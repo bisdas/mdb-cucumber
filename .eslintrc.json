@@ -3,12 +3,7 @@
         "browser": true,
         "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "prettier"
-    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "standard-with-typescript", "prettier"],
     "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -22,9 +17,5 @@
             "version": "detect"
         }
     },
-    "ignorePatterns": [
-        "src/reportWebVitals.ts",
-        "react-app-env.d.ts",
-        "index.css"
-    ]
+    "ignorePatterns": ["src/reportWebVitals.ts", "react-app-env.d.ts", "index.css"]
 }
