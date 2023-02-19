@@ -6,13 +6,13 @@ import {
     SearchBoxWrapper,
     SearchTitle,
     SiteHeaderWrapper,
-    SiteMottoWrapper,
+    // SiteMottoWrapper,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import ProductCard from '../../components/ProductCard'
 import SearchBox from '../../components/SearchBox'
 import SiteTitle from '../../components/SiteTitle'
-import SiteMotto from '../../components/SiteMotto'
+// import SiteMotto from '../../components/SiteMotto'
 import ProfileLinks from '../../components/ProfileLinks'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
 
@@ -24,9 +24,9 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SiteTitle />
                     <ProfileLinks />
                 </SiteHeaderWrapper>
-                <SiteMottoWrapper>
+                {/* <SiteMottoWrapper>
                     <SiteMotto />
-                </SiteMottoWrapper>
+                </SiteMottoWrapper> */}
 
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
