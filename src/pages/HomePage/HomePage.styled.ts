@@ -28,7 +28,12 @@ export const SearchTitle = styled.div`
 export const SiteHeaderWrapper = styled.div`
     padding: 6px 12px;
     margin-top: 14px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction; row;
+`
+
+export const SiteMottoWrapper = styled.div`
+    padding: 6px 12px;
+    margin-top: 6px;
+    margin-bottom: 14px;
 `
