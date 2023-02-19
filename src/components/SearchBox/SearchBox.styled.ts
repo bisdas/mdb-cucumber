@@ -5,16 +5,18 @@ export const OuterWrapper = styled.div`
     display: flex;
     flex-direction: row;
     border: 2px solid #cecece;
-    border-radius: 8px;
-    height: 36px;
+    border-radius: 6px;
+    height: 32px;
     padding-left: 14px;
     padding-right: 20px;
     align-items: center;
 `
 export const SearchIconWrapper = styled.div`
-    margin-right: 10px;
+    margin-right: 6px;
     position: relative;
     top: 2px;
+    pointer-events: none;
+    user-select: none;
 `
 
 export const SearchTextBoxWrapper = styled.div`
@@ -29,10 +31,14 @@ export const SearchTextBox = styled.input`
     border: none;
     font-family: 'Montserrat-Light', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 18px;
+    font-size: 14px;
 
     &:hover {
         border: none;
         outline: none;
+    }
+
+    &::placeholder {
+        color: #bababa;
     }
 `

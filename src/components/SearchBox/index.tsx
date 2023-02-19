@@ -6,7 +6,7 @@ const SearchBox: FunctionComponent<any> = (): ReactElement => {
     return (
         <OuterWrapper>
             <SearchIconWrapper>
-                <SearchIcon height={24} width={24} />
+                <SearchIcon height={18} width={18} fill="#bdbdbd" />
             </SearchIconWrapper>
             <SearchTextBoxWrapper>
                 <SearchTextBox type="text" placeholder="products & categories" />

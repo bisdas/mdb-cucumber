@@ -10,6 +10,8 @@ export const TitleWrapper = styled.div`
     box-sizing: border-box;
     white-space: break-spaces;
     margin-bottom: 6px;
+    pointer-events: none;
+    user-select: none;
 `
 export const TitleText = styled.span`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
@@ -17,5 +19,7 @@ export const TitleText = styled.span`
     font-size: 18px;
     width: 100%;
     display: block;
+    pointer-events: none;
+    user-select: none;
 }
 `
