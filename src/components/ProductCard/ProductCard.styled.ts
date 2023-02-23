@@ -9,12 +9,12 @@ export const ImageWrapper = styled.div`
         0deg,
         rgb(238 249 255) 0%,
         rgba(255, 255, 255, 0.03687412464985995) 1%,
-        rgb(225 250 255) 100%
+        rgb(255 255 255) 100%
     );
 
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ededed;
+    border: 1px solid #f2f2f2;
 `
 
 interface ImageContentProps {

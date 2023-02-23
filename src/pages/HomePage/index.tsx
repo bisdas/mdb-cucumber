@@ -13,7 +13,8 @@ import ProductCard from '../../components/ProductCard'
 import SearchBox from '../../components/SearchBox'
 import SiteTitle from '../../components/SiteTitle'
 // import SiteMotto from '../../components/SiteMotto'
-import ProfileLinks from '../../components/ProfileLinks'
+// import ProfileLinks from '../../components/ProfileLinks'
+import FeaturedItems from '../../components/FeaturedItems'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
@@ -22,7 +23,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
             <Content>
                 <SiteHeaderWrapper>
                     <SiteTitle />
-                    <ProfileLinks />
+                    {/* <ProfileLinks /> */}
                 </SiteHeaderWrapper>
                 {/* <SiteMottoWrapper>
                     <SiteMotto />
@@ -32,6 +33,8 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SearchTitle>Find your choice</SearchTitle>
                     <SearchBox />
                 </SearchBoxWrapper>
+
+                <FeaturedItems />
 
                 <Section title="Non-stick cookware">
                     <ScrollableLayout>
