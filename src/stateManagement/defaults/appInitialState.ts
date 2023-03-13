@@ -1,11 +1,17 @@
 import { PAGES } from '../../configuration/constants'
 
-export const initialAppState = {
+export interface IAppInitialState {
+    isLoadingApp: boolean
+    activePage: string
+    error: any
+    freshLoad: boolean
+}
+
+export const appInitialState: IAppInitialState = {
     isLoadingApp: true,
     activePage: PAGES.HOME,
     error: null,
     freshLoad: true,
-    notification: null,
 }
 
 /** TODO: remove this doNothing() function.
