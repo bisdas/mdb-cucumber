@@ -5,29 +5,37 @@ import {
     SearchTextBoxWrapper,
     SearchTextBox,
     SearchForm,
-    SearchButtonWrapper,
-    SearchButton,
+    // SearchButtonWrapper,
+    // SearchButton,
 } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
 
-const SearchBox: FunctionComponent<any> = (): ReactElement => {
-    const onSearch = (): void => {
-        console.log('search form submitted')
+interface SearchBoxProps {
+    onSearch: (term: string) => any
+}
+
+const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch }): ReactElement => {
+    const onSubmitForm = (event: any): void => {
+        event.preventDefault()
+    }
+
+    const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        onSearch(event.currentTarget.value)
     }
 
     return (
         <OuterWrapper>
-            <SearchForm onSubmit={onSearch}>
+            <SearchForm onSubmit={onSubmitForm}>
                 <SearchIconWrapper>
                     <SearchIcon height={18} width={18} fill="#bdbdbd" />
                 </SearchIconWrapper>
 
                 <SearchTextBoxWrapper>
-                    <SearchTextBox type="text" placeholder="products & categories" />
+                    <SearchTextBox type="text" placeholder="products & categories" onChange={onChangeInput} />
                 </SearchTextBoxWrapper>
-                <SearchButtonWrapper>
+                {/* <SearchButtonWrapper>
                     <SearchButton type="submit">SEARCH</SearchButton>
-                </SearchButtonWrapper>
+                </SearchButtonWrapper> */}
             </SearchForm>
         </OuterWrapper>
     )
