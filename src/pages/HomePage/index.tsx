@@ -1,4 +1,4 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { useRef, type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
@@ -11,18 +11,29 @@ import {
 import Section from '../../components/Section'
 import ProductCard from '../../components/ProductCard'
 import SearchBox from '../../components/SearchBox'
-import SiteTitle from '../../components/SiteTitle'
+// import SiteTitle from '../../components/SiteTitle'
 // import SiteMotto from '../../components/SiteMotto'
-import ProfileLinks from '../../components/ProfileLinks'
+// import ProfileLinks from '../../components/ProfileLinks'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
+import { debounce } from '../../utils/utils'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
+    const homePageRef = useRef()
+
+    const performSearch = debounce(
+        homePageRef,
+        (term: string) => {
+            console.log('received', term)
+        },
+        400
+    )
+
     return (
         <OuterWrapper>
             <Content>
                 <SiteHeaderWrapper>
-                    <SiteTitle />
-                    <ProfileLinks />
+                    {/* <SiteTitle /> */}
+                    {/* <ProfileLinks /> */}
                 </SiteHeaderWrapper>
                 {/* <SiteMottoWrapper>
                     <SiteMotto />
@@ -30,7 +41,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
-                    <SearchBox />
+                    <SearchBox onSearch={performSearch} />
                 </SearchBoxWrapper>
 
                 <Section title="Non-stick cookware">
