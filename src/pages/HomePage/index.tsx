@@ -1,4 +1,4 @@
-import React, { useRef, type FunctionComponent, type ReactElement } from 'react'
+import React, { useContext, useRef, type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
@@ -16,10 +16,16 @@ import SearchBox from '../../components/SearchBox'
 // import ProfileLinks from '../../components/ProfileLinks'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import { debounce } from '../../utils/utils'
+import { AppContext } from '../../stateManagement/contexts/appContext'
+import { createSetActivePageAction } from '../../stateManagement/actionCreators/appActionCreators'
+import { PAGES } from '../../configuration/constants'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
+    const [state, dispatch] = useContext(AppContext)
+
     const homePageRef = useRef()
 
+    console.log(state)
     const performSearch = debounce(
         homePageRef,
         (term: string) => {
@@ -29,7 +35,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
     )
 
     const switchToSearchMode = (): void => {
-        console.warn('search mode activating')
+        dispatch(createSetActivePageAction(PAGES.SEARCH))
     }
 
     return (
