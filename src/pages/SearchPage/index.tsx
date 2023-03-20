@@ -8,6 +8,7 @@ import { OuterWrapper, Content, SearchBoxWrapper } from './SearchPage.styled'
 const BareComponent: FunctionComponent<any> = (): ReactElement => {
     return (
         <OuterWrapper>
+            this is search page
             <Content>
                 <SearchBoxWrapper>{/* <SearchBox onSearch={() => {}} /> */}</SearchBoxWrapper>
             </Content>

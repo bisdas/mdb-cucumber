@@ -1,13 +1,13 @@
 import { PAGES } from '../../configuration/constants'
 
-export interface IAppInitialState {
+export interface IAppState {
     isLoadingApp: boolean
     activePage: string
     error: any
     freshLoad: boolean
 }
 
-export const appInitialState: IAppInitialState = {
+export const appInitialState: IAppState = {
     isLoadingApp: true,
     activePage: PAGES.HOME,
     error: null,

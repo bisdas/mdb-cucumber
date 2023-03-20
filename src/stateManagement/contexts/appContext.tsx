@@ -1,12 +1,8 @@
-import React, { useReducer } from 'react'
+import React, { type Dispatch, useReducer } from 'react'
 import { appReducer } from '../reducers/appReducer'
-import { appInitialState } from '../defaults/appInitialState'
+import { appInitialState, type IAppState } from '../defaults/appInitialState'
 
-interface IAppContext {
-    state: any
-    dispatch: React.Dispatch<any>
-}
-export const AppContext = React.createContext<IAppContext[] | null>(null)
+export const AppContext = React.createContext<[Partial<IAppState>, Dispatch<any>]>([{}, () => {}])
 
 export const AppContextProvider = (props: any): any => {
     const [state, dispatch] = useReducer(appReducer, appInitialState)
