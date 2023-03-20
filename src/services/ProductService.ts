@@ -21,12 +21,24 @@ class ProductService {
         return []
     }
 
-    getBrands(): any[] {
+    getBrands(): any {
         return []
     }
 
-    getByKeywords(): any[] {
-        return []
+    async getByKeywords(keyword: string): Promise<any> {
+        const itemsPromise = new Promise((resolve, reject) => {
+            try {
+                console.log(keyword)
+
+                // todo: utils logic to find keyword from a string.
+                // todo: filter products by keyword
+                resolve(PRODUCTS)
+            } catch (error) {
+                reject(error)
+            }
+        })
+
+        return await itemsPromise
     }
 }
 

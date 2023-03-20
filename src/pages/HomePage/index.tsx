@@ -28,6 +28,10 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
         400
     )
 
+    const switchToSearchMode = (): void => {
+        console.warn('search mode activating')
+    }
+
     return (
         <OuterWrapper>
             <Content>
@@ -41,7 +45,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
-                    <SearchBox onSearch={performSearch} />
+                    <SearchBox onSearch={performSearch} onFocus={switchToSearchMode} />
                 </SearchBoxWrapper>
 
                 <Section title="Non-stick cookware">

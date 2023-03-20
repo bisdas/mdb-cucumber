@@ -12,15 +12,20 @@ import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.sv
 
 interface SearchBoxProps {
     onSearch: (term: string) => any
+    onFocus: () => any
 }
 
-const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch }): ReactElement => {
+const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): ReactElement => {
     const onSubmitForm = (event: any): void => {
         event.preventDefault()
     }
 
     const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
         onSearch(event.currentTarget.value)
+    }
+
+    const onFocusInput = (): void => {
+        onFocus()
     }
 
     return (
@@ -31,7 +36,12 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch }): ReactElemen
                 </SearchIconWrapper>
 
                 <SearchTextBoxWrapper>
-                    <SearchTextBox type="text" placeholder="products & categories" onChange={onChangeInput} />
+                    <SearchTextBox
+                        type="text"
+                        placeholder="products & categories"
+                        onChange={onChangeInput}
+                        onFocus={onFocusInput}
+                    />
                 </SearchTextBoxWrapper>
                 {/* <SearchButtonWrapper>
                     <SearchButton type="submit">SEARCH</SearchButton>
