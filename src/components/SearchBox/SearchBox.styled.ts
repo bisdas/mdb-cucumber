@@ -1,8 +1,11 @@
 import styled from 'styled-components/macro'
 
-export const OuterWrapper = styled.div`
+interface IOuterWrapperProps {
+    seamless?: boolean
+}
+export const OuterWrapper = styled.div<IOuterWrapperProps>`
     margin-top: 6px;
-    border: 2px solid #cecece;
+    border: ${props => (props?.seamless === false ? '2px solid #cecece' : 'none')};
     border-radius: 6px;
     height: 32px;
 `
@@ -27,6 +30,7 @@ export const SearchForm = styled.form`
     padding-left: 14px;
     padding-right: 5px;
 `
+
 export const SearchTextBox = styled.input`
     width: 100%;
     height: 24px;
