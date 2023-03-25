@@ -1,4 +1,4 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { useRef, useEffect, type FunctionComponent, type ReactElement, useContext } from 'react'
 import {
     OuterWrapper,
     SearchIconWrapper,
@@ -9,13 +9,24 @@ import {
     // SearchButton,
 } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
+import { AppContext } from '../../stateManagement/contexts/appContext'
+import { PAGES } from '../../configuration/constants'
 
 interface SearchBoxProps {
     onSearch: (term: string) => any
-    onFocus: () => any
+    onFocus?: () => any
 }
 
 const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): ReactElement => {
+    const inputRef = useRef<HTMLInputElement>(null)
+    const [state] = useContext(AppContext)
+
+    useEffect(() => {
+        if (state.activePage === PAGES.SEARCH) {
+            inputRef?.current?.focus()
+        }
+    }, [])
+
     const onSubmitForm = (event: any): void => {
         event.preventDefault()
     }
@@ -25,7 +36,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): Re
     }
 
     const onFocusInput = (): void => {
-        onFocus()
+        onFocus instanceof Function && onFocus()
     }
 
     return (
@@ -37,6 +48,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): Re
 
                 <SearchTextBoxWrapper>
                     <SearchTextBox
+                        ref={inputRef}
                         type="text"
                         placeholder="products & categories"
                         onChange={onChangeInput}
