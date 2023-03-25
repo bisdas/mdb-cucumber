@@ -1,5 +1,5 @@
 import React, { useContext, type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, Content, SearchBoxWrapper, GoBackWrapper } from './SearchPage.styled'
+import { OuterWrapper, Content, PageHeader, SearchBoxWrapper, GoBackWrapper } from './SearchPage.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/back-arrow.svg'
 import SearchBox from '../../components/SearchBox'
 import { AppContext } from '../../stateManagement/contexts/appContext'
@@ -19,12 +19,14 @@ const BareComponent: FunctionComponent<any> = (): ReactElement => {
     return (
         <OuterWrapper>
             <Content>
-                <GoBackWrapper>
-                    <BackArrow onClick={navigateToHome} />
-                </GoBackWrapper>
-                <SearchBoxWrapper>
-                    <SearchBox onSearch={onChangeSearchInput} />
-                </SearchBoxWrapper>
+                <PageHeader>
+                    <GoBackWrapper>
+                        <BackArrow onClick={navigateToHome} />
+                    </GoBackWrapper>
+                    <SearchBoxWrapper>
+                        <SearchBox onSearch={onChangeSearchInput} seamLess={true} icon={false} />
+                    </SearchBoxWrapper>
+                </PageHeader>
             </Content>
         </OuterWrapper>
     )

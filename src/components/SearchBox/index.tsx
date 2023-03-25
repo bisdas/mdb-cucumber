@@ -1,13 +1,5 @@
 import React, { useRef, useEffect, type FunctionComponent, type ReactElement, useContext } from 'react'
-import {
-    OuterWrapper,
-    SearchIconWrapper,
-    SearchTextBoxWrapper,
-    SearchTextBox,
-    SearchForm,
-    // SearchButtonWrapper,
-    // SearchButton,
-} from './SearchBox.styled'
+import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
 import { AppContext } from '../../stateManagement/contexts/appContext'
 import { PAGES } from '../../configuration/constants'
@@ -15,9 +7,16 @@ import { PAGES } from '../../configuration/constants'
 interface SearchBoxProps {
     onSearch: (term: string) => any
     onFocus?: () => any
+    seamLess?: boolean
+    icon?: boolean
 }
 
-const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): ReactElement => {
+const SearchBox: FunctionComponent<SearchBoxProps> = ({
+    onSearch,
+    onFocus,
+    seamLess = false,
+    icon = true,
+}): ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null)
     const [state] = useContext(AppContext)
 
@@ -40,24 +39,23 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): Re
     }
 
     return (
-        <OuterWrapper>
+        <OuterWrapper seamless={seamLess}>
             <SearchForm onSubmit={onSubmitForm}>
-                <SearchIconWrapper>
-                    <SearchIcon height={18} width={18} fill="#bdbdbd" />
-                </SearchIconWrapper>
+                {icon && (
+                    <SearchIconWrapper>
+                        <SearchIcon height={18} width={18} fill="#bdbdbd" />
+                    </SearchIconWrapper>
+                )}
 
                 <SearchTextBoxWrapper>
                     <SearchTextBox
                         ref={inputRef}
                         type="text"
-                        placeholder="products & categories"
+                        placeholder="product, brand, category, etc."
                         onChange={onChangeInput}
                         onFocus={onFocusInput}
                     />
                 </SearchTextBoxWrapper>
-                {/* <SearchButtonWrapper>
-                    <SearchButton type="submit">SEARCH</SearchButton>
-                </SearchButtonWrapper> */}
             </SearchForm>
         </OuterWrapper>
     )
