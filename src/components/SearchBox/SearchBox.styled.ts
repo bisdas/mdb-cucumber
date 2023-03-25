@@ -46,15 +46,3 @@ export const SearchTextBox = styled.input`
         color: #bababa;
     }
 `
-
-// export const SearchButtonWrapper = styled.div``
-// export const SearchButton = styled.button`
-//     background: #cdcdcd;
-//     border: none;
-//     outline: none;
-//     padding: 4px 10px;
-//     border-radius: 4px;
-//     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-//     color: #000000;
-//     font-size: 12px;
-// `

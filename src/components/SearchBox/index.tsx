@@ -1,13 +1,5 @@
 import React, { useRef, useEffect, type FunctionComponent, type ReactElement, useContext } from 'react'
-import {
-    OuterWrapper,
-    SearchIconWrapper,
-    SearchTextBoxWrapper,
-    SearchTextBox,
-    SearchForm,
-    // SearchButtonWrapper,
-    // SearchButton,
-} from './SearchBox.styled'
+import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
 import { AppContext } from '../../stateManagement/contexts/appContext'
 import { PAGES } from '../../configuration/constants'
@@ -55,9 +47,6 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({ onSearch, onFocus }): Re
                         onFocus={onFocusInput}
                     />
                 </SearchTextBoxWrapper>
-                {/* <SearchButtonWrapper>
-                    <SearchButton type="submit">SEARCH</SearchButton>
-                </SearchButtonWrapper> */}
             </SearchForm>
         </OuterWrapper>
     )
