@@ -10,3 +10,6 @@ export const Content = styled.div`
 export const SearchBoxWrapper = styled.div`
     padding: 6px 12px;
 `
+export const GoBackWrapper = styled.div`
+    padding: 6px 12px;
+`
