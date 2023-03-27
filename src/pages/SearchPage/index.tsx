@@ -7,7 +7,7 @@ import { createSetActivePageAction } from '../../stateManagement/actionCreators/
 import { PAGES } from '../../configuration/constants'
 import useSearchBox from '../../hooks/useSearchBox'
 
-const BareComponent: FunctionComponent<any> = (): ReactElement => {
+const SearchPage: FunctionComponent<any> = (): ReactElement => {
     /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
     const [state, dispatch] = useContext(AppContext)
     const { onChangeSearchInput } = useSearchBox()
@@ -32,4 +32,4 @@ const BareComponent: FunctionComponent<any> = (): ReactElement => {
     )
 }
 
-export default BareComponent
+export default SearchPage

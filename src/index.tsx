@@ -4,12 +4,15 @@ import './index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AppContextProvider } from './stateManagement/contexts/appContext'
+import { Router } from './router'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
         <AppContextProvider>
-            <App />
+            <Router>
+                <App />
+            </Router>
         </AppContextProvider>
     </React.StrictMode>
 )
