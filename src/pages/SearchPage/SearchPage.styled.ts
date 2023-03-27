@@ -23,4 +23,5 @@ export const GoBackWrapper = styled.div`
     align-items: center;
     padding-top: 14px;
     user-select: none;
+    cursor: pointer;
 `
