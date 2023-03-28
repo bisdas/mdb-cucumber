@@ -1,8 +1,10 @@
-import React, { useRef, useEffect, type FunctionComponent, type ReactElement, useContext } from 'react'
+import React, { useRef, useEffect, type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
-import { AppContext } from '../../stateManagement/contexts/appContext'
-import { PAGES } from '../../configuration/constants'
+// import { AppContext } from '../../stateManagement/contexts/appContext'
+// import { PAGES } from '../../configuration/constants'
+import { useLocation } from 'react-router-dom'
+import { ROUTES } from '../../router'
 
 interface SearchBoxProps {
     onSearch: (term: string) => any
@@ -18,10 +20,12 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     icon = true,
 }): ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null)
-    const [state] = useContext(AppContext)
+    // const [state] = useContext(AppContext)
+    const location = useLocation()
 
     useEffect(() => {
-        if (state.activePage === PAGES.SEARCH) {
+        console.log(location)
+        if (location.pathname === `/${ROUTES.SEARCH}`) {
             inputRef?.current?.focus()
         }
     }, [])
