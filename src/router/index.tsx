@@ -1,21 +1,34 @@
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { RouterError } from '../router/RouterError'
+import RouteFallback from '../components/RouteFallback'
+import HomePage from '../pages/HomePage'
+import CategoryPage from '../pages/CategoryPage'
+import SearchPage from '../pages/SearchPage'
 
-interface IProps {
-    children: ReactElement
+export const ROUTES = {
+    CATEGORY: 'category/:id',
+    SEARCH: 'search',
+    HOME: '/',
 }
 
-export const Router: FunctionComponent<IProps> = ({ children }): ReactElement => {
-    const browserRouterRoot = createBrowserRouter([
-        {
-            path: '/',
-            element: children,
-            errorElement: <RouterError />,
-        },
-    ])
+const browserRouter = createBrowserRouter([
+    {
+        path: ROUTES.HOME,
+        element: <HomePage />,
+        errorElement: <RouteFallback />,
+    },
+    {
+        path: ROUTES.CATEGORY,
+        element: <CategoryPage />,
+    },
+    {
+        path: ROUTES.SEARCH,
+        element: <SearchPage />,
+    },
+])
 
-    return <RouterProvider router={browserRouterRoot} />
+const RouteMap: FunctionComponent<any> = (): ReactElement => {
+    return <RouterProvider router={browserRouter} />
 }
 
-export default Router
+export default RouteMap

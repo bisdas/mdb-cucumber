@@ -1,4 +1,4 @@
-import React, { useContext, type FunctionComponent, type ReactElement } from 'react'
+import React, { type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
@@ -15,18 +15,15 @@ import SearchBox from '../../components/SearchBox'
 // import SiteMotto from '../../components/SiteMotto'
 // import ProfileLinks from '../../components/ProfileLinks'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
-import { AppContext } from '../../stateManagement/contexts/appContext'
 import useSearchBox from '../../hooks/useSearchBox'
-import { createSetActivePageAction } from '../../stateManagement/actionCreators/appActionCreators'
-import { PAGES } from '../../configuration/constants'
+import { useRouter } from '../../router/useRouter'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
-    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-    const [state, dispatch] = useContext(AppContext)
+    const { navigateSearch } = useRouter()
     const { onChange } = useSearchBox()
 
-    const switchToSearchMode = (): void => {
-        dispatch(createSetActivePageAction(PAGES.SEARCH))
+    const navigateToSearchPage = (): void => {
+        navigateSearch()
     }
 
     return (
@@ -42,7 +39,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
-                    <SearchBox onSearch={onChange} onFocus={switchToSearchMode} />
+                    <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
                 <Section title="Non-stick cookware">
