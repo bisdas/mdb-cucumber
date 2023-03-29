@@ -24,7 +24,7 @@ const useSearchProducts = (keyword: string): void => {
 
         void fetchItems()
         return { status, products, error }
-    }, [keyword])
+    }, [keyword, error, products, status])
 }
 
 export default useSearchProducts

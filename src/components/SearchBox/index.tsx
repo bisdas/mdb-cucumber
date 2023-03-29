@@ -24,11 +24,10 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     const location = useLocation()
 
     useEffect(() => {
-        console.log(location)
         if (location.pathname === `/${ROUTES.SEARCH}`) {
             inputRef?.current?.focus()
         }
-    }, [])
+    }, [location.pathname])
 
     const onSubmitForm = (event: any): void => {
         event.preventDefault()

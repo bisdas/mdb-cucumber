@@ -17,8 +17,11 @@ class ProductService {
         return null
     }
 
-    getCategorisedProducts(): any[] {
-        return []
+    async getCategorisedProducts(): Promise<any> {
+        console.log('getting data from db.... ')
+        return await new Promise((resolve, reject) => {
+            resolve([1, 2, 3, 4])
+        })
     }
 
     getBrands(): any {

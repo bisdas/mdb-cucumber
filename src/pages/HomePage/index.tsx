@@ -17,10 +17,12 @@ import SearchBox from '../../components/SearchBox'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import useSearchBox from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
+import useStartUp from '../../hooks/useStartUp'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     const { navigateSearch } = useRouter()
     const { onChange } = useSearchBox()
+    useStartUp()
 
     const navigateToSearchPage = (): void => {
         navigateSearch()

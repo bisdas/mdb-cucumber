@@ -1,11 +1,4 @@
-import { ACTIVE_PAGE, APP_LOADING, APP_ERROR, APP_RESET, APP_FRESH_LOAD } from '../actions/appActions'
-
-export const createSetActivePageAction = (page: string): any => {
-    return {
-        type: ACTIVE_PAGE,
-        value: page,
-    }
-}
+import { APP_LOADING, APP_ERROR, APP_RESET, APP_FRESH_LOAD } from '../actions/appActions'
 
 export const createAppLoadingAction = (isLoading: boolean): any => {
     return {
