@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { LONG_RUNNING_ACTIVITY } from '../configuration/constants'
-import ProductService from '../services/ProductService'
+import StoreService from '../services/StoreService'
 
 const useSearchProducts = (keyword: string): void => {
     const [products, setProducts] = useState([])
@@ -14,7 +14,7 @@ const useSearchProducts = (keyword: string): void => {
             setStatus(LONG_RUNNING_ACTIVITY.RUNNING)
 
             try {
-                const items = await ProductService.getByKeywords(keyword)
+                const items = await StoreService.getByKeywords(keyword)
                 setStatus(LONG_RUNNING_ACTIVITY.IDLE)
                 setProducts(items)
             } catch (error: any) {

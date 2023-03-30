@@ -1,14 +1,14 @@
 import { useEffect, useContext } from 'react'
-import ProductService from '../services/ProductService'
+import StoreService from '../services/StoreService'
 import {
     createCategorisedProductsDataAction,
     createCategorisedProductsErrorAction,
     createCategorisedProductsRequestAction,
-    ProductsContext,
-} from '../stateManagement/productsState'
+    StoreContext,
+} from '../stateManagement/storeState'
 
 export const useCategorisedProducts = (): any => {
-    const [state, dispatch] = useContext(ProductsContext)
+    const [state, dispatch] = useContext(StoreContext)
     const data = state.categorisedProducts?.data
     const errors = state.categorisedProducts?.errors
     const isLoading = state.categorisedProducts?.isLoading
@@ -16,7 +16,7 @@ export const useCategorisedProducts = (): any => {
     useEffect(() => {
         if (data?.length === 0) {
             dispatch(createCategorisedProductsRequestAction())
-            ProductService.getCategorisedProducts()
+            StoreService.getCategorisedProducts()
                 .then(products => {
                     dispatch(createCategorisedProductsDataAction(products))
                 })

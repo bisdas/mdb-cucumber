@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
@@ -18,6 +19,7 @@ import { ScrollableLayout } from '../../components/SharedComponents/SharedStyled
 import useSearchBox from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
 import useStartUp from '../../hooks/useStartUp'
+import ProductsInCategory from '../../components/ProductsInCategory'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     const { navigateSearch } = useRouter()
@@ -46,98 +48,20 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
                 <Section title="Non-stick cookware">
                     <ScrollableLayout>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
+                        <div></div>
                     </ScrollableLayout>
                 </Section>
                 <Section title="Pots & Pans">
-                    <ScrollableLayout>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                    </ScrollableLayout>
+                    <div></div>
                 </Section>
                 <Section title="Tawa & Kadai">
-                    <ScrollableLayout>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                    </ScrollableLayout>
+                    <div></div>
                 </Section>
                 <Section title="Cutlery">
-                    <ScrollableLayout>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                    </ScrollableLayout>
+                    <div></div>
                 </Section>
                 <Section title="Glassware">
-                    <ScrollableLayout>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                        <SingleProductWrapper>
-                            <ProductCard />
-                        </SingleProductWrapper>
-                    </ScrollableLayout>
+                    <div></div>
                 </Section>
             </Content>
         </OuterWrapper>
