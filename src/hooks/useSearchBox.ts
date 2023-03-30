@@ -17,7 +17,7 @@ const useSearchBox = (): any => {
         if (keyword.trim() !== '') {
             onSearch()
         }
-    }, [keyword])
+    }, [keyword, onSearch])
 
     const onChangeSearchInput = (enteredValue: string): void => {
         setKeyword(enteredValue)

@@ -1,4 +1,4 @@
-import { ACTIVE_PAGE, APP_LOADING, APP_ERROR, APP_RESET, APP_FRESH_LOAD } from '../actions/appActions'
+import { APP_LOADING, APP_ERROR, APP_RESET, APP_RELOAD } from '../actions/appActions'
 import { appInitialState } from '../defaults/appInitialState'
 
 interface IAction {
@@ -15,22 +15,16 @@ export const appReducer = (state = appInitialState, action: IAction): any => {
                 isLoadingApp: value,
             }
 
-        case ACTIVE_PAGE:
-            return {
-                ...state,
-                activePage: value,
-            }
-
         case APP_ERROR:
             return {
                 ...state,
                 appError: value,
             }
 
-        case APP_FRESH_LOAD:
+        case APP_RELOAD:
             return {
                 ...state,
-                freshLoad: value,
+                reload: value,
             }
 
         case APP_RESET:

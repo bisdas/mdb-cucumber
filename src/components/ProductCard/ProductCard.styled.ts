@@ -18,7 +18,7 @@ export const ImageWrapper = styled.div`
 `
 
 interface ImageContentProps {
-    image: string
+    imageUrl: string
 }
 export const ImageContent = styled.div<ImageContentProps>`
     width: 100%;
@@ -28,7 +28,7 @@ export const ImageContent = styled.div<ImageContentProps>`
     color: #ededed;
     justify-content: center;
     align-items: center;
-    background-image: url(${props => props.image});
+    background-image: url(${props => props.imageUrl});
     background-size: cover;
 `
 
@@ -44,5 +44,13 @@ export const TitleText = styled.span`
     font-size: 12px;
     width: 100%;
     display: block;
-}
+}`
+
+export const Anchor = styled.a`
+    text-decoration: none;
+    color: #000000;
+
+    &:visited {
+        color: #000000;
+    }
 `

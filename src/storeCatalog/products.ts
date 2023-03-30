@@ -7,7 +7,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -16,7 +16,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -25,7 +25,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -34,7 +34,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -43,7 +43,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -52,7 +52,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -61,7 +61,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -70,7 +70,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -79,7 +79,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -88,7 +88,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -97,7 +97,7 @@ export const PRODUCTS = [
         brand: BRANDS.Prestige,
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B09F3DRD1M',
+        targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
         thumbnail: 'cold_pressed_oil.png',
     },
     {
@@ -106,7 +106,7 @@ export const PRODUCTS = [
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
-        amazonLink: 'https://www.amazon.in/dp/B00NTZB156',
+        targetLink: 'https://www.amazon.in/dp/B00NTZB156',
         thumbnail: 'cold_pressed_oil.png',
     },
 ]

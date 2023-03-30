@@ -1,15 +1,27 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, ImageWrapper, ImageContent, TitleWrapper, TitleText } from './ProductCard.styled'
+import { OuterWrapper, ImageWrapper, ImageContent, TitleWrapper, TitleText, Anchor } from './ProductCard.styled'
 import img from '../../assets/productThumbs/cold_pressed_oil.png'
 
-const ProductCard: FunctionComponent<any> = (): ReactElement => {
+interface IProductCardProps {
+    image: string
+    title: boolean
+    linkTo: string
+}
+
+const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkTo }): ReactElement => {
+    const formattedImageUrl = `../../assets/productThumbs/${image}`
     return (
         <OuterWrapper>
             <ImageWrapper>
-                <ImageContent image={img}></ImageContent>
+                <ImageContent imageUrl={formattedImageUrl}></ImageContent>
             </ImageWrapper>
             <TitleWrapper>
-                <TitleText>Saffolla Cold Pressed Organic Sunflower Oil</TitleText>
+                <TitleText>
+                    <Anchor href={linkTo} target="_blank">
+                        {title}
+                    </Anchor>
+                </TitleText>
             </TitleWrapper>
         </OuterWrapper>
     )
