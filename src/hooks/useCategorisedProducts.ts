@@ -14,16 +14,18 @@ export const useCategorisedProducts = (): any => {
     const isLoading = state.categorisedProducts?.isLoading
 
     useEffect(() => {
-        if (data?.length === 0) {
-            dispatch(createCategorisedProductsRequestAction())
-            StoreService.getCategorisedProducts()
-                .then(products => {
+        void (async (): Promise<any> => {
+            if (data?.length === 0) {
+                dispatch(createCategorisedProductsRequestAction())
+
+                try {
+                    const products = await StoreService.getCategorisedProducts()
                     dispatch(createCategorisedProductsDataAction(products))
-                })
-                .catch(error => {
+                } catch (error: any) {
                     dispatch(createCategorisedProductsErrorAction(error))
-                })
-        }
+                }
+            }
+        })()
     }, [data?.length, dispatch])
 
     return [data, errors, isLoading]

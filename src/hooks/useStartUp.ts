@@ -2,14 +2,14 @@
 import { useEffect, useContext } from 'react'
 import { AppContext } from '../stateManagement/contexts/appContext'
 import { createAppReloadAction } from '../stateManagement/actionCreators/appActionCreators'
-import { useCategorisedProducts } from './useProducts'
+import { useCategorisedProducts } from './useCategorisedProducts'
 import { useStoreCatalog } from './useStoreCatalog'
 
 const useStartUp = (): any => {
     const [appState, dispatch] = useContext(AppContext)
     const { reload } = appState
-    const [catalogs, brands, tags] = useStoreCatalog()
-    const [data, errors, isLoading] = useCategorisedProducts()
+    useStoreCatalog()
+    useCategorisedProducts()
 
     useEffect(() => {
         if (reload === true) {
