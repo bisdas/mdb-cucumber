@@ -26,7 +26,9 @@ class StoreService {
     async getCategories(): Promise<any> {
         const categoriesPromise = new Promise((resolve, reject) => {
             try {
-                resolve(CATEGORIES)
+                setTimeout(() => {
+                    resolve(CATEGORIES)
+                }, 1000)
             } catch (error) {
                 reject(error)
             }
@@ -35,28 +37,32 @@ class StoreService {
         return await categoriesPromise
     }
 
-    async getTags(): Promise<any> {
-        const tagsPromise = new Promise((resolve, reject) => {
-            try {
-                resolve(TAGS)
-            } catch (error) {
-                reject(error)
-            }
-        })
-
-        return await tagsPromise
-    }
-
     async getBrands(): Promise<any> {
         const brandsPromise = new Promise((resolve, reject) => {
             try {
-                resolve(BRANDS)
+                setTimeout(() => {
+                    resolve(BRANDS)
+                }, 5000)
             } catch (error) {
                 reject(error)
             }
         })
 
         return await brandsPromise
+    }
+
+    async getTags(): Promise<any> {
+        const tagsPromise = new Promise((resolve, reject) => {
+            try {
+                setTimeout(() => {
+                    resolve(TAGS)
+                }, 10000)
+            } catch (error) {
+                reject(error)
+            }
+        })
+
+        return await tagsPromise
     }
 
     async getByKeywords(keyword: string): Promise<any> {

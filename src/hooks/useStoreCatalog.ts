@@ -19,44 +19,49 @@ export const useStoreCatalog = (): any => {
 
     /** fetch categories */
     useEffect(() => {
-        if (categories?.data?.length === 0) {
-            dispatch(createCategoriesRequestAction())
-            StoreService.getCategories()
-                .then(categories => {
+        void (async (): Promise<any> => {
+            if (categories?.data?.length === 0) {
+                dispatch(createCategoriesRequestAction())
+                try {
+                    const categories = await StoreService.getCategories()
                     dispatch(createCategoriesDataAction(categories))
-                })
-                .catch(error => {
+                } catch (error: any) {
                     dispatch(createCategoriesErrorAction(error))
-                })
-        }
+                }
+            }
+        })()
     }, [categories?.data?.length, dispatch])
 
     /** fetch brands */
     useEffect(() => {
-        if (brands?.data?.length === 0) {
-            dispatch(createBrandsRequestAction())
-            StoreService.getBrands()
-                .then(brands => {
+        void (async (): Promise<any> => {
+            if (brands?.data?.length === 0) {
+                dispatch(createBrandsRequestAction())
+
+                try {
+                    const brands = await StoreService.getBrands()
                     dispatch(createBrandsDataAction(brands))
-                })
-                .catch(error => {
+                } catch (error: any) {
                     dispatch(createBrandsErrorAction(error))
-                })
-        }
+                }
+            }
+        })()
     }, [brands?.data?.length, dispatch])
 
     /** fetch tags */
     useEffect(() => {
-        if (tags?.data?.length === 0) {
-            dispatch(createTagsRequestAction())
-            StoreService.getTags()
-                .then(tags => {
+        void (async (): Promise<any> => {
+            if (tags?.data?.length === 0) {
+                dispatch(createTagsRequestAction())
+
+                try {
+                    const tags = await StoreService.getTags()
                     dispatch(createTagsDataAction(tags))
-                })
-                .catch(error => {
+                } catch (error: any) {
                     dispatch(createTagsErrorAction(error))
-                })
-        }
+                }
+            }
+        })()
     }, [tags?.data?.length, dispatch])
 
     return [categories, brands, tags]
