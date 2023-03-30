@@ -12,8 +12,7 @@ export const useRouter = (): any => {
         navigate(ROUTES.SEARCH)
     }
 
-    const navigateCategory = (id: any): void => {
-        console.log(id)
+    const navigateCategory = (id: string): void => {
         navigate(ROUTES.CATEGORY)
     }
 

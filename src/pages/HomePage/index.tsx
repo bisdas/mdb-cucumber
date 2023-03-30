@@ -3,7 +3,6 @@ import React, { type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
-    SingleProductWrapper,
     SearchBoxWrapper,
     SearchTitle,
     SiteHeaderWrapper,
@@ -41,7 +40,6 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                 <SiteMottoWrapper>
                     <SiteMotto />
                 </SiteMottoWrapper>
-
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
@@ -50,7 +48,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                 {categorisedItemsData.map((item: any) => (
                     <Section title={item.category.title} key={item.category.id}>
                         <ScrollableLayout>
-                            <ProductsInCategory products={item.products} showAll={false} />
+                            <ProductsInCategory categoryId={item.category} products={item.products} showAll={false} />
                         </ScrollableLayout>
                     </Section>
                 ))}

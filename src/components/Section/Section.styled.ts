@@ -16,7 +16,7 @@ export const TitleWrapper = styled.div`
 export const TitleText = styled.span`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
     width: 100%;
     display: block;
     pointer-events: none;

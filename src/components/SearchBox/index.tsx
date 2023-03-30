@@ -9,14 +9,14 @@ import { ROUTES } from '../../router'
 interface SearchBoxProps {
     onSearch: (term: string) => any
     onFocus?: () => any
-    seamLess?: boolean
+    seamless?: boolean
     icon?: boolean
 }
 
 const SearchBox: FunctionComponent<SearchBoxProps> = ({
     onSearch,
     onFocus,
-    seamLess = false,
+    seamless = false,
     icon = true,
 }): ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null)
@@ -42,8 +42,8 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     }
 
     return (
-        <OuterWrapper seamless={seamLess}>
-            <SearchForm onSubmit={onSubmitForm}>
+        <OuterWrapper seamless={seamless}>
+            <SearchForm seamless={seamless} onSubmit={onSubmitForm}>
                 {icon && (
                     <SearchIconWrapper>
                         <SearchIcon height={18} width={18} fill="#bdbdbd" />
