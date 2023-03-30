@@ -20,11 +20,13 @@ import useSearchBox from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
 import useStartUp from '../../hooks/useStartUp'
 import ProductsInCategory from '../../components/ProductsInCategory'
+import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
+    useStartUp()
     const { navigateSearch } = useRouter()
     const { onChange } = useSearchBox()
-    useStartUp()
+    const [categorisedItemsData, categorisedItemsErrors, categorisedItemsLoading] = useCategorisedProducts()
 
     const navigateToSearchPage = (): void => {
         navigateSearch()
@@ -46,23 +48,13 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
-                <Section title="Non-stick cookware">
-                    <ScrollableLayout>
-                        <div></div>
-                    </ScrollableLayout>
-                </Section>
-                <Section title="Pots & Pans">
-                    <div></div>
-                </Section>
-                <Section title="Tawa & Kadai">
-                    <div></div>
-                </Section>
-                <Section title="Cutlery">
-                    <div></div>
-                </Section>
-                <Section title="Glassware">
-                    <div></div>
-                </Section>
+                {categorisedItemsData.map((item: any) => (
+                    <Section title={item.category.title} key={item.category.id}>
+                        <ScrollableLayout>
+                            <ProductsInCategory products={item.products} showAll={false} />
+                        </ScrollableLayout>
+                    </Section>
+                ))}
             </Content>
         </OuterWrapper>
     )

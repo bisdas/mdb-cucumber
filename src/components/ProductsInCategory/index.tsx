@@ -1,31 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, SingleProductWrapper } from './ProductsInCategory.styled'
+import ProductCard from '../ProductCard'
 
 interface IProductsInCategoryProps {
-    category: string
+    products: any[]
     showAll: boolean
 }
 
-const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({ category, showAll }): ReactElement => {
+const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({ products, showAll }): ReactElement => {
     return (
-        <OuterWrapper>
-            {/* <SingleProductWrapper>
-            <ProductCard />
-        </SingleProductWrapper>
-        <SingleProductWrapper>
-            <ProductCard />
-        </SingleProductWrapper>
-        <SingleProductWrapper>
-            <ProductCard />
-        </SingleProductWrapper>
-        <SingleProductWrapper>
-            <ProductCard />
-        </SingleProductWrapper>
-        <SingleProductWrapper>
-            <ProductCard />
-        </SingleProductWrapper> */}
-        </OuterWrapper>
+        <>
+            {products.map(product => (
+                <SingleProductWrapper key={product.id}>
+                    <ProductCard image={product.thumbnail} title={product.title} linkTo={product.targetLink} />
+                </SingleProductWrapper>
+            ))}
+        </>
     )
 }
 
