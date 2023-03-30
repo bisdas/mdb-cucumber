@@ -13,8 +13,6 @@ export const useCategorisedProducts = (): any => {
     const errors = state.categorisedProducts?.errors
     const isLoading = state.categorisedProducts?.isLoading
 
-    console.log('data ', data, 'errors ', errors, 'isLoading', isLoading)
-
     useEffect(() => {
         if (data?.length === 0) {
             dispatch(createCategorisedProductsRequestAction())

@@ -18,7 +18,6 @@ class ProductService {
     }
 
     async getCategorisedProducts(): Promise<any> {
-        console.log('getting data from db.... ')
         return await new Promise((resolve, reject) => {
             resolve([1, 2, 3, 4])
         })

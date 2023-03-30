@@ -1,20 +1,20 @@
 import { useEffect, useContext } from 'react'
 import { AppContext } from '../stateManagement/contexts/appContext'
-import { createAppFreshLoadAction } from '../stateManagement/actionCreators/appActionCreators'
+import { createAppReloadAction } from '../stateManagement/actionCreators/appActionCreators'
 import { useCategorisedProducts } from './useProducts'
 
 const useStartUp = (): any => {
     const [appState, dispatch] = useContext(AppContext)
-    const { freshLoad } = appState
+    const { reload } = appState
     const [data, errors, isLoading] = useCategorisedProducts()
 
-    console.log('useStartUp ', freshLoad, data, errors, isLoading)
+    console.log('useStartUp ', reload, data, errors, isLoading)
 
     useEffect(() => {
-        if (freshLoad === true) {
-            dispatch(createAppFreshLoadAction(false))
+        if (reload === true) {
+            dispatch(createAppReloadAction(false))
         }
-    }, [freshLoad, dispatch])
+    }, [reload, dispatch])
 }
 
 export default useStartUp

@@ -1,4 +1,4 @@
-import { APP_LOADING, APP_ERROR, APP_RESET, APP_FRESH_LOAD } from '../actions/appActions'
+import { APP_LOADING, APP_ERROR, APP_RESET, APP_RELOAD } from '../actions/appActions'
 
 export const createAppLoadingAction = (isLoading: boolean): any => {
     return {
@@ -14,10 +14,10 @@ export const createAppErrorAction = (error: any): any => {
     }
 }
 
-export const createAppFreshLoadAction = (freshLoad: boolean): any => {
+export const createAppReloadAction = (reload: boolean): any => {
     return {
-        type: APP_FRESH_LOAD,
-        value: freshLoad,
+        type: APP_RELOAD,
+        value: reload,
     }
 }
 
