@@ -8,7 +8,7 @@ import { useStoreCatalog } from './useStoreCatalog'
 const useStartUp = (): any => {
     const [appState, dispatch] = useContext(AppContext)
     const { reload } = appState
-    const [catalogs, brands, tags] = useStoreCatalog()
+    const [categories, brands, tags] = useStoreCatalog()
     const [data, errors, isLoading] = useCategorisedProducts()
 
     useEffect(() => {

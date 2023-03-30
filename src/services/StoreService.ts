@@ -26,9 +26,7 @@ class StoreService {
     async getCategories(): Promise<any> {
         const categoriesPromise = new Promise((resolve, reject) => {
             try {
-                setTimeout(() => {
-                    resolve(CATEGORIES)
-                }, 1000)
+                resolve(CATEGORIES)
             } catch (error) {
                 reject(error)
             }
@@ -40,9 +38,7 @@ class StoreService {
     async getBrands(): Promise<any> {
         const brandsPromise = new Promise((resolve, reject) => {
             try {
-                setTimeout(() => {
-                    resolve(BRANDS)
-                }, 5000)
+                resolve(BRANDS)
             } catch (error) {
                 reject(error)
             }
@@ -54,9 +50,7 @@ class StoreService {
     async getTags(): Promise<any> {
         const tagsPromise = new Promise((resolve, reject) => {
             try {
-                setTimeout(() => {
-                    resolve(TAGS)
-                }, 10000)
+                resolve(TAGS)
             } catch (error) {
                 reject(error)
             }
@@ -68,8 +62,6 @@ class StoreService {
     async getByKeywords(keyword: string): Promise<any> {
         const itemsPromise = new Promise((resolve, reject) => {
             try {
-                console.log(keyword)
-
                 // todo: utils logic to find keyword from a string.
                 // todo: filter products by keyword
                 resolve(PRODUCTS)
