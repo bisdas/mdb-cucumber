@@ -7,14 +7,13 @@ import {
     SearchBoxWrapper,
     SearchTitle,
     SiteHeaderWrapper,
-    // SiteMottoWrapper,
+    SiteMottoWrapper,
 } from './HomePage.styled'
 import Section from '../../components/Section'
-import ProductCard from '../../components/ProductCard'
 import SearchBox from '../../components/SearchBox'
-// import SiteTitle from '../../components/SiteTitle'
-// import SiteMotto from '../../components/SiteMotto'
-// import ProfileLinks from '../../components/ProfileLinks'
+import SiteTitle from '../../components/SiteTitle'
+import SiteMotto from '../../components/SiteMotto'
+import ProfileLinks from '../../components/ProfileLinks'
 import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import useSearchBox from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
@@ -36,12 +35,12 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
         <OuterWrapper>
             <Content>
                 <SiteHeaderWrapper>
-                    {/* <SiteTitle /> */}
+                    <SiteTitle />
                     {/* <ProfileLinks /> */}
                 </SiteHeaderWrapper>
-                {/* <SiteMottoWrapper>
+                <SiteMottoWrapper>
                     <SiteMotto />
-                </SiteMottoWrapper> */}
+                </SiteMottoWrapper>
 
                 <SearchBoxWrapper>
                     <SearchTitle>Find your choice</SearchTitle>
