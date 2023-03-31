@@ -48,7 +48,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                 {categorisedItemsData.map((item: any) => (
                     <Section title={item.category.title} key={item.category.id}>
                         <ScrollableLayout>
-                            <ProductsInCategory categoryId={item.category} products={item.products} showAll={false} />
+                            <ProductsInCategory category={item.category} products={item.products} showAll={false} />
                         </ScrollableLayout>
                     </Section>
                 ))}

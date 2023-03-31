@@ -26,5 +26,5 @@ export const TitleText = styled.span`
     font-size: 12px;
     width: 100%;
     display: block;
-    line-height: 1px;
+    line-height: 4px;
 }`

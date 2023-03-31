@@ -3,13 +3,9 @@ import React, { type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, TitleWrapper, TitleText, Content } from './MoreProductsCard.styled'
 import { ReactComponent as ArrowRight } from '../../assets/icons/arrow-right.svg'
 
-interface IMoreProductsCardProps {
-    onShowMoreProducts: () => any
-}
-
-const MoreProductsCard: FunctionComponent<IMoreProductsCardProps> = ({ onShowMoreProducts }): ReactElement => {
+const MoreProductsCard: FunctionComponent = (): ReactElement => {
     return (
-        <OuterWrapper onClick={onShowMoreProducts}>
+        <OuterWrapper>
             <Content>
                 <TitleWrapper>
                     <TitleText>

@@ -10,11 +10,11 @@ const Text = styled.span`
 `
 export const First = styled(Text)`
     color: #000000;
-    font-size: 34px;
+    font-size: 32px;
 `
 export const Second = styled(Text)`
     color: #000000;
-    font-size: 34px;
+    font-size: 32px;
 `
 export const Third = styled(Text)`
     color: #000000;
