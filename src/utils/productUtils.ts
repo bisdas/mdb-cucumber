@@ -1,5 +1,4 @@
 export const organiseProductsByCategory = (products: any[]): any => {
-    console.log('organiseProductsByCategory')
     const organisedItems: any[] = products.reduce((allOrganisedItems: any[], currentProduct: any) => {
         const allOrganisedItemsModified = [...allOrganisedItems]
         currentProduct.categories.forEach((category: any) => {

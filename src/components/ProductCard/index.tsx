@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, ImageWrapper, ImageContent, TitleWrapper, TitleText, Anchor } from './ProductCard.styled'
+import Image from '../../assets/productThumbs/cold_pressed_oil.png'
 
 interface IProductCardProps {
     image: string
@@ -15,7 +16,8 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkT
         <OuterWrapper>
             <Anchor href={linkTo} target="_blank" title={title}>
                 <ImageWrapper>
-                    <ImageContent imageUrl={formattedImageUrl}></ImageContent>
+                    {/* <ImageContent imageUrl={formattedImageUrl}></ImageContent> */}
+                    <ImageContent imageUrl={Image}></ImageContent>
                 </ImageWrapper>
                 <TitleWrapper>
                     <TitleText>{shortTitle}</TitleText>
