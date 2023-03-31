@@ -76,7 +76,9 @@ export const CategoryTitle = styled.div`
     align-items: center;
 `
 
-export const ProductGridWrapper = styled.div``
+export const ProductGridWrapper = styled.div`
+    margin-top: 30px;
+`
 
 export const Grid = styled.div``
 

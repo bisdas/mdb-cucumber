@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, ImageWrapper, ImageContent, TitleWrapper, TitleText, Anchor } from './ProductCard.styled'
+
+// todo: remove hard code image
 import Image from '../../assets/productThumbs/cold_pressed_oil.png'
 
 interface IProductCardProps {

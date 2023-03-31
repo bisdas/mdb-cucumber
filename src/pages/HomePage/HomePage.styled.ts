@@ -28,7 +28,6 @@ export const SiteHeaderWrapper = styled.div`
     display: flex;
     flex-direction: row;
     background: #f5f5f5;
-    margin-bottom: 10px;
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
@@ -36,8 +35,10 @@ export const SiteHeaderWrapper = styled.div`
 
 export const SiteMottoWrapper = styled.div`
     padding: 6px 12px;
-    margin-top: 6px;
     margin-bottom: 18px;
+    background: #dedede;
+    padding-top: 16px;
+    padding-bottom: 16px;
 `
 export const LoaderWrapper = styled.div`
     padding: 6px 12px;

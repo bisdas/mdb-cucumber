@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { type FunctionComponent, type ReactElement, useMemo, useState, useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import {
     OuterWrapper,
     Content,
@@ -35,7 +36,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
         // fake delay to show the loader
         setTimeout(() => {
             setPageLoading(false)
-        }, 3000)
+        }, 500)
     })
 
     const category = productsData?.find((data: any) => data.category.id.trim() === id?.trim())
@@ -57,6 +58,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
         while (updatedProducts.length < fullLengthToMatchGrid) {
             updatedProducts.push({
                 isEmpty: true,
+                id: uuidv4(),
             })
         }
 

@@ -28,6 +28,5 @@ export const organiseProductsByCategory = (products: any[]): any => {
         return allOrganisedItemsModified
     }, [])
 
-    console.log(organisedItems)
     return organisedItems
 }
