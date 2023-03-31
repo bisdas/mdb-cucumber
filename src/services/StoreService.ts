@@ -19,7 +19,12 @@ class StoreService {
     async getCategorisedProducts(): Promise<any> {
         return await new Promise((resolve, reject) => {
             const result = organiseProductsByCategory(this.allProducts)
-            resolve(result)
+
+            setTimeout(() => {
+                resolve(result)
+            }, 500)
+
+            // hard coded delay
         })
     }
 
