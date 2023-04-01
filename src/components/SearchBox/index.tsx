@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled'
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
-// import { AppContext } from '../../stateManagement/contexts/appContext'
-// import { PAGES } from '../../configuration/constants'
 import { useLocation } from 'react-router-dom'
 import { ROUTES } from '../../router'
 
@@ -20,7 +18,6 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     icon = true,
 }): ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null)
-    // const [state] = useContext(AppContext)
     const location = useLocation()
 
     useEffect(() => {

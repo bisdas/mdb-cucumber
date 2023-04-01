@@ -19,15 +19,6 @@ export const PageContent = styled.div`
     margin-bottom: 60px;
 `
 
-export const LoaderWrapper = styled.div`
-    padding: 6px 12px;
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #2b2b2b;
-    font-size: 14px;
-    padding-left: 15px;
-    margin-top: 10px;
-`
-
 export const Description = styled.div``
 
 export const DescriptionFirstLine = styled.div`
@@ -78,18 +69,4 @@ export const CategoryTitle = styled.div`
 
 export const ProductGridWrapper = styled.div`
     margin-top: 30px;
-`
-
-export const Grid = styled.div``
-
-export const Column = styled.div``
-
-export const Row = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`
-
-export const ProductCardWrapper = styled.div`
-    display: inline-block;
 `

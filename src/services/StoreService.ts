@@ -4,13 +4,13 @@ import { CATEGORIES, BRANDS, TAGS } from '../storeCatalog/catalogs'
 import { organiseProductsByCategory } from '../utils/productUtils'
 
 class StoreService {
-    allProducts: any[]
+    products: any[]
     brands: any
     categories: any
     tags: any
 
     constructor(products: any[], categories: any, brands: any, tags: any) {
-        this.allProducts = products
+        this.products = products
         this.brands = brands
         this.categories = categories
         this.tags = tags
@@ -18,21 +18,24 @@ class StoreService {
 
     async getCategorisedProducts(): Promise<any> {
         return await new Promise((resolve, reject) => {
-            const result = organiseProductsByCategory(this.allProducts)
+            try {
+                const result = organiseProductsByCategory(this.products)
 
-            setTimeout(() => {
-                resolve(result)
-            }, 500)
-
-            // hard coded delay
+                // fake delay
+                setTimeout(() => {
+                    resolve(result)
+                }, 500)
+            } catch (error: any) {
+                reject(error)
+            }
         })
     }
 
     async getCategories(): Promise<any> {
         const categoriesPromise = new Promise((resolve, reject) => {
             try {
-                resolve(CATEGORIES)
-            } catch (error) {
+                resolve(this.categories)
+            } catch (error: any) {
                 reject(error)
             }
         })
@@ -43,8 +46,8 @@ class StoreService {
     async getBrands(): Promise<any> {
         const brandsPromise = new Promise((resolve, reject) => {
             try {
-                resolve(BRANDS)
-            } catch (error) {
+                resolve(this.brands)
+            } catch (error: any) {
                 reject(error)
             }
         })
@@ -55,8 +58,8 @@ class StoreService {
     async getTags(): Promise<any> {
         const tagsPromise = new Promise((resolve, reject) => {
             try {
-                resolve(TAGS)
-            } catch (error) {
+                resolve(this.tags)
+            } catch (error: any) {
                 reject(error)
             }
         })
@@ -65,12 +68,21 @@ class StoreService {
     }
 
     async getByKeywords(keyword: string): Promise<any> {
+        console.log('get by keywords', keyword)
         const itemsPromise = new Promise((resolve, reject) => {
             try {
                 // todo: utils logic to find keyword from a string.
                 // todo: filter products by keyword
-                resolve(PRODUCTS)
-            } catch (error) {
+
+                setTimeout(() => {
+                    // todo: remove hard code error
+                    if (keyword === 'error') {
+                        reject(new Error('error keyword'))
+                    } else {
+                        resolve(this.products)
+                    }
+                }, 3000)
+            } catch (error: any) {
                 reject(error)
             }
         })

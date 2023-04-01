@@ -3,7 +3,7 @@ export const PAGES = {
     SEARCH: 'SEARCH',
 }
 
-export const LONG_RUNNING_ACTIVITY = {
-    IDLE: 'IDLE',
-    RUNNING: 'RUNNING',
+export enum LONG_RUN_ACTIVITY {
+    IDLE = 'IDLE',
+    RUNNING = 'RUNNING',
 }

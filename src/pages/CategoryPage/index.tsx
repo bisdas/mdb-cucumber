@@ -7,24 +7,19 @@ import {
     Content,
     PageHeader,
     PageContent,
-    LoaderWrapper,
     Description,
     DescriptionFirstLine,
     DescriptionSecondLine,
     ProductGridWrapper,
     GoBackWrapper,
     CategoryTitle,
-    ProductCardWrapper,
-    Grid,
-    Column,
-    Row,
 } from './CategoryPage.styled'
+import { LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
 import { useParams } from 'react-router-dom'
 import { useRouter } from '../../router/useRouter'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
-import ProductCard from '../../components/ProductCard'
-import InvisibleCard from '../../components/InvisibleCard'
+import ProductsGrid from '../../components/ProductsGrid'
 
 const CategoryPage: FunctionComponent<any> = (): ReactElement => {
     const { navigateHome } = useRouter()
@@ -34,48 +29,17 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
 
     useEffect(() => {
         // fake delay to show the loader
+        // due to the fact that the context is not immediately
+        // updated after data is fetched from the store service,
+        // the service is recalled.
+        // todo: check why the service is called multiple times
+
         setTimeout(() => {
             setPageLoading(false)
         }, 500)
     })
 
     const category = productsData?.find((data: any) => data.category.id.trim() === id?.trim())
-    const numberOfColumns = 3
-
-    const productsGrid = useMemo(() => {
-        if (isProductsLoading === true) {
-            return []
-        }
-
-        const updatedProducts = category.products.map((product: any) => ({
-            ...product,
-            isEmpty: false,
-        }))
-
-        const totalNumberOfRows = Math.ceil(category.products.length / numberOfColumns)
-        const fullLengthToMatchGrid = totalNumberOfRows * numberOfColumns
-
-        while (updatedProducts.length < fullLengthToMatchGrid) {
-            updatedProducts.push({
-                isEmpty: true,
-                id: uuidv4(),
-            })
-        }
-
-        const grid = updatedProducts.reduce((grid: any[], currentItem: any, currentIndex: number) => {
-            const modifiedGrid = [...grid]
-            const isFirstElement = currentIndex % numberOfColumns === 0
-
-            if (isFirstElement) {
-                modifiedGrid.push([])
-            }
-
-            modifiedGrid[modifiedGrid.length - 1].push(currentItem)
-            return modifiedGrid
-        }, [])
-
-        return grid
-    }, [category?.products, numberOfColumns])
 
     const navigateToHomePage = (): void => {
         navigateHome()
@@ -103,29 +67,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
                         </Description>
 
                         <ProductGridWrapper>
-                            <Grid>
-                                {productsGrid.map((gridRow: any, index: number) => (
-                                    <Row key={index}>
-                                        {gridRow.map((gridColumn: any) => (
-                                            <Column key={gridColumn.id}>
-                                                {gridColumn.isEmpty === false ? (
-                                                    <ProductCardWrapper>
-                                                        <ProductCard
-                                                            image={gridColumn.thumbnail}
-                                                            title={gridColumn.title}
-                                                            linkTo={gridColumn.targetLink}
-                                                        />
-                                                    </ProductCardWrapper>
-                                                ) : (
-                                                    <ProductCardWrapper>
-                                                        <InvisibleCard />
-                                                    </ProductCardWrapper>
-                                                )}
-                                            </Column>
-                                        ))}
-                                    </Row>
-                                ))}
-                            </Grid>
+                            <ProductsGrid products={category.products} numberOfColumns={3} />
                         </ProductGridWrapper>
                     </PageContent>
                 )}

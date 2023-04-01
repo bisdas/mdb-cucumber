@@ -1,29 +1,38 @@
-import { useEffect, useState, useRef } from 'react'
-import { debounce } from '../utils/utils'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useState, useContext, useEffect } from 'react'
 
-const useSearchBox = (): any => {
+import { useSearchProducts } from './useSearchProducts'
+import {
+    StoreContext,
+    createFilteredProductsDataAction,
+    createFilteredProductsErrorAction,
+    createFilteredProductsRequestAction,
+} from '../stateManagement/storeState'
+
+export const useSearchBox = (): any => {
+    const [_, dispatchToStore] = useContext(StoreContext)
     const [keyword, setKeyword] = useState('')
-    const searchHookRef = useRef()
-
-    const onSearch = debounce(
-        searchHookRef,
-        (): void => {
-            console.log('useSearchBox received', keyword)
-        },
-        500
-    )
+    const { isLoading, products, error } = useSearchProducts(keyword)
 
     useEffect(() => {
-        if (keyword.trim() !== '') {
-            onSearch()
+        if (keyword.trim() === '') {
+            dispatchToStore(createFilteredProductsDataAction([]))
         }
-    }, [keyword, onSearch])
 
-    const onChangeSearchInput = (enteredValue: string): void => {
+        // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+        if (isLoading) {
+            dispatchToStore(createFilteredProductsRequestAction())
+        } else if (error !== null) {
+            dispatchToStore(createFilteredProductsErrorAction(error))
+        } else if (products?.length > 0) {
+            dispatchToStore(createFilteredProductsDataAction(products))
+        }
+    }, [isLoading, products, error, keyword, dispatchToStore])
+
+    console.log('status', status, 'products', products, 'error', error)
+    const onChangeInput = (enteredValue: string): void => {
         setKeyword(enteredValue)
     }
 
-    return { onChangeSearchInput }
+    return { onChangeInput }
 }
-
-export default useSearchBox

@@ -26,6 +26,11 @@ export interface IStoreState {
         data: any[]
         errors: any[]
     }
+    filteredProducts: {
+        isLoading: boolean
+        data: any[]
+        errors: any[]
+    }
 }
 
 /* initial state */
@@ -50,6 +55,11 @@ export const productsInitialState: IStoreState = {
         data: [],
         errors: [],
     },
+    filteredProducts: {
+        isLoading: false,
+        data: [],
+        errors: [],
+    },
 }
 
 /* actions */
@@ -68,6 +78,10 @@ const TAGS_ERROR = 'TAGS_ERROR'
 const CATEGORISED_PRODUCTS_REQUEST = 'CATEGORISED_PRODUCTS_REQUEST'
 const CATEGORISED_PRODUCTS_DATA = 'CATEGORISED_PRODUCTS_DATA'
 const CATEGORISED_PRODUCTS_ERROR = 'CATEGORISED_PRODUCTS_ERROR'
+
+const FILTERED_PRODUCTS_REQUEST = 'FILTERED_PRODUCTS_REQUEST'
+const FILTERED_PRODUCTS_DATA = 'FILTERED_PRODUCTS_DATA'
+const FILTERED_PRODUCTS_ERROR = 'FILTERED_PRODUCTS_ERROR'
 
 /* action creators */
 export const createCategoriesRequestAction = (): any => {
@@ -148,6 +162,27 @@ export const createCategorisedProductsDataAction = (data: any): any => {
 export const createCategorisedProductsErrorAction = (error: any): any => {
     return {
         type: CATEGORISED_PRODUCTS_ERROR,
+        value: error,
+    }
+}
+
+export const createFilteredProductsRequestAction = (): any => {
+    return {
+        type: FILTERED_PRODUCTS_REQUEST,
+        value: true,
+    }
+}
+
+export const createFilteredProductsDataAction = (data: any): any => {
+    return {
+        type: FILTERED_PRODUCTS_DATA,
+        value: data,
+    }
+}
+
+export const createFilteredProductsErrorAction = (error: any): any => {
+    return {
+        type: FILTERED_PRODUCTS_ERROR,
         value: error,
     }
 }
@@ -267,6 +302,35 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
             return {
                 ...state,
                 categorisedProducts: {
+                    isLoading: false,
+                    data: [],
+                    errors: value,
+                },
+            }
+        case FILTERED_PRODUCTS_REQUEST:
+            return {
+                ...state,
+                filteredProducts: {
+                    isLoading: true,
+                    data: [],
+                    errors: [],
+                },
+            }
+
+        case FILTERED_PRODUCTS_DATA:
+            return {
+                ...state,
+                filteredProducts: {
+                    isLoading: false,
+                    data: value,
+                    errors: [],
+                },
+            }
+
+        case FILTERED_PRODUCTS_ERROR:
+            return {
+                ...state,
+                filteredProducts: {
                     isLoading: false,
                     data: [],
                     errors: value,
