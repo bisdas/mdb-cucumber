@@ -51,10 +51,12 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
                     </LoaderWrapper>
                 ) : (
                     <PageContent>
-                        <Description>
-                            <DescriptionFirstLine>{filteredProducts?.data.length} items</DescriptionFirstLine>
-                            <DescriptionSecondLine>matched your search</DescriptionSecondLine>
-                        </Description>
+                        {filteredProducts?.data?.length !== 0 && (
+                            <Description>
+                                <DescriptionFirstLine>{filteredProducts?.data.length} items</DescriptionFirstLine>
+                                <DescriptionSecondLine>matched your search</DescriptionSecondLine>
+                            </Description>
+                        )}
 
                         <ProductGridWrapper>
                             <ProductsGrid products={filteredProducts?.data} numberOfColumns={3} />
