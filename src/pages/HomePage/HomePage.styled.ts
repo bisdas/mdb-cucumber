@@ -35,8 +35,6 @@ export const SiteHeaderWrapper = styled.div`
 
 export const SiteMottoWrapper = styled.div`
     padding: 6px 12px;
-    margin-bottom: 18px;
-    background: #dedede;
     padding-top: 16px;
     padding-bottom: 16px;
 `

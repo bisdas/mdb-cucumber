@@ -2,12 +2,11 @@ import React, { type FunctionComponent, type ReactElement } from 'react'
 import { OuterWrapper, Content, PageHeader, SearchBoxWrapper, GoBackWrapper } from './SearchPage.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
 import SearchBox from '../../components/SearchBox'
-import useSearchBox from '../../hooks/useSearchBox'
+import { useSearchBox } from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
 
 const SearchPage: FunctionComponent<any> = (): ReactElement => {
-    const { onChangeSearchInput } = useSearchBox()
-
+    const { onChangeInput } = useSearchBox()
     const { navigateHome } = useRouter()
     const navigateToHomePage = (): void => {
         navigateHome()
@@ -21,7 +20,7 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
                         <BackArrow onClick={navigateToHomePage} />
                     </GoBackWrapper>
                     <SearchBoxWrapper>
-                        <SearchBox onSearch={onChangeSearchInput} seamless={true} icon={false} />
+                        <SearchBox onSearch={onChangeInput} seamless={true} icon={false} />
                     </SearchBoxWrapper>
                 </PageHeader>
             </Content>

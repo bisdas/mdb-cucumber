@@ -1,29 +1,15 @@
-import { useEffect, useState, useRef } from 'react'
-import { debounce } from '../utils/utils'
+import { useState } from 'react'
 
-const useSearchBox = (): any => {
+import { useSearchProducts } from './useSearchProducts'
+
+export const useSearchBox = (): any => {
     const [keyword, setKeyword] = useState('')
-    const searchHookRef = useRef()
+    const { status, products, error } = useSearchProducts(keyword)
 
-    const onSearch = debounce(
-        searchHookRef,
-        (): void => {
-            console.log('useSearchBox received', keyword)
-        },
-        500
-    )
-
-    useEffect(() => {
-        if (keyword.trim() !== '') {
-            onSearch()
-        }
-    }, [keyword, onSearch])
-
-    const onChangeSearchInput = (enteredValue: string): void => {
+    console.log('status', status, 'products', products, 'error', error)
+    const onChangeInput = (enteredValue: string): void => {
         setKeyword(enteredValue)
     }
 
-    return { onChangeSearchInput }
+    return { onChangeInput }
 }
-
-export default useSearchBox
