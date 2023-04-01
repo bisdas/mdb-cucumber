@@ -4,7 +4,7 @@ import StoreService from '../services/StoreService'
 import { debounce } from '../utils/utils'
 
 interface IUseSearchProducts {
-    status: LONG_RUN_ACTIVITY
+    isLoading: boolean
     products: any[]
     error: any
 }
@@ -53,5 +53,6 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
         fetchProducts()
     }, [keyword, fetchProducts])
 
-    return { status, products, error }
+    const isLoading: boolean = status === LONG_RUN_ACTIVITY.RUNNING
+    return { isLoading, products, error }
 }

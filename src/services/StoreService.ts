@@ -75,7 +75,12 @@ class StoreService {
                 // todo: filter products by keyword
 
                 setTimeout(() => {
-                    resolve(this.products)
+                    // todo: remove hard code error
+                    if (keyword === 'error') {
+                        reject(new Error('error keyword'))
+                    } else {
+                        resolve(this.products)
+                    }
                 }, 3000)
             } catch (error: any) {
                 reject(error)

@@ -38,9 +38,3 @@ export const SiteMottoWrapper = styled.div`
     padding-top: 16px;
     padding-bottom: 16px;
 `
-export const LoaderWrapper = styled.div`
-    padding: 6px 12px;
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #2b2b2b;
-    font-size: 14px;
-`

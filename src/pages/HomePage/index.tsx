@@ -7,14 +7,12 @@ import {
     SearchTitle,
     SiteHeaderWrapper,
     SiteMottoWrapper,
-    LoaderWrapper,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
 import SiteTitle from '../../components/SiteTitle'
 import SiteMotto from '../../components/SiteMotto'
-import ProfileLinks from '../../components/ProfileLinks'
-import { ScrollableLayout } from '../../components/SharedComponents/SharedStyledComponents.styled'
+import { ScrollableLayout, LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import { useSearchBox } from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
 import useStartUp from '../../hooks/useStartUp'
@@ -36,7 +34,6 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
             <Content>
                 <SiteHeaderWrapper>
                     <SiteTitle />
-                    {/* <ProfileLinks /> */}
                 </SiteHeaderWrapper>
                 <SiteMottoWrapper>
                     <SiteMotto />

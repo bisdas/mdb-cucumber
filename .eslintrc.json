@@ -13,7 +13,17 @@
     "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": true,
+                "object": true
+            },
+            {
+                "enforceForRenamedProperties": false
+            }
+        ]
     },
     "settings": {
         "react": {

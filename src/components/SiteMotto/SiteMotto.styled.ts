@@ -9,12 +9,12 @@ const Text = styled.span`
     font-size: 11px;
 `
 export const First = styled(Text)`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     font-size: 24px;
 `
 export const Second = styled(Text)`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     font-size: 24px;
 `
