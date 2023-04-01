@@ -19,6 +19,7 @@ import { useSearchBox } from '../../hooks/useSearchBox'
 import { useRouter } from '../../router/useRouter'
 import { StoreContext } from '../../stateManagement/storeState'
 import ProductsGrid from '../../components/ProductsGrid'
+import Spinner from '../../components/Spinner'
 
 const SearchPage: FunctionComponent<any> = (): ReactElement => {
     const [storeData] = useContext(StoreContext)
@@ -46,14 +47,16 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
 
                 {filteredProducts?.isLoading === true ? (
                     <LoaderWrapper>
-                        <div>Loading...</div>
+                        <Spinner />
                     </LoaderWrapper>
                 ) : (
                     <PageContent>
-                        <Description>
-                            <DescriptionFirstLine>{filteredProducts?.data.length} items</DescriptionFirstLine>
-                            <DescriptionSecondLine>matched your search</DescriptionSecondLine>
-                        </Description>
+                        {filteredProducts?.data?.length !== 0 && (
+                            <Description>
+                                <DescriptionFirstLine>{filteredProducts?.data.length} items</DescriptionFirstLine>
+                                <DescriptionSecondLine>matched your search</DescriptionSecondLine>
+                            </Description>
+                        )}
 
                         <ProductGridWrapper>
                             <ProductsGrid products={filteredProducts?.data} numberOfColumns={3} />

@@ -20,6 +20,7 @@ import { useParams } from 'react-router-dom'
 import { useRouter } from '../../router/useRouter'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import ProductsGrid from '../../components/ProductsGrid'
+import Spinner from '../../components/Spinner'
 
 const CategoryPage: FunctionComponent<any> = (): ReactElement => {
     const { navigateHome } = useRouter()
@@ -57,7 +58,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
 
                 {isProductsLoading === true || pageLoading ? (
                     <LoaderWrapper>
-                        <div>Loading...</div>
+                        <Spinner />
                     </LoaderWrapper>
                 ) : (
                     <PageContent>

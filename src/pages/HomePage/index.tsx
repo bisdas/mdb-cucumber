@@ -18,6 +18,7 @@ import { useRouter } from '../../router/useRouter'
 import useStartUp from '../../hooks/useStartUp'
 import ProductsInCategory from '../../components/ProductsInCategory'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
+import Spinner from '../../components/Spinner'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -45,7 +46,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
                 {categorisedItemsLoading === true ? (
                     <LoaderWrapper>
-                        <div>Loading...</div>
+                        <Spinner />
                     </LoaderWrapper>
                 ) : (
                     <>

@@ -8,3 +8,4 @@ Hooks - useState, useEffect, useContext, useReducer
 Custom Hooks
 Design Patterns - Singleton patterns
 Styling - Styled components, SASS, CSS
+Programming Languages - JavaScript, TypeScript

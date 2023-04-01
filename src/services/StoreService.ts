@@ -81,7 +81,7 @@ class StoreService {
                     } else {
                         resolve(this.products)
                     }
-                }, 3000)
+                }, 300)
             } catch (error: any) {
                 reject(error)
             }
