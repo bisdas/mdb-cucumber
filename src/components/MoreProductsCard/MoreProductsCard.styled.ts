@@ -23,8 +23,8 @@ export const TitleWrapper = styled.div`
 export const TitleText = styled.span`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 12px;
+    font-size: 11px;
     width: 100%;
     display: block;
-    line-height: 4px;
+    line-height: 0;
 }`

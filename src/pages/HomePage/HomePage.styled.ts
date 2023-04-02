@@ -38,3 +38,5 @@ export const SiteMottoWrapper = styled.div`
     padding-top: 16px;
     padding-bottom: 16px;
 `
+
+export const MenuItem = styled.div``

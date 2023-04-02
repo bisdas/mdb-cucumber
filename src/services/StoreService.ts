@@ -2,6 +2,7 @@
 import { PRODUCTS } from '../storeCatalog/products'
 import { CATEGORIES, BRANDS, TAGS } from '../storeCatalog/catalogs'
 import { organiseProductsByCategory } from '../utils/productUtils'
+import { getRandomNumber } from '../utils/utils'
 
 class StoreService {
     products: any[]
@@ -22,9 +23,10 @@ class StoreService {
                 const result = organiseProductsByCategory(this.products)
 
                 // fake delay
+                const ramdomDelay = getRandomNumber(10, 600)
                 setTimeout(() => {
                     resolve(result)
-                }, 500)
+                }, ramdomDelay)
             } catch (error: any) {
                 reject(error)
             }
@@ -74,6 +76,8 @@ class StoreService {
                 // todo: utils logic to find keyword from a string.
                 // todo: filter products by keyword
 
+                // fake delay
+                const ramdomDelay = getRandomNumber(10, 600)
                 setTimeout(() => {
                     // todo: remove hard code error
                     if (keyword === 'error') {
@@ -81,7 +85,7 @@ class StoreService {
                     } else {
                         resolve(this.products)
                     }
-                }, 300)
+                }, ramdomDelay)
             } catch (error: any) {
                 reject(error)
             }
