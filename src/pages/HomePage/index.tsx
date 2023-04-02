@@ -7,6 +7,7 @@ import {
     SearchTitle,
     SiteHeaderWrapper,
     SiteMottoWrapper,
+    MenuItem,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
@@ -19,6 +20,7 @@ import useStartUp from '../../hooks/useStartUp'
 import ProductsInCategory from '../../components/ProductsInCategory'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
+import HamburgerMenu from '../../components/HamburgerMenu'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -35,6 +37,13 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
             <Content>
                 <SiteHeaderWrapper>
                     <SiteTitle />
+
+                    <HamburgerMenu>
+                        <MenuItem>About us</MenuItem>
+                        <MenuItem>Instagram</MenuItem>
+                        <MenuItem>YouTube</MenuItem>
+                        <MenuItem>How this site works</MenuItem>
+                    </HamburgerMenu>
                 </SiteHeaderWrapper>
                 <SiteMottoWrapper>
                     <SiteMotto />

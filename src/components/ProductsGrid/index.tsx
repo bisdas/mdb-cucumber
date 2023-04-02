@@ -41,7 +41,7 @@ const ProductsGrid: FunctionComponent<IProductsGridProps> = ({ products, numberO
         }, [])
 
         return grid
-    }, [sanitizedProducts, numberOfColumns])
+    }, [numberOfColumns])
 
     return (
         <OuterWrapper>

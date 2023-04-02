@@ -21,6 +21,7 @@ import { useRouter } from '../../router/useRouter'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import ProductsGrid from '../../components/ProductsGrid'
 import Spinner from '../../components/Spinner'
+import { getRandomNumber } from '../../utils/utils'
 
 const CategoryPage: FunctionComponent<any> = (): ReactElement => {
     const { navigateHome } = useRouter()
@@ -35,9 +36,10 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
         // the service is recalled.
         // todo: check why the service is called multiple times
 
+        const randomDelay = getRandomNumber(100, 500)
         setTimeout(() => {
             setPageLoading(false)
-        }, 500)
+        }, randomDelay)
     })
 
     const category = productsData?.find((data: any) => data.category.id.trim() === id?.trim())

@@ -29,7 +29,7 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
                 </SingleProductWrapper>
             ))}
 
-            <Link to={moreItemsLink}>
+            <Link to={moreItemsLink} style={{ textDecoration: 'none' }}>
                 <MoreProductsCard />
             </Link>
         </>
