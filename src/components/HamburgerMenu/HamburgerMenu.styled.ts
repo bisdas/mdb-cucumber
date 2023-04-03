@@ -32,4 +32,5 @@ export const MenuContent = styled.div`
     flex: 7;
     background: #ffffff;
     opacity: 1;
+    box-sizing: border-box;
 `
