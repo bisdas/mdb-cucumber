@@ -1,7 +1,6 @@
 import styled from 'styled-components/macro'
 
 export const ScrollableLayout = styled.div`
-    padding: 0 12px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;

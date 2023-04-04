@@ -7,6 +7,7 @@ import {
     SearchTitle,
     SiteHeaderWrapper,
     SiteMottoWrapper,
+    ProductSectionsWrapper,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
@@ -49,25 +50,27 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
-                {categorisedItemsLoading === true ? (
-                    <LoaderWrapper>
-                        <Spinner />
-                    </LoaderWrapper>
-                ) : (
-                    <>
-                        {categorisedItemsData.map((item: any) => (
-                            <Section title={item.category.title} key={item.category.id}>
-                                <ScrollableLayout>
-                                    <ProductsInCategory
-                                        category={item.category}
-                                        products={item.products}
-                                        showAll={false}
-                                    />
-                                </ScrollableLayout>
-                            </Section>
-                        ))}
-                    </>
-                )}
+                <ProductSectionsWrapper>
+                    {categorisedItemsLoading === true ? (
+                        <LoaderWrapper>
+                            <Spinner />
+                        </LoaderWrapper>
+                    ) : (
+                        <>
+                            {categorisedItemsData.map((item: any) => (
+                                <Section title={item.category.title} key={item.category.id}>
+                                    <ScrollableLayout>
+                                        <ProductsInCategory
+                                            category={item.category}
+                                            products={item.products}
+                                            showAll={false}
+                                        />
+                                    </ScrollableLayout>
+                                </Section>
+                            ))}
+                        </>
+                    )}
+                </ProductSectionsWrapper>
             </Content>
         </OuterWrapper>
     )

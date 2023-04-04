@@ -23,7 +23,7 @@ class StoreService {
                 const result = organiseProductsByCategory(this.products)
 
                 // fake delay
-                const ramdomDelay = getRandomNumber(10, 600)
+                const ramdomDelay = getRandomNumber(100, 1000)
                 setTimeout(() => {
                     resolve(result)
                 }, ramdomDelay)
@@ -77,7 +77,7 @@ class StoreService {
                 // todo: filter products by keyword
 
                 // fake delay
-                const ramdomDelay = getRandomNumber(10, 600)
+                const ramdomDelay = getRandomNumber(100, 1000)
                 setTimeout(() => {
                     // todo: remove hard code error
                     if (keyword === 'error') {

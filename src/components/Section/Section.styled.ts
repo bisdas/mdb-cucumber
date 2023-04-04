@@ -6,7 +6,6 @@ export const OuterWrapper = styled.div`
 export const ContentWrapper = styled.div``
 
 export const TitleWrapper = styled.div`
-    padding: 6px 12px;
     box-sizing: border-box;
     white-space: break-spaces;
     margin-bottom: 6px;
