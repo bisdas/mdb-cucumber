@@ -105,21 +105,17 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                             </MenuItem>
                         </MenuSection>
                         <MenuSection>
-                            <SocialLinkHead>
-                                <SocialLinkExploreLineOne>Explore</SocialLinkExploreLineOne>
-                                <SocialLinkExploreLineTwo>Delish Bowl</SocialLinkExploreLineTwo>
-                                <SocialLinkButtons>
-                                    <SocialLink>
-                                        <InstagramIcon height={14} width={14} />
-                                    </SocialLink>
-                                    <SocialLink>
-                                        <YouTubeIcon height={14} width={14} />
-                                    </SocialLink>
-                                    <SocialLink>
-                                        <FacebookIcon height={14} width={14} />
-                                    </SocialLink>
-                                </SocialLinkButtons>
-                            </SocialLinkHead>
+                            <SocialLinkButtons>
+                                <SocialLink>
+                                    <InstagramIcon height={14} width={14} />
+                                </SocialLink>
+                                <SocialLink>
+                                    <YouTubeIcon height={14} width={14} />
+                                </SocialLink>
+                                <SocialLink>
+                                    <FacebookIcon height={14} width={14} />
+                                </SocialLink>
+                            </SocialLinkButtons>
                         </MenuSection>
                     </HamburgerMenu>
                 </SiteHeaderWrapper>

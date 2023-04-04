@@ -57,9 +57,9 @@ export const MenuNavigateIcon = styled.span<IMenuItemIcon>`
     top: ${props => props.adjustTopPosition}px;
 `
 export const MenuItemTitle = styled.span`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 13px;
+    font-size: 14px;
     margin-left: 6px;
     flex: 1;
     border-bottom: 1px solid #f2f2f2;
@@ -129,11 +129,11 @@ export const SocialLink = styled.span`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 32px;
-    width: 32px;
+    height: 26px;
+    width: 26px;
     border-radius: 50%;
-    margin-right: 12px;
-    border-width: 1px;
-    border-color: #e4e4e4;
-    border-style: solid;
+    margin-right: 10px;
+    border: 1px solid #e4e4e4;
+    background: #ffffff;
+    box-sizing: border-box;
 `
