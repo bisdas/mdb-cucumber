@@ -20,9 +20,6 @@ import {
     MenuItemIcon,
     MenuItemTitle,
     MenuNavigateIcon,
-    SocialLinkHead,
-    SocialLinkExploreLineOne,
-    SocialLinkExploreLineTwo,
     SocialLinkButtons,
     SocialLink,
 } from './HomePage.styled'
@@ -115,7 +112,6 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                                 <SocialLink>
                                     <FacebookIcon height={14} width={14} />
                                 </SocialLink>
-                                
                             </SocialLinkButtons>
                         </MenuSection>
                     </HamburgerMenu>

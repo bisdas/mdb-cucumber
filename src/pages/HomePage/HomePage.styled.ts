@@ -106,21 +106,6 @@ export const DelishBowl = styled.span`
     font-size: 10px;
 `
 
-export const SocialLinkHead = styled.div``
-
-export const SocialLinkExploreLineOne = styled.div`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 12px;
-    margin-right: 3px;
-`
-export const SocialLinkExploreLineTwo = styled.div`
-    font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 14px;
-    margin-right: 3px;
-`
-
 export const SocialLinkButtons = styled.div`
     margin-top: 6px;
 `
