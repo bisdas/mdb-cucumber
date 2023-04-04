@@ -7,21 +7,6 @@ import {
     SearchTitle,
     SiteHeaderWrapper,
     SiteMottoWrapper,
-    MenuItem,
-    MenuHead,
-    SubtitleOne,
-    SubtitleTwo,
-    ByDelishBowl,
-    By,
-    DelishBowl,
-    Title,
-    MenuHeadSection,
-    MenuSection,
-    MenuItemIcon,
-    MenuItemTitle,
-    MenuNavigateIcon,
-    SocialLinkButtons,
-    SocialLink,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
@@ -35,14 +20,7 @@ import ProductsInCategory from '../../components/ProductsInCategory'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
 import HamburgerMenu from '../../components/HamburgerMenu'
-
-import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
-import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
-import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
-import { ReactComponent as ContactIcon } from '../../assets/icons/contact-us.svg'
-import { ReactComponent as FeedbackIcon } from '../../assets/icons/feedback.svg'
-import { ReactComponent as GoHomeIcon } from '../../assets/icons/go-home.svg'
-import { ReactComponent as ArrowRightShortIcon } from '../../assets/icons/arrow-right-short.svg'
+import SideMenuContent from '../../components/SideMenuContent'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -59,61 +37,8 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
             <Content>
                 <SiteHeaderWrapper>
                     <SiteTitle />
-
                     <HamburgerMenu>
-                        <MenuHeadSection>
-                            <MenuHead>
-                                <Title>Cucumber</Title>
-                                <SubtitleOne>Ideas for your</SubtitleOne>
-                                <SubtitleTwo>kitchen.</SubtitleTwo>
-                                <ByDelishBowl>
-                                    <By>by</By>
-                                    <DelishBowl>Delish Bowl</DelishBowl>
-                                </ByDelishBowl>
-                            </MenuHead>
-                        </MenuHeadSection>
-                        <MenuSection>
-                            <MenuItem>
-                                <MenuItemIcon adjustTopPosition={0}>
-                                    <GoHomeIcon height={16} width={16} />
-                                </MenuItemIcon>
-                                <MenuItemTitle>Delish Bowl - Home</MenuItemTitle>
-                                <MenuNavigateIcon adjustTopPosition={-1}>
-                                    <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
-                                </MenuNavigateIcon>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuItemIcon adjustTopPosition={1}>
-                                    <ContactIcon height={16} width={16} />
-                                </MenuItemIcon>
-                                <MenuItemTitle>Contact us</MenuItemTitle>
-                                <MenuNavigateIcon adjustTopPosition={-1}>
-                                    <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
-                                </MenuNavigateIcon>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuItemIcon adjustTopPosition={1}>
-                                    <FeedbackIcon height={16} width={16} />
-                                </MenuItemIcon>
-                                <MenuItemTitle>Leave us a feedback</MenuItemTitle>
-                                <MenuNavigateIcon adjustTopPosition={-1}>
-                                    <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
-                                </MenuNavigateIcon>
-                            </MenuItem>
-                        </MenuSection>
-                        <MenuSection>
-                            <SocialLinkButtons>
-                                <SocialLink>
-                                    <InstagramIcon height={14} width={14} />
-                                </SocialLink>
-                                <SocialLink>
-                                    <YouTubeIcon height={14} width={14} />
-                                </SocialLink>
-                                <SocialLink>
-                                    <FacebookIcon height={14} width={14} />
-                                </SocialLink>
-                            </SocialLinkButtons>
-                        </MenuSection>
+                        <SideMenuContent />
                     </HamburgerMenu>
                 </SiteHeaderWrapper>
                 <SiteMottoWrapper>
