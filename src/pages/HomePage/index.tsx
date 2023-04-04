@@ -74,7 +74,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                         </MenuHeadSection>
                         <MenuSection>
                             <MenuItem>
-                                <MenuItemIcon adjustTopPosition={-1}>
+                                <MenuItemIcon adjustTopPosition={0}>
                                     <GoHomeIcon height={16} width={16} />
                                 </MenuItemIcon>
                                 <MenuItemTitle>Delish Bowl - Home</MenuItemTitle>
@@ -83,7 +83,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                                 </MenuNavigateIcon>
                             </MenuItem>
                             <MenuItem>
-                                <MenuItemIcon adjustTopPosition={0}>
+                                <MenuItemIcon adjustTopPosition={1}>
                                     <ContactIcon height={16} width={16} />
                                 </MenuItemIcon>
                                 <MenuItemTitle>Contact us</MenuItemTitle>
@@ -92,7 +92,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                                 </MenuNavigateIcon>
                             </MenuItem>
                             <MenuItem>
-                                <MenuItemIcon adjustTopPosition={0}>
+                                <MenuItemIcon adjustTopPosition={1}>
                                     <FeedbackIcon height={16} width={16} />
                                 </MenuItemIcon>
                                 <MenuItemTitle>Leave us a feedback</MenuItemTitle>
