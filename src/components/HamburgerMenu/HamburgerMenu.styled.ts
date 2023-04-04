@@ -19,7 +19,7 @@ export const MenuContentWrapper = styled.div`
     width: 100vw;
     display: flex;
     flex-direction: row;
-    animation: 0.3s ${fadeIn};
+    animation: 0.4s ${fadeIn};
 `
 
 export const Backdrop = styled.div`

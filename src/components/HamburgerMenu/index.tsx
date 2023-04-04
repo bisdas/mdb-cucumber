@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, type FunctionComponent } from 'react'
 import { Portal } from '../Portal'
+import { useScrollLock } from '../../hooks/useScrollLock'
 import { OuterWrapper, Trigger, MenuContentWrapper, Backdrop, MenuContent } from './HamburgerMenu.styled'
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu-alt.svg'
 
 const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    useScrollLock(isMenuOpen)
     return (
         <OuterWrapper>
             <Trigger
