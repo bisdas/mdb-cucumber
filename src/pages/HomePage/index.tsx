@@ -23,6 +23,7 @@ import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
 import HamburgerMenu from '../../components/HamburgerMenu'
 import SideMenuContent from '../../components/SideMenuContent'
+import SiteFooter from '../../components/SiteFooter'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -72,7 +73,9 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                         </>
                     )}
                 </ProductSectionsWrapper>
-                <SiteFooterWrapper>Site Footer</SiteFooterWrapper>
+                <SiteFooterWrapper>
+                    <SiteFooter />
+                </SiteFooterWrapper>
             </Content>
         </OuterWrapper>
     )
