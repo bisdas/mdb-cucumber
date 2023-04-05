@@ -12,9 +12,9 @@ interface LinkProps {
     height: number
 }
 export const Link = styled.div<LinkProps>`
-    background-image: url(${props => props.backgroundImage});
-    height: ${props => props.width}px;
-    width: ${props => props.height}px;
+    background-image: url(${(props) => props.backgroundImage});
+    height: ${(props) => props.width}px;
+    width: ${(props) => props.height}px;
     background-position: center;
     background-size: cover;
     margin-left: 12px;

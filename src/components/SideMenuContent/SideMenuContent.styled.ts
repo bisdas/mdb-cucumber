@@ -13,11 +13,11 @@ interface IMenuItemIcon {
 }
 export const MenuItemIcon = styled.span<IMenuItemIcon>`
     position: relative;
-    top: ${props => props.adjustTopPosition}px;
+    top: ${(props) => props.adjustTopPosition}px;
 `
 export const MenuNavigateIcon = styled.span<IMenuItemIcon>`
     position: relative;
-    top: ${props => props.adjustTopPosition}px;
+    top: ${(props) => props.adjustTopPosition}px;
 `
 export const MenuItemTitle = styled.span`
     font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';

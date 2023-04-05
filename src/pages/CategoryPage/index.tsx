@@ -36,7 +36,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
         // the service is recalled.
         // todo: check why the service is called multiple times
 
-        const randomDelay = getRandomNumber(100, 500)
+        const randomDelay = getRandomNumber(100, 1000)
         setTimeout(() => {
             setPageLoading(false)
         }, randomDelay)

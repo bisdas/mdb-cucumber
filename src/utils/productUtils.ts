@@ -11,7 +11,7 @@ export const organiseProductsByCategory = (products: any[]): any => {
                 thumbnail: currentProduct.thumbnail,
             }
 
-            const existingCategory = allOrganisedItemsModified.find(item => item.category.id === category.id)
+            const existingCategory = allOrganisedItemsModified.find((item) => item.category.id === category.id)
             if (existingCategory === undefined) {
                 allOrganisedItemsModified.push({
                     category: {

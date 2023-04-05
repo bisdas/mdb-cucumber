@@ -5,7 +5,7 @@ interface IOuterWrapperProps {
 }
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     margin-top: 6px;
-    border: ${props => (props?.seamless === false ? '2px solid #cecece' : 'none')};
+    border: ${(props) => (props?.seamless === false ? '2px solid #cecece' : 'none')};
     border-radius: 6px;
     height: 36px;
 `
@@ -30,7 +30,7 @@ export const SearchForm = styled.form<ISearchFormProps>`
     flex-direction: row;
     align-items: center;
     height: 36px;
-    padding-left: ${props => (props.seamless ? '0' : '14px')};
+    padding-left: ${(props) => (props.seamless ? '0' : '14px')};
     padding-right: 5px;
 `
 

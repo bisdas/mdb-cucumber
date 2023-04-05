@@ -1,4 +1,9 @@
-import styled from 'styled-components/macro'
+import styled, { keyframes } from 'styled-components/macro'
+
+const fadeIn = keyframes`
+    0%   {opacity: 0}
+    100% {opacity: 1}
+`
 
 export const OuterWrapper = styled.div``
 
@@ -14,6 +19,7 @@ export const PageHeader = styled.div`
 export const PageContent = styled.div`
     padding: 20px 12px;
     margin-bottom: 60px;
+    animation: 1s ${fadeIn};
 `
 
 export const SearchBoxWrapper = styled.div`
