@@ -1,6 +1,24 @@
 import styled from 'styled-components/macro'
 
-export const OuterWrapper = styled.div``
+export const OuterWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+`
+export const HeadSection = styled.div`
+    padding: 14px;
+    background: #f2f2f2;
+`
+
+export const MenuItemsSection = styled.div`
+    padding: 0 14px;
+    margin-top: 10px;
+`
+export const CommunityInviteSection = styled.div`
+    padding: 0 14px;
+    flex: 1;
+    background: #f2f2f2;
+`
 
 export const MenuItem = styled.div`
     margin-bottom: 10px;
@@ -19,25 +37,18 @@ export const MenuNavigateIcon = styled.span<IMenuItemIcon>`
     position: relative;
     top: ${(props) => props.adjustTopPosition}px;
 `
-export const MenuItemTitle = styled.span`
+
+interface IMenuItemTitle {
+    border: boolean
+}
+export const MenuItemTitle = styled.span<IMenuItemTitle>`
     font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     font-size: 14px;
     margin-left: 6px;
     flex: 1;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: ${(props) => (props.border ? '1px solid #f2f2f2' : 'none')};
     padding-bottom: 14px;
-`
-
-export const MenuHeadSection = styled.div`
-    padding: 14px;
-    background: #f2f2f2;
-`
-
-export const MenuSection = styled.div`
-    margin-top: 16px;
-    padding: 0 14px;
-    margin-top: 16px;
 `
 
 export const MenuHead = styled.div``
@@ -84,4 +95,17 @@ export const SocialLink = styled.span`
     border: 1px solid #e4e4e4;
     background: #ffffff;
     box-sizing: border-box;
+`
+
+export const CommunityInvite = styled.div`
+    margin-top: 20px;
+    margin-bottom: 10px;
+`
+export const Join = styled.div`
+    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-size: 12px;
+`
+export const TheCommunity = styled.div`
+    font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-size: 14px;
 `
