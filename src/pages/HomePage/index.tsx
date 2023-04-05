@@ -6,6 +6,7 @@ import {
     SearchBoxWrapper,
     SearchTitle,
     SiteHeaderWrapper,
+    SiteFooterWrapper,
     SiteMottoWrapper,
     ProductSectionsWrapper,
 } from './HomePage.styled'
@@ -71,6 +72,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                         </>
                     )}
                 </ProductSectionsWrapper>
+                <SiteFooterWrapper>Site Footer</SiteFooterWrapper>
             </Content>
         </OuterWrapper>
     )

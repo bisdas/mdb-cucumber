@@ -44,6 +44,8 @@ export const SiteHeaderWrapper = styled.div`
     -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
 `
 
+export const SiteFooterWrapper = styled.div``
+
 export const SiteMottoWrapper = styled.div`
     padding: 6px 12px;
     padding-top: 16px;

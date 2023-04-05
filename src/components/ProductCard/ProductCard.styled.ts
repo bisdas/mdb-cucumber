@@ -28,7 +28,7 @@ export const ImageContent = styled.div<ImageContentProps>`
     color: #ededed;
     justify-content: center;
     align-items: center;
-    background-image: url(${props => props.imageUrl});
+    background-image: url(${(props) => props.imageUrl});
     background-size: cover;
 `
 

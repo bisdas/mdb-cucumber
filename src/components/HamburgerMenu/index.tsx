@@ -1,31 +1,38 @@
-import React, { useState, type FunctionComponent } from 'react'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useEffect, useState, type FunctionComponent } from 'react'
 import { Portal } from '../Portal'
 import { useScrollLock } from '../../hooks/useScrollLock'
 import { OuterWrapper, Trigger, MenuContentWrapper, Backdrop, MenuContent } from './HamburgerMenu.styled'
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu-alt.svg'
 
 const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [isClosing, setIsClosing] = useState(false)
 
-    useScrollLock(isMenuOpen)
+    useScrollLock(isOpen)
     return (
         <OuterWrapper>
             <Trigger
                 onClick={(): void => {
-                    setIsMenuOpen(true)
+                    setIsOpen(true)
                 }}
             >
                 <MenuIcon height={36} width={36} />
             </Trigger>
-            {isMenuOpen && (
+            {isOpen && (
                 <Portal rootElementName="body" className="flying-menu-bar-portal">
                     <MenuContentWrapper>
                         <Backdrop
+                            closing={isClosing}
                             onClick={(): void => {
-                                setIsMenuOpen(false)
+                                setIsClosing(true)
+                                setTimeout(() => {
+                                    setIsOpen(false)
+                                    setIsClosing(false)
+                                }, 300)
                             }}
                         ></Backdrop>
-                        <MenuContent>{children}</MenuContent>
+                        <MenuContent closing={isClosing}>{children}</MenuContent>
                     </MenuContentWrapper>
                 </Portal>
             )}

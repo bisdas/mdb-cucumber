@@ -23,7 +23,7 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
     const moreItemsLink: string = `category/${category.id}`
     return (
         <>
-            {selectProducts.map(product => (
+            {selectProducts.map((product) => (
                 <SingleProductWrapper key={product.id}>
                     <ProductCard image={product.thumbnail} title={product.title} linkTo={product.targetLink} />
                 </SingleProductWrapper>
