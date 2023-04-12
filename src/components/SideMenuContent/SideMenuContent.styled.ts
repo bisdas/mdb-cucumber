@@ -101,10 +101,6 @@ export const CommunityInvite = styled.div`
     margin-top: 20px;
     margin-bottom: 10px;
 `
-export const Join = styled.div`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    font-size: 12px;
-`
 export const TheCommunity = styled.div`
     font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     font-size: 14px;
