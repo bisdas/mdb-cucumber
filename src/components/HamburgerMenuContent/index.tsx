@@ -20,7 +20,7 @@ import {
     CommunityInvite,
     // Join,
     TheCommunity,
-} from './SideMenuContent.styled'
+} from './HamburgerMenuContent.styled'
 import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'

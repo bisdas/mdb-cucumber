@@ -22,7 +22,7 @@ import ProductsInCategory from '../../components/ProductsInCategory'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
 import HamburgerMenu from '../../components/HamburgerMenu'
-import SideMenuContent from '../../components/SideMenuContent'
+import HamburgerMenuContent from '../../components/HamburgerMenuContent'
 import SiteFooter from '../../components/SiteFooter'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
@@ -41,7 +41,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                 <SiteHeaderWrapper>
                     <SiteTitle />
                     <HamburgerMenu>
-                        <SideMenuContent />
+                        <HamburgerMenuContent />
                     </HamburgerMenu>
                 </SiteHeaderWrapper>
                 <SiteMottoWrapper>
