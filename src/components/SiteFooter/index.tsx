@@ -33,8 +33,11 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                 <Section>
                     <SectionTitle>Partner with us</SectionTitle>
                     <SectionBody>
-                        Are you a brand, or an individual looking to expand your business? We believe that we working
-                        together can help you reach a broader audience, and let your business grow faster.
+                        <div>Are you a brand, or an individual looking to expand your business?</div>
+                        <p>
+                            We believe that we working together can help you reach a broader audience, and let your
+                            business grow faster.
+                        </p>
                         <ContactButtonWrapper>
                             <ContactButton role="button">Send an email</ContactButton>
                         </ContactButtonWrapper>

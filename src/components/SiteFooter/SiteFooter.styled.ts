@@ -9,7 +9,7 @@ export const Content = styled.div`
     padding-top: 14px;
 `
 
-export const Section = styled.div`
+export const Section = styled.section`
     margin-bottom: 14px;
 `
 export const SectionTitle = styled.div`
