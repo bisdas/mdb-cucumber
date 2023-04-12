@@ -18,7 +18,7 @@ import {
     SocialLinkButtons,
     SocialLink,
     CommunityInvite,
-    Join,
+    // Join,
     TheCommunity,
 } from './SideMenuContent.styled'
 import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
@@ -84,8 +84,7 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
             </MenuItemsSection>
             <CommunityInviteSection>
                 <CommunityInvite>
-                    <Join>Join</Join>
-                    <TheCommunity>The Community</TheCommunity>
+                    <TheCommunity>Join the community</TheCommunity>
                 </CommunityInvite>
                 <SocialLinkButtons>
                     <SocialLink>
