@@ -29,7 +29,6 @@ export const useSearchBox = (): any => {
         }
     }, [isLoading, products, error, keyword, dispatchToStore])
 
-    console.log('status', status, 'products', products, 'error', error)
     const onChangeInput = (enteredValue: string): void => {
         setKeyword(enteredValue)
     }

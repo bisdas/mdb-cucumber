@@ -31,7 +31,6 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
     }
 
     const { filteredProducts } = storeData
-    console.log('search page store data', storeData.filteredProducts)
 
     return (
         <OuterWrapper>

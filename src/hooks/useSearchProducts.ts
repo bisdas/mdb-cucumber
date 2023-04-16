@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import { useEffect, useState, useRef, useCallback } from 'react'
 import { LONG_RUN_ACTIVITY } from '../configuration/constants'
 import StoreService from '../services/StoreService'
@@ -10,7 +11,6 @@ interface IUseSearchProducts {
 }
 
 export const useSearchProducts = (keyword: string): IUseSearchProducts => {
-    console.log('keyword received from source', keyword)
     const [products, setProducts] = useState([])
     const [status, setStatus] = useState(LONG_RUN_ACTIVITY.IDLE)
     const [error, setError] = useState(null)
@@ -30,7 +30,7 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
                         setStatus(LONG_RUN_ACTIVITY.RUNNING)
 
                         try {
-                            const items = await StoreService.getByKeywords(keyword)
+                            const items = await StoreService.getProductsByKeyword(keyword)
                             setProducts(items)
                             setError(null)
                         } catch (error: any) {
@@ -44,7 +44,7 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
                     void fetchItems()
                 }
             },
-            500
+            1000
         ),
         [debounce, keyword]
     )
