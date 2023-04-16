@@ -7,3 +7,5 @@ export enum LONG_RUN_ACTIVITY {
     IDLE = 'IDLE',
     RUNNING = 'RUNNING',
 }
+
+export const KEYWORD_MIN_LENGTH = 3

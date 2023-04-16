@@ -23,7 +23,7 @@ export const useStoreCatalog = (): any => {
             if (categories?.data?.length === 0) {
                 dispatch(createCategoriesRequestAction())
                 try {
-                    const categories = await StoreService.getCategories()
+                    const categories = await StoreService.getAllCategories()
                     dispatch(createCategoriesDataAction(categories))
                 } catch (error: any) {
                     dispatch(createCategoriesErrorAction(error))
@@ -39,7 +39,7 @@ export const useStoreCatalog = (): any => {
                 dispatch(createBrandsRequestAction())
 
                 try {
-                    const brands = await StoreService.getBrands()
+                    const brands = await StoreService.getAllBrands()
                     dispatch(createBrandsDataAction(brands))
                 } catch (error: any) {
                     dispatch(createBrandsErrorAction(error))
@@ -55,7 +55,7 @@ export const useStoreCatalog = (): any => {
                 dispatch(createTagsRequestAction())
 
                 try {
-                    const tags = await StoreService.getTags()
+                    const tags = await StoreService.getAllTags()
                     dispatch(createTagsDataAction(tags))
                 } catch (error: any) {
                     dispatch(createTagsErrorAction(error))

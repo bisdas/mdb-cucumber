@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-debugger */
 import { PRODUCTS } from '../storeCatalog/products'
 import { CATEGORIES, BRANDS, TAGS } from '../storeCatalog/catalogs'
-import { organiseProductsByCategory } from '../utils/productUtils'
+import { organiseProductsByCategory, getCollectionByKeywordMatch } from '../utils/productUtils'
 import { getRandomNumber } from '../utils/utils'
+import { KEYWORD_MIN_LENGTH } from '../configuration/constants'
 
 class StoreService {
     products: any[]
@@ -33,8 +35,8 @@ class StoreService {
         })
     }
 
-    async getCategories(): Promise<any> {
-        const categoriesPromise = new Promise((resolve, reject) => {
+    async getAllCategories(): Promise<any> {
+        const promiseCategories = new Promise((resolve, reject) => {
             try {
                 resolve(this.categories)
             } catch (error: any) {
@@ -42,11 +44,11 @@ class StoreService {
             }
         })
 
-        return await categoriesPromise
+        return await promiseCategories
     }
 
-    async getBrands(): Promise<any> {
-        const brandsPromise = new Promise((resolve, reject) => {
+    async getAllBrands(): Promise<any> {
+        const promiseBrands = new Promise((resolve, reject) => {
             try {
                 resolve(this.brands)
             } catch (error: any) {
@@ -54,11 +56,11 @@ class StoreService {
             }
         })
 
-        return await brandsPromise
+        return await promiseBrands
     }
 
-    async getTags(): Promise<any> {
-        const tagsPromise = new Promise((resolve, reject) => {
+    async getAllTags(): Promise<any> {
+        const promiseTags = new Promise((resolve, reject) => {
             try {
                 resolve(this.tags)
             } catch (error: any) {
@@ -66,26 +68,94 @@ class StoreService {
             }
         })
 
-        return await tagsPromise
+        return await promiseTags
     }
 
-    async getByKeywords(keyword: string): Promise<any> {
-        console.log('get by keywords', keyword)
+    getProductsByCategories(categories: any[]): any {
+        const productsList: any[] = this.products.reduce((collectedProducts: any[], currentProduct: any) => {
+            const updatedList = [...collectedProducts]
+            currentProduct.categories.forEach((category: any) => {
+                const catIndex = categories.findIndex((cat) => {
+                    return cat.title.toLowerCase().trim() === category.title.toLowerCase().trim()
+                })
+
+                if (catIndex !== -1) {
+                    updatedList.push(currentProduct)
+                }
+            })
+
+            return updatedList
+        }, [])
+
+        return productsList
+    }
+
+    getProductsByBrands(brands: any[]): any {
+        const productsList: any[] = this.products.reduce((collectedProducts: any[], currentProduct: any) => {
+            const updatedList = [...collectedProducts]
+            const brandIndex = brands.findIndex(
+                (brand) => brand.title.toLowerCase().trim() === currentProduct.brand.title.toLowerCase().trim()
+            )
+
+            if (brandIndex !== -1) {
+                updatedList.push(currentProduct)
+            }
+
+            return updatedList
+        }, [])
+
+        return productsList
+    }
+
+    getProductsByTags(tags: any[]): any {
+        const productsList: any[] = this.products.reduce((collectedProducts: any[], currentProduct: any) => {
+            const updatedList = [...collectedProducts]
+            currentProduct.tags.forEach((productCurrentTag: any) => {
+                const tagIndex = tags.findIndex(
+                    (tag) => tag.title.toLowerCase().trim() === productCurrentTag.title.toLowerCase().trim()
+                )
+
+                if (tagIndex !== -1) {
+                    updatedList.push(currentProduct)
+                }
+            })
+
+            return updatedList
+        }, [])
+
+        return productsList
+    }
+
+    getProductsByTitle(title: string): any {
+        // todo: search partial of titles
+        return [...this.products.filter((prod) => prod.title.toLowerCase().includes(title.trim()))]
+    }
+
+    async getProductsByKeyword(keyword: string): Promise<any> {
         const itemsPromise = new Promise((resolve, reject) => {
             try {
-                // todo: utils logic to find keyword from a string.
-                // todo: filter products by keyword
+                /** resolve with empty array if effective keyword length is less than minimum */
+                const sanitisedKeyword = keyword.toLowerCase().trim()
+                if (sanitisedKeyword.length < KEYWORD_MIN_LENGTH) {
+                    resolve([])
+                    return
+                }
 
-                // fake delay
-                const ramdomDelay = getRandomNumber(100, 1000)
-                setTimeout(() => {
-                    // todo: remove hard code error
-                    if (keyword === 'error') {
-                        reject(new Error('error keyword'))
-                    } else {
-                        resolve(this.products)
-                    }
-                }, ramdomDelay)
+                const matchedCategories = getCollectionByKeywordMatch(sanitisedKeyword, this.categories)
+                const matchedBrands = getCollectionByKeywordMatch(sanitisedKeyword, this.brands)
+                const getMatchedTags = getCollectionByKeywordMatch(sanitisedKeyword, this.tags)
+
+                const matchedProducts: any[] = []
+                matchedProducts.push(...this.getProductsByCategories(matchedCategories))
+                matchedProducts.push(...this.getProductsByBrands(matchedBrands))
+                matchedProducts.push(...this.getProductsByTags(getMatchedTags))
+                matchedProducts.push(this.getProductsByTitle(sanitisedKeyword))
+
+                if (sanitisedKeyword === 'error') {
+                    reject(new Error('error keyword'))
+                } else {
+                    resolve(matchedProducts)
+                }
             } catch (error: any) {
                 reject(error)
             }

@@ -18,15 +18,39 @@ export const CATEGORIES = {
 }
 
 export const BRANDS = {
-    Prestige: 'Prestige',
-    Hawkins: 'Hawkins',
+    Prestige: {
+        id: 'Prestige',
+        title: 'Prestige',
+    },
+    Hawkins: {
+        id: 'Hawkins',
+        title: 'Hawkins',
+    },
 }
 
 export const TAGS = {
-    cookware: 'cookware',
-    kadai: 'kadai',
-    pan: 'pan',
-    nonstick: 'nonstick',
-    cutleries: 'cutleries',
-    cutleri: 'cutleri',
+    cookware: {
+        id: 'cookware',
+        title: 'cookware',
+    },
+    kadai: {
+        id: 'kadai',
+        title: 'kadai',
+    },
+    pan: {
+        id: 'pan',
+        title: 'pan',
+    },
+    nonstick: {
+        id: 'nonstick',
+        title: 'nonstick',
+    },
+    cutleries: {
+        id: 'cutleries',
+        title: 'cutleries',
+    },
+    cutlery: {
+        id: 'cutlery',
+        title: 'cutlery',
+    },
 }
