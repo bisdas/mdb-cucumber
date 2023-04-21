@@ -30,13 +30,8 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
     const [pageLoading, setPageLoading] = useState(true)
 
     useEffect(() => {
-        // fake delay to show the loader
-        // due to the fact that the context is not immediately
-        // updated after data is fetched from the store service,
-        // the service is recalled.
-        // todo: check why the service is called multiple times
-
-        const randomDelay = getRandomNumber(100, 1000)
+        // fake delay to show the loader on category page
+        const randomDelay = getRandomNumber(250, 1000)
         setTimeout(() => {
             setPageLoading(false)
         }, randomDelay)

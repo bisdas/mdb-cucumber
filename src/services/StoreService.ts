@@ -20,12 +20,16 @@ class StoreService {
     }
 
     async getCategorisedProducts(): Promise<any> {
+        // due to the fact that the context is not immediately
+        // updated after data is fetched from the store service,
+        // the service is recalled.
+        // todo: check why the service is called multiple times
         return await new Promise((resolve, reject) => {
             try {
                 const result = organiseProductsByCategory(this.products)
 
                 // fake delay
-                const ramdomDelay = getRandomNumber(100, 1000)
+                const ramdomDelay = getRandomNumber(200, 1000)
                 setTimeout(() => {
                     resolve(result)
                 }, ramdomDelay)

@@ -52,12 +52,12 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
-                <ProductSectionsWrapper>
-                    {categorisedItemsLoading === true ? (
-                        <LoaderWrapper>
-                            <Spinner />
-                        </LoaderWrapper>
-                    ) : (
+                {categorisedItemsLoading === true ? (
+                    <LoaderWrapper>
+                        <Spinner />
+                    </LoaderWrapper>
+                ) : (
+                    <ProductSectionsWrapper>
                         <>
                             {categorisedItemsData.map((item: any) => (
                                 <Section title={item.category.title} key={item.category.id}>
@@ -71,8 +71,8 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                                 </Section>
                             ))}
                         </>
-                    )}
-                </ProductSectionsWrapper>
+                    </ProductSectionsWrapper>
+                )}
                 <SiteFooterWrapper>
                     <SiteFooter />
                 </SiteFooterWrapper>
