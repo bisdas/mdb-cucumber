@@ -7,9 +7,9 @@ export const Content = styled.div`
     box-sizing: border-box;
     border-top: 10px solid #ebebeb;
     padding-top: 14px;
-    // background: #f9f9f9;
-    // padding: 10px;
     box-sizing: border-box;
+    background: #f8f8f8;
+    padding: 12px;
 `
 
 export const Section = styled.section`
