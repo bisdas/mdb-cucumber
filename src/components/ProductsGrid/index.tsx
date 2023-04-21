@@ -10,8 +10,12 @@ interface IProductsGridProps {
 }
 
 const ProductsGrid: FunctionComponent<IProductsGridProps> = ({ products, numberOfColumns }): ReactElement => {
-    const sanitizedProducts = products === undefined ? [] : [...products]
+    const sanitizedProducts = useMemo(() => (products === undefined ? [] : [...products]), [products])
     const productsGrid = useMemo(() => {
+        if (sanitizedProducts.length === 0) {
+            return []
+        }
+
         const updatedProducts = sanitizedProducts.map((product: any) => ({
             ...product,
             isEmpty: false,
@@ -41,34 +45,40 @@ const ProductsGrid: FunctionComponent<IProductsGridProps> = ({ products, numberO
         }, [])
 
         return grid
-    }, [numberOfColumns])
+    }, [sanitizedProducts, numberOfColumns])
 
     return (
-        <OuterWrapper>
-            <Grid>
-                {productsGrid.map((gridRow: any, index: number) => (
-                    <Row key={index}>
-                        {gridRow.map((gridColumn: any) => (
-                            <Item key={gridColumn.id}>
-                                {gridColumn.isEmpty === false ? (
-                                    <ProductCardWrapper>
-                                        <ProductCard
-                                            image={gridColumn.thumbnail}
-                                            title={gridColumn.title}
-                                            linkTo={gridColumn.targetLink}
-                                        />
-                                    </ProductCardWrapper>
-                                ) : (
-                                    <ProductCardWrapper>
-                                        <InvisibleCard />
-                                    </ProductCardWrapper>
-                                )}
-                            </Item>
+        <>
+            {productsGrid.length > 0 ? (
+                <OuterWrapper>
+                    <Grid>
+                        {productsGrid.map((gridRow: any, index: number) => (
+                            <Row key={index}>
+                                {gridRow.map((gridColumn: any) => (
+                                    <Item key={gridColumn.id}>
+                                        {gridColumn.isEmpty === false ? (
+                                            <ProductCardWrapper>
+                                                <ProductCard
+                                                    image={gridColumn.thumbnail}
+                                                    title={gridColumn.title}
+                                                    linkTo={gridColumn.targetLink}
+                                                />
+                                            </ProductCardWrapper>
+                                        ) : (
+                                            <ProductCardWrapper>
+                                                <InvisibleCard />
+                                            </ProductCardWrapper>
+                                        )}
+                                    </Item>
+                                ))}
+                            </Row>
                         ))}
-                    </Row>
-                ))}
-            </Grid>
-        </OuterWrapper>
+                    </Grid>
+                </OuterWrapper>
+            ) : (
+                <></>
+            )}
+        </>
     )
 }
 

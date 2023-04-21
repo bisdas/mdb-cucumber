@@ -149,7 +149,7 @@ class StoreService {
                 matchedProducts.push(...this.getProductsByCategories(matchedCategories))
                 matchedProducts.push(...this.getProductsByBrands(matchedBrands))
                 matchedProducts.push(...this.getProductsByTags(getMatchedTags))
-                matchedProducts.push(this.getProductsByTitle(sanitisedKeyword))
+                matchedProducts.push(...this.getProductsByTitle(sanitisedKeyword))
 
                 if (sanitisedKeyword === 'error') {
                     reject(new Error('error keyword'))
