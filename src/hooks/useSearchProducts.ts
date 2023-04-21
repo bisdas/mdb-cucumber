@@ -1,6 +1,6 @@
 /* eslint-disable no-debugger */
 import { useEffect, useState, useRef, useCallback } from 'react'
-import { LONG_RUN_ACTIVITY } from '../configuration/constants'
+import { LONG_RUN_ACTIVITY, KEYWORD_MIN_LENGTH } from '../configuration/constants'
 import StoreService from '../services/StoreService'
 import { debounce } from '../utils/utils'
 
@@ -44,13 +44,21 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
                     void fetchItems()
                 }
             },
-            1000
+            300
         ),
         [debounce, keyword]
     )
 
     useEffect((): any => {
-        fetchProducts()
+        /* if the keyword length is less than minimum, clear results
+         * else, fetch new results.
+         */
+        if (keyword.trim().length < KEYWORD_MIN_LENGTH) {
+            setProducts([])
+            setError(null)
+        } else {
+            fetchProducts()
+        }
     }, [keyword, fetchProducts])
 
     const isLoading: boolean = status === LONG_RUN_ACTIVITY.RUNNING

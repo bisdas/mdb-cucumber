@@ -24,7 +24,7 @@ export const useSearchBox = (): any => {
             dispatchToStore(createFilteredProductsRequestAction())
         } else if (error !== null) {
             dispatchToStore(createFilteredProductsErrorAction(error))
-        } else if (products?.length > 0) {
+        } else {
             dispatchToStore(createFilteredProductsDataAction(products))
         }
     }, [isLoading, products, error, keyword, dispatchToStore])
