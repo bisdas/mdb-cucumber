@@ -31,7 +31,7 @@ import { ReactComponent as InfoIcon } from '../../assets/icons/ticket-informatio
 import { ReactComponent as ArrowRightShortIcon } from '../../assets/icons/arrow-right-short.svg'
 
 import { useRouter } from '../../router/useRouter'
-import { openMailWriterWindow } from '../../utils/utils'
+import { openContactMailWriterWindow, openFeedbackMailWriterWindow } from '../../utils/utils'
 
 const SideMenuContent: FunctionComponent = (): ReactElement => {
     const { navigateAbout } = useRouter()
@@ -67,7 +67,7 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem> */}
-                <MenuItem onClick={openMailWriterWindow}>
+                <MenuItem onClick={openContactMailWriterWindow}>
                     <MenuItemIcon adjustTopPosition={1}>
                         <ContactIcon height={16} width={16} />
                     </MenuItemIcon>
@@ -76,7 +76,7 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={openFeedbackMailWriterWindow}>
                     <MenuItemIcon adjustTopPosition={1}>
                         <FeedbackIcon height={16} width={16} />
                     </MenuItemIcon>
