@@ -26,11 +26,12 @@ import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.sv
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
 import { ReactComponent as ContactIcon } from '../../assets/icons/contact-us.svg'
 import { ReactComponent as FeedbackIcon } from '../../assets/icons/feedback.svg'
-import { ReactComponent as GoHomeIcon } from '../../assets/icons/go-home.svg'
+// import { ReactComponent as GoHomeIcon } from '../../assets/icons/go-home.svg'
 import { ReactComponent as InfoIcon } from '../../assets/icons/ticket-information.svg'
 import { ReactComponent as ArrowRightShortIcon } from '../../assets/icons/arrow-right-short.svg'
 
 import { useRouter } from '../../router/useRouter'
+import { openMailWriterWindow } from '../../utils/utils'
 
 const SideMenuContent: FunctionComponent = (): ReactElement => {
     const { navigateAbout } = useRouter()
@@ -57,7 +58,7 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem>
-                <MenuItem>
+                {/* <MenuItem>
                     <MenuItemIcon adjustTopPosition={0}>
                         <GoHomeIcon height={16} width={16} />
                     </MenuItemIcon>
@@ -65,8 +66,8 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                     <MenuNavigateIcon adjustTopPosition={-1}>
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
-                </MenuItem>
-                <MenuItem>
+                </MenuItem> */}
+                <MenuItem onClick={openMailWriterWindow}>
                     <MenuItemIcon adjustTopPosition={1}>
                         <ContactIcon height={16} width={16} />
                     </MenuItemIcon>
