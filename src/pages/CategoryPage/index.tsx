@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import React, { type FunctionComponent, type ReactElement, useMemo, useState, useEffect } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+import React, { type FunctionComponent, type ReactElement, useState, useEffect } from 'react'
 import {
     OuterWrapper,
     Content,
