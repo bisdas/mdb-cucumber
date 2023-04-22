@@ -37,7 +37,7 @@ export const ContactButtonWrapper = styled.div`
 `
 export const ContactButton = styled.div`
     background: #202020;
-    padding: 4px 14px;
+    padding: 6px 16px;
     cursor: pointer;
     display: inline-block;
     border-radius: 3px;
@@ -45,7 +45,7 @@ export const ContactButton = styled.div`
     user-select: none;
     outline: none;
     color: #ffffff;
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
 `
 
