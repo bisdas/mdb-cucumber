@@ -12,7 +12,6 @@ import {
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
-import SiteTitle from '../../components/SiteTitle'
 import SiteMotto from '../../components/SiteMotto'
 import { ScrollableLayout, LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import { useSearchBox } from '../../hooks/useSearchBox'
@@ -21,9 +20,8 @@ import useStartUp from '../../hooks/useStartUp'
 import ProductsInCategory from '../../components/ProductsInCategory'
 import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
-import HamburgerMenu from '../../components/HamburgerMenu'
-import HamburgerMenuContent from '../../components/HamburgerMenuContent'
 import SiteFooter from '../../components/SiteFooter'
+import SiteHeader from '../../components/SiteHeader'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -38,12 +36,8 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
     return (
         <OuterWrapper>
             <Content>
-                <SiteHeaderWrapper>
-                    <SiteTitle />
-                    <HamburgerMenu>
-                        <HamburgerMenuContent />
-                    </HamburgerMenu>
-                </SiteHeaderWrapper>
+                <SiteHeader />
+
                 <SiteMottoWrapper>
                     <SiteMotto />
                 </SiteMottoWrapper>
@@ -52,12 +46,12 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
-                <ProductSectionsWrapper>
-                    {categorisedItemsLoading === true ? (
-                        <LoaderWrapper>
-                            <Spinner />
-                        </LoaderWrapper>
-                    ) : (
+                {categorisedItemsLoading === true ? (
+                    <LoaderWrapper>
+                        <Spinner />
+                    </LoaderWrapper>
+                ) : (
+                    <ProductSectionsWrapper>
                         <>
                             {categorisedItemsData.map((item: any) => (
                                 <Section title={item.category.title} key={item.category.id}>
@@ -71,8 +65,8 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                                 </Section>
                             ))}
                         </>
-                    )}
-                </ProductSectionsWrapper>
+                    </ProductSectionsWrapper>
+                )}
                 <SiteFooterWrapper>
                     <SiteFooter />
                 </SiteFooterWrapper>

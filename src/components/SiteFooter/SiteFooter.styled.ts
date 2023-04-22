@@ -7,9 +7,9 @@ export const Content = styled.div`
     box-sizing: border-box;
     border-top: 10px solid #ebebeb;
     padding-top: 14px;
-    // background: #f9f9f9;
-    // padding: 10px;
     box-sizing: border-box;
+    background: #f8f8f8;
+    padding: 12px;
 `
 
 export const Section = styled.section`
@@ -37,7 +37,7 @@ export const ContactButtonWrapper = styled.div`
 `
 export const ContactButton = styled.div`
     background: #202020;
-    padding: 4px 14px;
+    padding: 6px 16px;
     cursor: pointer;
     display: inline-block;
     border-radius: 3px;
@@ -45,7 +45,7 @@ export const ContactButton = styled.div`
     user-select: none;
     outline: none;
     color: #ffffff;
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
 `
 
