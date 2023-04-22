@@ -17,12 +17,12 @@ export const PageHeader = styled.div`
     border-bottom: 2px solid #dedede;
 `
 
-
-export const SearchBoxWrapper = styled.div`
-    padding: 6px 12px;
-    flex: 1;
-    padding-left: 0;
+export const PageContent = styled.div`
+    padding: 20px 12px;
+    margin-bottom: 60px;
+    animation: 1s ${fadeIn};
 `
+
 export const GoBackWrapper = styled.div`
     padding: 6px 12px;
     display: flex;

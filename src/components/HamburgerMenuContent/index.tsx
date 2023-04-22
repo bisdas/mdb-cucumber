@@ -30,7 +30,10 @@ import { ReactComponent as GoHomeIcon } from '../../assets/icons/go-home.svg'
 import { ReactComponent as InfoIcon } from '../../assets/icons/ticket-information.svg'
 import { ReactComponent as ArrowRightShortIcon } from '../../assets/icons/arrow-right-short.svg'
 
+import { useRouter } from '../../router/useRouter'
+
 const SideMenuContent: FunctionComponent = (): ReactElement => {
+    const { navigateAbout } = useRouter()
     return (
         <OuterWrapper>
             <HeadSection>
@@ -45,7 +48,7 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                 </MenuHead>
             </HeadSection>
             <MenuItemsSection>
-                <MenuItem>
+                <MenuItem onClick={navigateAbout}>
                     <MenuItemIcon adjustTopPosition={0}>
                         <InfoIcon height={16} width={16} />
                     </MenuItemIcon>
