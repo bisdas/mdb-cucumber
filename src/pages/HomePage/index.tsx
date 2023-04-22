@@ -5,7 +5,6 @@ import {
     Content,
     SearchBoxWrapper,
     SearchTitle,
-    SiteHeaderWrapper,
     SiteFooterWrapper,
     SiteMottoWrapper,
     ProductSectionsWrapper,

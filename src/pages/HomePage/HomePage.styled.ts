@@ -32,10 +32,6 @@ export const SearchTitle = styled.div`
     white-space: break-spaces;
 `
 
-export const SiteHeaderWrapper = styled.div`
-    padding: 6px 12px;
-`
-
 export const SiteFooterWrapper = styled.div``
 
 export const SiteMottoWrapper = styled.div`

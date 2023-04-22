@@ -9,3 +9,5 @@ export enum LONG_RUN_ACTIVITY {
 }
 
 export const KEYWORD_MIN_LENGTH = 3
+export const DELISH_BOWL_EMAIL_ADDRESS = 'mydelishbowl@gmail.com'
+export const CUCUMBER_EMAIL_SUBJECT = 'Writing to Cucumber (Delish Bowl)'
