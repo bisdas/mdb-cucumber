@@ -31,10 +31,19 @@ import { ReactComponent as InfoIcon } from '../../assets/icons/ticket-informatio
 import { ReactComponent as ArrowRightShortIcon } from '../../assets/icons/arrow-right-short.svg'
 
 import { useRouter } from '../../router/useRouter'
-import { openMailWriterWindow } from '../../utils/utils'
+import {
+    DELISH_BOWL_INSTAGRAM_LINK,
+    DELISH_BOWL_YOUTUBE_LINK,
+    DELISH_BOWL_FACEBOOK_LINK,
+    CUCUMBER_FEEDBACK_EMAIL_SUBJECT,
+    CUCUMBER_CONTACT_EMAIL_SUBJECT,
+} from '../../configuration/constants'
+import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils'
 
 const SideMenuContent: FunctionComponent = (): ReactElement => {
     const { navigateAbout } = useRouter()
+
+    // todo: move menu item to a component
     return (
         <OuterWrapper>
             <HeadSection>
@@ -67,7 +76,11 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem> */}
-                <MenuItem onClick={openMailWriterWindow}>
+                <MenuItem
+                    onClick={() => {
+                        openEmailWriterWindow(CUCUMBER_CONTACT_EMAIL_SUBJECT)
+                    }}
+                >
                     <MenuItemIcon adjustTopPosition={1}>
                         <ContactIcon height={16} width={16} />
                     </MenuItemIcon>
@@ -76,7 +89,11 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        openEmailWriterWindow(CUCUMBER_FEEDBACK_EMAIL_SUBJECT)
+                    }}
+                >
                     <MenuItemIcon adjustTopPosition={1}>
                         <FeedbackIcon height={16} width={16} />
                     </MenuItemIcon>
@@ -91,13 +108,25 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                     <TheCommunity>Join the community</TheCommunity>
                 </CommunityInvite>
                 <SocialLinkButtons>
-                    <SocialLink>
+                    <SocialLink
+                        onClick={() => {
+                            openAnyLinkWindow(DELISH_BOWL_INSTAGRAM_LINK)
+                        }}
+                    >
                         <InstagramIcon height={14} width={14} />
                     </SocialLink>
-                    <SocialLink>
+                    <SocialLink
+                        onClick={() => {
+                            openAnyLinkWindow(DELISH_BOWL_YOUTUBE_LINK)
+                        }}
+                    >
                         <YouTubeIcon height={14} width={14} />
                     </SocialLink>
-                    <SocialLink>
+                    <SocialLink
+                        onClick={() => {
+                            openAnyLinkWindow(DELISH_BOWL_FACEBOOK_LINK)
+                        }}
+                    >
                         <FacebookIcon height={14} width={14} />
                     </SocialLink>
                 </SocialLinkButtons>

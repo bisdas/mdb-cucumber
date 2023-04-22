@@ -14,6 +14,15 @@ import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
 
+import {
+    DELISH_BOWL_INSTAGRAM_LINK,
+    DELISH_BOWL_YOUTUBE_LINK,
+    DELISH_BOWL_FACEBOOK_LINK,
+    DELISH_BOWL_EMAIL_ADDRESS,
+    CUCUMBER_COLLABORATION_EMAIL_SUBJECT,
+} from '../../configuration/constants'
+import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils'
+
 const SiteFooter: FunctionComponent = (): ReactElement => {
     return (
         <OuterWrapper>
@@ -39,23 +48,42 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                             business grow faster.
                         </p>
                         <ContactButtonWrapper>
-                            <ContactButton role="button">Send an email</ContactButton>
+                            <ContactButton
+                                onClick={() => {
+                                    openEmailWriterWindow(CUCUMBER_COLLABORATION_EMAIL_SUBJECT)
+                                }}
+                                role="button"
+                            >
+                                Send an email
+                            </ContactButton>
                         </ContactButtonWrapper>
                     </SectionBody>
                 </Section>
                 <Section>
                     <SectionTitle>Contact us</SectionTitle>
-                    <SectionBody>Email: mydelishbowl@gmail.com</SectionBody>
+                    <SectionBody>Email: {DELISH_BOWL_EMAIL_ADDRESS.toLowerCase()}</SectionBody>
                 </Section>
                 <Section>
                     <SectionBody>
-                        <SocialLink>
+                        <SocialLink
+                            onClick={() => {
+                                openAnyLinkWindow(DELISH_BOWL_INSTAGRAM_LINK)
+                            }}
+                        >
                             <InstagramIcon height={14} width={14} />
                         </SocialLink>
-                        <SocialLink>
+                        <SocialLink
+                            onClick={() => {
+                                openAnyLinkWindow(DELISH_BOWL_YOUTUBE_LINK)
+                            }}
+                        >
                             <YouTubeIcon height={14} width={14} />
                         </SocialLink>
-                        <SocialLink>
+                        <SocialLink
+                            onClick={() => {
+                                openAnyLinkWindow(DELISH_BOWL_FACEBOOK_LINK)
+                            }}
+                        >
                             <FacebookIcon height={14} width={14} />
                         </SocialLink>
                     </SectionBody>
