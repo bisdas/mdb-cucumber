@@ -13,7 +13,6 @@ import {
 import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
-
 import {
     DELISH_BOWL_INSTAGRAM_LINK,
     DELISH_BOWL_YOUTUBE_LINK,

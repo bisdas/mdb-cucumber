@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import React, { type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
@@ -40,7 +41,11 @@ import {
 } from '../../configuration/constants'
 import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils'
 
-const SideMenuContent: FunctionComponent = (): ReactElement => {
+interface IHamburgerMenuContent {
+    onCloseMenu?: any
+}
+
+const HamburgerMenuContent: FunctionComponent<IHamburgerMenuContent> = ({ onCloseMenu }): ReactElement => {
     const { navigateAbout } = useRouter()
 
     // todo: move menu item to a component
@@ -58,7 +63,15 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
                 </MenuHead>
             </HeadSection>
             <MenuItemsSection>
-                <MenuItem onClick={navigateAbout}>
+                <MenuItem
+                    onClick={() => {
+                        // todo: revisit this. check why about page is not scrollable when not nvaigated with the delay
+                        onCloseMenu()
+                        setTimeout(() => {
+                            navigateAbout()
+                        }, 350)
+                    }}
+                >
                     <MenuItemIcon adjustTopPosition={0}>
                         <InfoIcon height={16} width={16} />
                     </MenuItemIcon>
@@ -135,4 +148,4 @@ const SideMenuContent: FunctionComponent = (): ReactElement => {
     )
 }
 
-export default SideMenuContent
+export default HamburgerMenuContent

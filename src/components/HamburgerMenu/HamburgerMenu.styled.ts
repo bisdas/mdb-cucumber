@@ -12,7 +12,6 @@ const fadeOpacityOut = keyframes`
     0%   {opacity: ${backdropOpacityOpen}}
     100% {opacity: ${backdropOpacityClosed}}
 `
-
 const slideLeftIn = keyframes`
     0% { left: ${menuPositionLeftClosed} }
     100% { left: ${menuPositionLeftOpen} }
