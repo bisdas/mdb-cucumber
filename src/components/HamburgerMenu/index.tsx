@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useState, type FunctionComponent } from 'react'
+import React, { useMemo, useState, type FunctionComponent } from 'react'
 import { Portal } from '../Portal'
 import { useScrollLock } from '../../hooks/useScrollLock'
 import { OuterWrapper, Trigger, MenuContentWrapper, Backdrop, MenuContent } from './HamburgerMenu.styled'
@@ -10,6 +10,26 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
     const [isClosing, setIsClosing] = useState(false)
 
     useScrollLock(isOpen)
+
+    const initiateCloseMenu = (): void => {
+        setIsClosing(true)
+        setTimeout(() => {
+            setIsOpen(false)
+            setIsClosing(false)
+        }, 300)
+    }
+
+    const childrenWithProps = useMemo(() => {
+        return React.Children.map(children, (child) => {
+            if (React.isValidElement(child)) {
+                console.log('child', child)
+                return React.cloneElement(child as React.ReactElement<any>, { onCloseMenu: initiateCloseMenu })
+            }
+
+            return child
+        })
+    }, [children])
+
     return (
         <OuterWrapper>
             <Trigger
@@ -22,17 +42,8 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
             {isOpen && (
                 <Portal rootElementName="body" className="flying-menu-bar-portal">
                     <MenuContentWrapper>
-                        <Backdrop
-                            closing={isClosing}
-                            onClick={(): void => {
-                                setIsClosing(true)
-                                setTimeout(() => {
-                                    setIsOpen(false)
-                                    setIsClosing(false)
-                                }, 300)
-                            }}
-                        ></Backdrop>
-                        <MenuContent closing={isClosing}>{children}</MenuContent>
+                        <Backdrop closing={isClosing} onClick={initiateCloseMenu}></Backdrop>
+                        <MenuContent closing={isClosing}>{childrenWithProps}</MenuContent>
                     </MenuContentWrapper>
                 </Portal>
             )}
