@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, ImageWrapper, ImageContent, TitleWrapper, TitleText, Anchor } from './ProductCard.styled'
+import React, { useState, type FunctionComponent, type ReactElement } from 'react'
+import { OuterWrapper, Content, ImageWrapper, ImageContent, TitleWrapper, TitleText } from './ProductCard.styled'
 
 // todo: remove hard code image
-import Image from '../../assets/productThumbs/cold_pressed_oil.png'
+import Image from '../../assets/productImages/cold_pressed_oil.png'
+import ProductModal from '../ProductModal'
 
 interface IProductCardProps {
     image: string
@@ -12,11 +13,27 @@ interface IProductCardProps {
 }
 
 const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkTo }): ReactElement => {
+    const [isProductModalOpen, setIsProductModalOpen] = useState(false)
+
     const formattedImageUrl = `./productImages/${image}`
     const shortTitle = `${title.substring(0, 50)}...`
+
     return (
         <OuterWrapper>
-            <Anchor href={linkTo} target="_blank" title={title}>
+            {isProductModalOpen && (
+                <ProductModal
+                    product={{ image, title, linkTo }}
+                    onClose={() => {
+                        setIsProductModalOpen(false)
+                    }}
+                />
+            )}
+
+            <Content
+                onClick={() => {
+                    setIsProductModalOpen(true)
+                }}
+            >
                 <ImageWrapper>
                     {/* <ImageContent imageUrl={formattedImageUrl}></ImageContent> */}
                     <ImageContent imageUrl={Image}></ImageContent>
@@ -24,7 +41,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkT
                 <TitleWrapper>
                     <TitleText>{shortTitle}</TitleText>
                 </TitleWrapper>
-            </Anchor>
+            </Content>
         </OuterWrapper>
     )
 }

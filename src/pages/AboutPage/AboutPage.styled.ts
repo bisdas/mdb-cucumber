@@ -62,3 +62,7 @@ export const ShareButton = styled.div`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
 `
+
+export const ButtonWrapper = styled.div`
+    margin-top: 10px;
+`
