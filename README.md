@@ -14,3 +14,4 @@ Pending -
 Error boundary
 Customised route not found
 Icon for browser window
+use actual image of products

@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const OuterWrapper = styled.div``
+export const Content = styled.div``
 export const ImageWrapper = styled.div`
     height: 100px;
     width: 100px;
@@ -46,11 +47,11 @@ export const TitleText = styled.span`
     display: block;
 }`
 
-export const Anchor = styled.a`
-    text-decoration: none;
-    color: #000000;
+// export const Anchor = styled.a`
+//     text-decoration: none;
+//     color: #000000;
 
-    &:visited {
-        color: #000000;
-    }
-`
+//     &:visited {
+//         color: #000000;
+//     }
+// `
