@@ -40,7 +40,7 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
                 <MenuIcon height={36} width={36} />
             </Trigger>
             {isOpen && (
-                <Portal rootElementName="body" className="flying-menu-bar-portal">
+                <Portal rootElementId="portal-root" className="hamburger-menu-portal">
                     <MenuContentWrapper>
                         <Backdrop closing={isClosing} onClick={initiateCloseMenu}></Backdrop>
                         <MenuContent closing={isClosing}>{childrenWithProps}</MenuContent>

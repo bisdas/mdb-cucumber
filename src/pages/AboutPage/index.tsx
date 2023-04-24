@@ -11,6 +11,7 @@ import {
     Link,
     ParagraphText,
     ShareButton,
+    ButtonWrapper,
 } from './AboutPage.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
 import { DELISH_BOWL_INSTAGRAM_LINK, CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT } from '../../configuration/constants'
@@ -58,7 +59,7 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                     <ParagraphTitle>Share your idea</ParagraphTitle>
                     <ParagraphText>
                         Are you having a great product idea we can list on Cucumber?
-                        <div>
+                        <ButtonWrapper>
                             <ShareButton
                                 onClick={() => {
                                     openEmailWriterWindow(CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT)
@@ -67,7 +68,7 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                             >
                                 Share with us
                             </ShareButton>
-                        </div>
+                        </ButtonWrapper>
                     </ParagraphText>
                     <ParagraphText></ParagraphText>
                 </PageContent>

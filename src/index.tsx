@@ -6,7 +6,7 @@ import { AppContextProvider } from './stateManagement/contexts/appContext'
 import App from './App'
 import { StoreContextProvider } from './stateManagement/storeState'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const root = ReactDOM.createRoot(document.getElementById('app-root') as HTMLElement)
 root.render(
     <React.StrictMode>
         <AppContextProvider>
