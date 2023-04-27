@@ -1,17 +1,26 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
-const contentOpacityClosed = 0
-const contentOpacityOpen = 1
+const openPostionTop = '30px'
+const closedPostionTop = '-50%'
 
 const backdropFadeIn = keyframes`
     0%   {opacity: ${backdropOpacityClosed}}
     100% {opacity: ${backdropOpacityOpen}}
 `
+const backdropFadeOut = keyframes`
+    0% {opacity: ${backdropOpacityOpen}}
+    100%   {opacity: ${backdropOpacityClosed}}
+`
 
-const contentFadeIn = keyframes`
-    0%   {opacity: ${contentOpacityClosed}}
-    100% {opacity: ${contentOpacityOpen}}
+const contentDriftIn = keyframes`
+    0%   {top: ${closedPostionTop}}
+    100% {top: ${openPostionTop}}
+`
+const contentDriftOut = keyframes`
+    0%      {top: ${openPostionTop}}
+    100%   {top: ${closedPostionTop}}
 `
 
 export const OuterWrapper = styled.div`
@@ -22,32 +31,38 @@ export const OuterWrapper = styled.div`
     height: 100vh;
 `
 
-export const Backdrop = styled.div`
+interface IBackdrop {
+    closing: boolean
+}
+export const Backdrop = styled.div<IBackdrop>`
     background: #000000;
     opacity: 0.4;
     height: 100%;
     position: relative;
     top: 0;
-    animation: 0.1s ${backdropFadeIn} linear;
+    animation: 0.3s ${(props) => (props.closing ? backdropFadeOut : backdropFadeIn)} linear;
 `
 
-export const ContentWrapper = styled.div`
+interface IContentWrapper {
+    closing: boolean
+}
+export const ContentWrapper = styled.div<IContentWrapper>`
     width: 100%;
     display: flex;
     justify-content: center;
+    top: 30px;
+    position: absolute;
+    opacity: 1;
+    animation: 0.3s ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease;
 `
 
 export const Content = styled.div`
     background: #ffffff;
-    position: absolute;
-    top: 30px;
     width: 70vw;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     padding: 16px;
-    opacity: 1;
-    animation: 0.3s ${contentFadeIn} linear;
 `
 
 export const ImageWrapper = styled.div`

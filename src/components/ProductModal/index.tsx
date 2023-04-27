@@ -2,7 +2,7 @@
 /* eslint-disable no-debugger */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/promise-function-async */
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { type FunctionComponent, type ReactElement, useState, useEffect } from 'react'
 import { Portal } from '../Portal'
 import {
     OuterWrapper,
@@ -21,15 +21,29 @@ interface IProductModalProps {
 }
 
 const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose }): ReactElement => {
-    debugger
+    const [isClosing, setIsClosing] = useState(false)
+
+    const initiateClose = (): void => {
+        setIsClosing(true)
+        setTimeout(() => {
+            setIsClosing(false)
+            onClose()
+        }, 300)
+    }
+
     const formattedImageUrl = `../assets/productImages/${product.image}`
     const shortTitle = `${product.title.substring(0, 50)}...`
 
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
             <OuterWrapper>
-                <Backdrop onClick={onClose} />
-                <ContentWrapper>
+                <Backdrop
+                    closing={isClosing}
+                    onClick={() => {
+                        initiateClose()
+                    }}
+                />
+                <ContentWrapper closing={isClosing}>
                     <Content>
                         <ImageWrapper></ImageWrapper>
                         <TitleWrapper>

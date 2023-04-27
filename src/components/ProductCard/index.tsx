@@ -5,6 +5,7 @@ import { OuterWrapper, Content, ImageWrapper, ImageContent, TitleWrapper, TitleT
 // todo: remove hard code image
 import Image from '../../assets/productImages/cold_pressed_oil.png'
 import ProductModal from '../ProductModal'
+import { useScrollLock } from '../../hooks/useScrollLock'
 
 interface IProductCardProps {
     image: string
@@ -14,6 +15,8 @@ interface IProductCardProps {
 
 const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkTo }): ReactElement => {
     const [isProductModalOpen, setIsProductModalOpen] = useState(false)
+
+    useScrollLock(isProductModalOpen)
 
     const formattedImageUrl = `./productImages/${image}`
     const shortTitle = `${title.substring(0, 50)}...`

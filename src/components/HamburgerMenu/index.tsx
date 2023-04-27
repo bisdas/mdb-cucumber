@@ -22,7 +22,6 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
     const childrenWithProps = useMemo(() => {
         return React.Children.map(children, (child) => {
             if (React.isValidElement(child)) {
-                console.log('child', child)
                 return React.cloneElement(child as React.ReactElement<any>, { onCloseMenu: initiateCloseMenu })
             }
 
