@@ -10,7 +10,6 @@ import {
     ContentWrapper,
     Content,
     ImageWrapper,
-    ImageContent,
     Brand,
     TitleWrapper,
     TitleText,
