@@ -72,21 +72,6 @@ export const ImageWrapper = styled.div`
     position: relative;
 `
 
-interface ImageContentProps {
-    imageUrl: string
-}
-export const ImageContent = styled.div<ImageContentProps>`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    font-size: 30px;
-    color: #ededed;
-    justify-content: center;
-    align-items: center;
-    background-image: url(${(props) => props.imageUrl});
-    background-size: cover;
-`
-
 export const Brand = styled.div`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     color: rgb(0 0 0);
