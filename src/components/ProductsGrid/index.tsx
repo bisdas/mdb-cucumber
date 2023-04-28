@@ -61,7 +61,7 @@ const ProductsGrid: FunctionComponent<IProductsGridProps> = ({ products, numberO
                                                 <ProductCard
                                                     image={gridColumn.thumbnail}
                                                     title={gridColumn.title}
-                                                    linkTo={gridColumn.targetLink}
+                                                    allDetails={gridColumn}
                                                 />
                                             </ProductCardWrapper>
                                         ) : (

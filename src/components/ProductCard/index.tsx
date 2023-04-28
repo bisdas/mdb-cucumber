@@ -10,10 +10,10 @@ import { useScrollLock } from '../../hooks/useScrollLock'
 interface IProductCardProps {
     image: string
     title: string
-    linkTo: string
+    allDetails: any
 }
 
-const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkTo }): ReactElement => {
+const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDetails }): ReactElement => {
     const [isProductModalOpen, setIsProductModalOpen] = useState(false)
 
     useScrollLock(isProductModalOpen)
@@ -25,7 +25,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, linkT
         <OuterWrapper>
             {isProductModalOpen && (
                 <ProductModal
-                    product={{ image, title, linkTo }}
+                    product={allDetails}
                     onClose={() => {
                         setIsProductModalOpen(false)
                     }}
