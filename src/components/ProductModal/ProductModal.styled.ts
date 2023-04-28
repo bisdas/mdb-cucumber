@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
 const openPostionTop = '30px'
-const closedPostionTop = '-50%'
+const closedPostionTop = '-100%'
 
 const backdropFadeIn = keyframes`
     0%   {opacity: ${backdropOpacityClosed}}
@@ -58,27 +58,18 @@ export const ContentWrapper = styled.div<IContentWrapper>`
 
 export const Content = styled.div`
     background: #ffffff;
-    width: 70vw;
+    width: 80vw;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    padding: 16px;
+    padding: 20px;
+    box-sizing: border-box;
 `
 
 export const ImageWrapper = styled.div`
-    height: 100px;
     width: 100px;
+    padding: 50%;
     border-radius: 10px;
-    background: linear-gradient(
-        0deg,
-        rgb(238 249 255) 0%,
-        rgba(255, 255, 255, 0.03687412464985995) 1%,
-        rgb(255 255 255) 100%
-    );
-
-    padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #f2f2f2;
+    position: relative;
 `
 
 interface ImageContentProps {
@@ -96,11 +87,19 @@ export const ImageContent = styled.div<ImageContentProps>`
     background-size: cover;
 `
 
+export const Brand = styled.div`
+    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
+    color: rgb(0 0 0);
+    font-size: 14px;
+    margin-top: 10px;
+`
+
 export const TitleWrapper = styled.div`
-    padding: 6px 4px;
-    width: 100px;
     box-sizing: border-box;
     white-space: break-spaces;
+    flex: 1;
+    margin-top: 4px;
+    margin-bottom: 10px;
 `
 export const TitleText = styled.span`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
@@ -109,3 +108,17 @@ export const TitleText = styled.span`
     width: 100%;
     display: block;
 }`
+
+export const ActionLinkButton = styled.div`
+    background: #ff9800;
+    padding: 6px 16px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+    color: #000000;
+    font-family: Montserrat-Medium, 'Helvetica Neue', Helvetica, 'sans-serif';
+    font-size: 14px;
+`
