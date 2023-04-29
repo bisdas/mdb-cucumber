@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, type FunctionComponent, type ReactElement } from 'react'
+import React, { useState, type FunctionComponent, type ReactElement, useMemo } from 'react'
 import { OuterWrapper, Content, ImageWrapper, ImageContent, TitleWrapper, TitleText } from './ProductCard.styled'
-
-// todo: remove hard code image
-import Image from '../../assets/productImages/cold_pressed_oil.png'
 import ProductModal from '../ProductModal'
 import { useScrollLock } from '../../hooks/useScrollLock'
 
@@ -18,7 +15,10 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
 
     useScrollLock(isProductModalOpen)
 
-    const formattedImageUrl = `./productImages/${image}`
+    const formattedImageUrl = useMemo(
+        () => `${location.protocol}//${window.location.host}/productImages/${image}`,
+        [image]
+    )
     const shortTitle = `${title.substring(0, 40)}...`
 
     return (
@@ -38,8 +38,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
                 }}
             >
                 <ImageWrapper>
-                    {/* <ImageContent imageUrl={formattedImageUrl}></ImageContent> */}
-                    <ImageContent imageUrl={Image}></ImageContent>
+                    <ImageContent imageUrl={formattedImageUrl}></ImageContent>
                 </ImageWrapper>
                 <TitleWrapper>
                     <TitleText>{shortTitle}</TitleText>

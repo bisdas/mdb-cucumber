@@ -15,3 +15,5 @@ Error boundary
 Customised route not found
 Icon for browser window
 use actual image of products
+hamburger menu backdrop shoule be full width
+update site motto text
