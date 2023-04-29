@@ -19,7 +19,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
     useScrollLock(isProductModalOpen)
 
     const formattedImageUrl = `./productImages/${image}`
-    const shortTitle = `${title.substring(0, 50)}...`
+    const shortTitle = `${title.substring(0, 40)}...`
 
     return (
         <OuterWrapper>
