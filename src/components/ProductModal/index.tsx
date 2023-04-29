@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-debugger */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/promise-function-async */
-import React, { type FunctionComponent, type ReactElement, useState, useEffect } from 'react'
+import React, { type FunctionComponent, type ReactElement, useState, useMemo } from 'react'
 import { Portal } from '../Portal'
 import {
     OuterWrapper,
@@ -15,7 +14,6 @@ import {
     TitleText,
     ActionLinkButton,
 } from './ProductModal.styled'
-import Image from '../../assets/productImages/cold_pressed_oil.png'
 import { openAnyLinkWindow } from '../../utils/utils'
 
 interface IProductModalProps {
@@ -34,7 +32,10 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
         }, 300)
     }
 
-    // const formattedImageUrl = `../assets/productImages/${product.image}`
+    const formattedImageUrl = useMemo(
+        () => `${location.protocol}//${window.location.host}/productImages/${product.thumbnail}`,
+        [product.thumbnail]
+    )
 
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
@@ -49,7 +50,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                     <Content>
                         <ImageWrapper>
                             <img
-                                src={Image}
+                                src={formattedImageUrl}
                                 height="100%"
                                 width="100%"
                                 alt="product-image"
