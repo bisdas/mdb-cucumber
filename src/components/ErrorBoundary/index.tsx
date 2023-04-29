@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 import React, { type ReactElement } from 'react'
 import ErrorFallbackUI from '../ErrorFallbackUI'
 
@@ -13,8 +12,7 @@ class ErrorBoundary extends React.Component<IErrorBoundaryProps> {
     }
 
     render(): ReactElement {
-        // if (this.props.error !== null) {
-        if (true) {
+        if (this.props.error !== null) {
             return <ErrorFallbackUI />
         }
 

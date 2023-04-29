@@ -40,18 +40,9 @@ export const TitleWrapper = styled.div`
     white-space: break-spaces;
 `
 export const TitleText = styled.span`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 12px;
+    font-size: 11px;
     width: 100%;
     display: block;
 }`
-
-// export const Anchor = styled.a`
-//     text-decoration: none;
-//     color: #000000;
-
-//     &:visited {
-//         color: #000000;
-//     }
-// `
