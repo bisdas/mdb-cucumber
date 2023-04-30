@@ -2,7 +2,7 @@ import { CATEGORIES, BRANDS, TAGS } from './catalogs'
 
 export const PRODUCTS = [
     {
-        id: '00001',
+        id: '000001',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid, 200 mm, 3 Litre',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -11,7 +11,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00002',
+        id: '000002',
         title: 'Futura Stir-Fry WOK 3 Litre with Induction Base without lid',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -20,7 +20,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00003',
+        id: '000003',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid, 200 mm, 3 Litre',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -29,7 +29,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00004',
+        id: '000004',
         title: 'Futura Stir-Fry WOK 3 Litre with Induction Base without lid',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -38,7 +38,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00005',
+        id: '000005',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid, 200 mm, 3 Litre',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -47,7 +47,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00006',
+        id: '000006',
         title: 'Futura Stir-Fry WOK 3 Litre with Induction Base without lid',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -56,7 +56,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00007',
+        id: '000007',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid, 200 mm, 3 Litre',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.TAWA_KADAI],
@@ -65,7 +65,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00008',
+        id: '000008',
         title: 'Futura Stir-Fry WOK 3 Litre with Induction Base without lid',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.POTS_PANS],
@@ -74,7 +74,7 @@ export const PRODUCTS = [
         image: 'cold_pressed_oil.png',
     },
     {
-        id: '00009',
+        id: '000009',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid, 200 mm, 3 Litre',
         brand: BRANDS.Hawkins,
         categories: [CATEGORIES.CUTLERIES],
