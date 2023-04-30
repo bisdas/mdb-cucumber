@@ -59,7 +59,7 @@ const ProductsGrid: FunctionComponent<IProductsGridProps> = ({ products, numberO
                                         {gridColumn.isEmpty === false ? (
                                             <ProductCardWrapper>
                                                 <ProductCard
-                                                    image={gridColumn.thumbnail}
+                                                    image={gridColumn.image}
                                                     title={gridColumn.title}
                                                     allDetails={gridColumn}
                                                 />

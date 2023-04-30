@@ -25,7 +25,7 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
         <>
             {selectProducts.map((product) => (
                 <SingleProductWrapper key={product.id}>
-                    <ProductCard image={product.thumbnail} title={product.title} allDetails={product} />
+                    <ProductCard image={product.image} title={product.title} allDetails={product} />
                 </SingleProductWrapper>
             ))}
 

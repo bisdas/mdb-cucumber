@@ -33,8 +33,8 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
     }
 
     const formattedImageUrl = useMemo(
-        () => `${location.protocol}//${window.location.host}/productImages/${product.thumbnail}`,
-        [product.thumbnail]
+        () => `${location.protocol}//${window.location.host}/productImages/${product.image}`,
+        [product.image]
     )
 
     return (

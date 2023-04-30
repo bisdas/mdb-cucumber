@@ -19,19 +19,31 @@ export const Second = styled(Text)`
     font-size: 24px;
 `
 export const Third = styled(Text)`
+    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     position: relative;
-    font-size: 18px;
+    font-size: 21px;
 `
 export const Fourth = styled(Text)`
+    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     position: relative;
-    font-size: 18px;
+    font-size: 21px;
 `
+
 export const Stylish = styled(Text)`
+    font-family: 'Montserrat-Italic', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #bd00ff;
     position: relative;
-    font-size: 28px;
-    // font-style: italic;
+    font-size: 24px;
     display: inline;
+`
+
+export const HowItWorks = styled.div`
+    margin-top: 10px;
+    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    color: #000000;
+    position: relative;
+    font-size: 14px;
+    text-decoration: underline;
 `

@@ -36,7 +36,7 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
                     setIsOpen(true)
                 }}
             >
-                <MenuIcon height={36} width={36} />
+                <MenuIcon height={40} width={40} />
             </Trigger>
             {isOpen && (
                 <Portal rootElementId="portal-root" className="hamburger-menu-portal">
