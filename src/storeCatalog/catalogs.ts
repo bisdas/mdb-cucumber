@@ -43,6 +43,10 @@ export const CATEGORIES = {
         id: 'WOODEN_ITEMS',
         title: 'Wooden Items',
     },
+    CERAMIC_ITEMS: {
+        id: 'CERAMIC_ITEMS',
+        title: 'Ceramic Items',
+    },
     KITCHEN_TOOLS_ACCESSORIES: {
         id: 'KITCHEN_TOOLS_ACCESSORIES',
         title: 'Kitchen Tools & Accessories',

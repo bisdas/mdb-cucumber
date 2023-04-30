@@ -8,7 +8,7 @@ export const OuterWrapper = styled.div`
 `
 
 export const TitleDesign = styled.div`
-    width: 136px;
+    width: 146px;
     pointer-events: none;
     touch-action: none;
     user-select: none;

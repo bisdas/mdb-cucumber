@@ -39,4 +39,12 @@ export const SiteMottoWrapper = styled.div`
     padding-top: 16px;
     padding-bottom: 16px;
     animation: 2s ${fadeIn};
+    background: rgb(255, 240, 215);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 240, 215, 1) 0%,
+        rgba(190, 237, 255, 1) 35%,
+        rgba(243, 253, 255, 1) 100%
+    );
+    margin-bottom: 20px;
 `

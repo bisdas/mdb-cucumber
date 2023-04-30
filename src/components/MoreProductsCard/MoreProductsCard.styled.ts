@@ -21,7 +21,7 @@ export const TitleWrapper = styled.div`
     white-space: break-spaces;
 `
 export const TitleText = styled.span`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     font-size: 11px;
     width: 100%;

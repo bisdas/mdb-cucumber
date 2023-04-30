@@ -53,7 +53,7 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                     <ParagraphText>
                         We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon. You
                         don&apos;t pay anything extra for any item. You pay normally what you pay on Amazon for the
-                        product.
+                        product. Sounds good, right?
                     </ParagraphText>
 
                     <ParagraphTitle>Share your idea</ParagraphTitle>
