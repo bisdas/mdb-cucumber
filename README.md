@@ -17,3 +17,6 @@ Icon for browser window
 use actual image of products
 hamburger menu backdrop shoule be full width
 update site motto text
+block desktop browser
+\*\* bookmarkability: maintain state when a sub route is opened directly.
+update readme and description

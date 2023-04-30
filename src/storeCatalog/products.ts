@@ -8,7 +8,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [TAGS.kadai, TAGS.nonstick],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00002',
@@ -17,7 +17,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00003',
@@ -26,7 +26,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00004',
@@ -35,7 +35,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00005',
@@ -44,7 +44,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00006',
@@ -53,7 +53,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00007',
@@ -62,7 +62,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.TAWA_KADAI],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00008',
@@ -71,7 +71,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00009',
@@ -80,7 +80,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.CUTLERIES],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00010',
@@ -89,7 +89,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00011',
@@ -98,7 +98,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.NON_STICK_COOKWARE, CATEGORIES.CUTLERIES],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B09F3DRD1M',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
     {
         id: '00012',
@@ -107,6 +107,6 @@ export const PRODUCTS = [
         categories: [CATEGORIES.POTS_PANS],
         tags: [TAGS.cutleries],
         targetLink: 'https://www.amazon.in/dp/B00NTZB156',
-        thumbnail: 'cold_pressed_oil.png',
+        image: 'cold_pressed_oil.png',
     },
 ]

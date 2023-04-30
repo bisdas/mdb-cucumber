@@ -95,7 +95,7 @@ export const TitleText = styled.span`
 }`
 
 export const ActionLinkButton = styled.div`
-    background: #ff9800;
+    background: #0091db;
     padding: 6px 16px;
     cursor: pointer;
     display: inline-block;
@@ -103,7 +103,7 @@ export const ActionLinkButton = styled.div`
     box-sizing: border-box;
     user-select: none;
     outline: none;
-    color: #000000;
-    font-family: Montserrat-Medium, 'Helvetica Neue', Helvetica, 'sans-serif';
+    color: #ffffff;
+    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
 `

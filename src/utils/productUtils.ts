@@ -11,7 +11,7 @@ export const organiseProductsByCategory = (products: any[]): any => {
                 brand: currentProduct.brand,
                 tags: currentProduct.tags,
                 targetLink: currentProduct.targetLink,
-                thumbnail: currentProduct.thumbnail,
+                image: currentProduct.image,
             }
 
             const existingCategory = allOrganisedItemsModified.find((item) => item.category.id === category.id)
