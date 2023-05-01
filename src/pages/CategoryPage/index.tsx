@@ -12,6 +12,7 @@ import {
     ProductGridWrapper,
     GoBackWrapper,
     CategoryTitle,
+    ThatsAll,
 } from './CategoryPage.styled'
 import { LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
@@ -66,6 +67,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
                         <ProductGridWrapper>
                             <ProductsGrid products={category.products} numberOfColumns={3} />
                         </ProductGridWrapper>
+                        <ThatsAll>That&apos;s all, folks!</ThatsAll>
                     </PageContent>
                 )}
             </Content>

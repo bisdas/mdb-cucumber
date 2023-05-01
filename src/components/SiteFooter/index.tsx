@@ -34,8 +34,7 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                 <Section>
                     <SectionTitle>Cucumber</SectionTitle>
                     <SectionBody>
-                        Cucumber recommends you the finest product ideas you can choose from to make your kitchen look
-                        beautiful.
+                        Cucumber recommends you product ideas you can choose from to make your kitchen look beautiful.
                     </SectionBody>
                 </Section>
                 <Section>
