@@ -41,7 +41,7 @@ export const Stylish = styled(Text)`
 
 export const HowItWorks = styled.div`
     margin-top: 10px;
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     position: relative;
     font-size: 14px;

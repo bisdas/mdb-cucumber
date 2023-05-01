@@ -53,21 +53,6 @@ export const MenuItemTitle = styled.span<IMenuItemTitle>`
 
 export const MenuHead = styled.div``
 
-// export const Uplift = styled.div`
-// font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-// color: #6b6b6b;
-// font-size: 12px;
-// margin-top: 4px;
-// `
-
-// export const Stylish = styled.span`
-//     font-family: 'Lobster-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-//     color: #6b6b6b;
-//     position: relative;
-//     font-size: 12px;
-//     display: inline;
-// `
-
 export const SocialLinkButtons = styled.div`
     margin-top: 6px;
 `
