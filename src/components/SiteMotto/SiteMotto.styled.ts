@@ -32,8 +32,8 @@ export const Fourth = styled(Text)`
 `
 
 export const Stylish = styled(Text)`
-    font-family: 'Montserrat-Italic', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #bd00ff;
+    font-family: 'Lobster-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    color: #0078ff;
     position: relative;
     font-size: 24px;
     display: inline;
