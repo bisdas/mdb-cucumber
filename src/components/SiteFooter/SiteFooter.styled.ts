@@ -36,7 +36,7 @@ export const ContactButtonWrapper = styled.div`
     margin: 10px 0;
 `
 export const ContactButton = styled.div`
-    background: #202020;
+    background: #0082d6;
     padding: 6px 16px;
     cursor: pointer;
     display: inline-block;
@@ -57,7 +57,6 @@ export const SocialLink = styled.span`
     width: 30px;
     border-radius: 50%;
     margin-right: 14px;
-    // border: 1px solid #e4e4e4;
     background: #ffffff;
     box-sizing: border-box;
 `

@@ -47,7 +47,7 @@ export const Description = styled.div``
 export const DescriptionFirstLine = styled.div`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 26px;
+    font-size: 24px;
     width: 100%;
     display: block;
     pointer-events: none;
@@ -57,7 +57,7 @@ export const DescriptionFirstLine = styled.div`
 export const DescriptionSecondLine = styled.div`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     display: block;
     pointer-events: none;

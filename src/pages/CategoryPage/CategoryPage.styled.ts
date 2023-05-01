@@ -21,7 +21,7 @@ export const PageHeader = styled.div`
 
 export const PageContent = styled.div`
     padding: 20px 12px;
-    margin-bottom: 60px;
+    border-bottom: 18px solid #eaeaea;
     animation: 1s ${fadeIn};
 `
 
@@ -30,7 +30,7 @@ export const Description = styled.div``
 export const DescriptionFirstLine = styled.div`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 26px;
+    font-size: 24px;
     width: 100%;
     display: block;
     pointer-events: none;
@@ -40,7 +40,7 @@ export const DescriptionFirstLine = styled.div`
 export const DescriptionSecondLine = styled.div`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     display: block;
     pointer-events: none;
@@ -73,6 +73,14 @@ export const CategoryTitle = styled.div`
     align-items: center;
 `
 
+export const ThatsAll = styled.div`
+    font-family: Montserrat-Regular, 'Helvetica Neue', Helvetica, 'sans-serif';
+    color: rgb(0 0 0);
+    font-size: 14px;
+    text-align: center;
+`
+
 export const ProductGridWrapper = styled.div`
     margin-top: 30px;
+    margin-bottom: 40px;
 `

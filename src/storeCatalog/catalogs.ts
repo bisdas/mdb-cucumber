@@ -102,6 +102,18 @@ export const BRANDS = {
         id: 'Hawkins',
         title: 'Hawkins',
     },
+    Bergner: {
+        id: 'BERGNER',
+        title: 'BERGNER',
+    },
+    Amazon_Solimo: {
+        id: 'Amazon Brand - Solimo',
+        title: 'Amazon Brand - Solimo',
+    },
+    Borosil: {
+        id: 'Borosil',
+        title: 'Borosil',
+    },
 }
 
 export const TAGS = {
@@ -132,5 +144,21 @@ export const TAGS = {
     induction: {
         id: 'induction',
         title: 'induction',
+    },
+    frypan: {
+        id: 'frypan',
+        title: 'frypan',
+    },
+    frying: {
+        id: 'frying',
+        title: 'frying',
+    },
+    glasslid: {
+        id: 'glasslid',
+        title: 'glasslid',
+    },
+    tpan: {
+        id: 'tpan',
+        title: 'tpan',
     },
 }
