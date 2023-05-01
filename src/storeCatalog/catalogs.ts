@@ -94,6 +94,10 @@ export const BRANDS = {
         id: 'Prestige',
         title: 'Prestige',
     },
+    Carote: {
+        id: 'CAROTE',
+        title: 'CAROTE',
+    },
     Hawkins: {
         id: 'Hawkins',
         title: 'Hawkins',
@@ -124,5 +128,9 @@ export const TAGS = {
     cutlery: {
         id: 'cutlery',
         title: 'cutlery',
+    },
+    induction: {
+        id: 'induction',
+        title: 'induction',
     },
 }
