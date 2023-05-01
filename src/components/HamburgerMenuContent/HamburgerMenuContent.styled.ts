@@ -52,33 +52,21 @@ export const MenuItemTitle = styled.span<IMenuItemTitle>`
 `
 
 export const MenuHead = styled.div``
-export const Title = styled.div`
-    font-family: 'Montserrat-ExtraBold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #009a4f;
-    font-size: 24px;
-`
-export const SubtitleOne = styled.div`
-    font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 16px;
-`
-export const SubtitleTwo = styled.div`
-    font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 16px;
-`
-export const ByDelishBowl = styled.div``
-export const By = styled.span`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 10px;
-    margin-right: 3px;
-`
-export const DelishBowl = styled.span`
-    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    font-size: 10px;
-`
+
+// export const Uplift = styled.div`
+// font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+// color: #6b6b6b;
+// font-size: 12px;
+// margin-top: 4px;
+// `
+
+// export const Stylish = styled.span`
+//     font-family: 'Lobster-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+//     color: #6b6b6b;
+//     position: relative;
+//     font-size: 12px;
+//     display: inline;
+// `
 
 export const SocialLinkButtons = styled.div`
     margin-top: 6px;
