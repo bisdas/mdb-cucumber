@@ -27,7 +27,7 @@ export const ProductSectionsWrapper = styled.div`
 export const SearchTitle = styled.div`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #2b2b2b;
-    font-size: 14px;
+    font-size: 16px;
     box-sizing: border-box;
     white-space: break-spaces;
 `

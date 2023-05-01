@@ -1,15 +1,10 @@
 /* eslint-disable no-debugger */
 import React, { type FunctionComponent, type ReactElement } from 'react'
+import SiteTitle from '../SiteTitle'
 import {
     OuterWrapper,
     MenuItem,
     MenuHead,
-    SubtitleOne,
-    SubtitleTwo,
-    ByDelishBowl,
-    By,
-    DelishBowl,
-    Title,
     HeadSection,
     MenuItemsSection,
     CommunityInviteSection,
@@ -19,7 +14,6 @@ import {
     SocialLinkButtons,
     SocialLink,
     CommunityInvite,
-    // Join,
     TheCommunity,
 } from './HamburgerMenuContent.styled'
 import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
@@ -53,13 +47,7 @@ const HamburgerMenuContent: FunctionComponent<IHamburgerMenuContent> = ({ onClos
         <OuterWrapper>
             <HeadSection>
                 <MenuHead>
-                    <Title>Cucumber</Title>
-                    <SubtitleOne>Ideas for your</SubtitleOne>
-                    <SubtitleTwo>kitchen.</SubtitleTwo>
-                    <ByDelishBowl>
-                        <By>by</By>
-                        <DelishBowl>Delish Bowl</DelishBowl>
-                    </ByDelishBowl>
+                    <SiteTitle />
                 </MenuHead>
             </HeadSection>
             <MenuItemsSection>

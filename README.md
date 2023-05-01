@@ -11,12 +11,12 @@ Styling - Styled components, SASS, CSS
 Programming Languages - JavaScript, TypeScript
 
 Pending -
-Error boundary
-Customised route not found
-Icon for browser window
+Done - Error boundary
+Done - Customised route not found
+Done - Icon for browser window
 use actual image of products
 hamburger menu backdrop shoule be full width
-update site motto text
+Done - update site motto text
 block desktop browser
 \*\* bookmarkability: maintain state when a sub route is opened directly.
-update readme and description
+update tech tags in readme above

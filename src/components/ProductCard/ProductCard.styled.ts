@@ -3,8 +3,8 @@ import styled from 'styled-components/macro'
 export const OuterWrapper = styled.div``
 export const Content = styled.div``
 export const ImageWrapper = styled.div`
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border-radius: 10px;
     background: linear-gradient(
         0deg,
@@ -13,7 +13,7 @@ export const ImageWrapper = styled.div`
         rgb(255 255 255) 100%
     );
 
-    padding: 10px;
+    padding: 6px;
     box-sizing: border-box;
     border: 1px solid #f2f2f2;
 `
@@ -35,7 +35,7 @@ export const ImageContent = styled.div<ImageContentProps>`
 
 export const TitleWrapper = styled.div`
     padding: 6px 4px;
-    width: 100px;
+    width: 120px;
     box-sizing: border-box;
     white-space: break-spaces;
 `
