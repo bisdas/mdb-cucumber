@@ -3,9 +3,9 @@ export const CATEGORIES = {
         id: 'POTS_PANS',
         title: 'Pots & Pans',
     },
-    TAWA_KADAI: {
+    TAWA_KADHAI: {
         id: 'TAWA_KADHAI',
-        title: 'Tawa & Kadai',
+        title: 'Tawa & Kadhai',
     },
     CUTLERIES: {
         id: 'CUTLERIES',
@@ -107,12 +107,48 @@ export const BRANDS = {
         title: 'BERGNER',
     },
     Amazon_Solimo: {
-        id: 'Amazon Brand - Solimo',
+        id: 'Amazon_Solimo',
         title: 'Amazon Brand - Solimo',
     },
     Borosil: {
         id: 'Borosil',
         title: 'Borosil',
+    },
+    Signoraware: {
+        id: 'Signoraware',
+        title: 'Signoraware',
+    },
+    The_Indus_Valley: {
+        id: 'The_Indus_Valley',
+        title: 'The Indus Valley',
+    },
+    Rock_Tawa: {
+        id: 'Rock_Tawa',
+        title: 'Rock Tawa',
+    },
+    Hemer: {
+        id: 'HEMER',
+        title: 'HEMER',
+    },
+    Milton: {
+        id: 'MILTON',
+        title: 'MILTON',
+    },
+    Stahl: {
+        id: 'Stahl',
+        title: 'Stahl',
+    },
+    Vinod: {
+        id: 'Vinod',
+        title: 'Vinod',
+    },
+    Nirlon: {
+        id: 'NIRLON',
+        title: 'NIRLON',
+    },
+    Shri_Sam: {
+        id: 'Shri_Sam',
+        title: 'Shri & Sam',
     },
 }
 
