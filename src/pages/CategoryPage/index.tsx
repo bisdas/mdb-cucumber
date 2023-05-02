@@ -31,7 +31,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
 
     useEffect(() => {
         // fake delay to show the loader on category page
-        const randomDelay = getRandomNumber(250, 1000)
+        const randomDelay = getRandomNumber(250, 750)
         setTimeout(() => {
             setPageLoading(false)
         }, randomDelay)
@@ -65,7 +65,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
                         </Description>
 
                         <ProductGridWrapper>
-                            <ProductsGrid products={category.products} numberOfColumns={3} />
+                            <ProductsGrid products={category.products} numberOfColumns={2} />
                         </ProductGridWrapper>
                         <ThatsAll>That&apos;s all, folks!</ThatsAll>
                     </PageContent>

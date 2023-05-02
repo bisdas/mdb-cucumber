@@ -3,10 +3,10 @@ import styled from 'styled-components/macro'
 export const OuterWrapper = styled.div``
 export const Content = styled.div``
 export const ImageWrapper = styled.div`
-    height: 100px;
-    width: 100px;
+    min-width: 100px;
     border-radius: 10px;
-    padding: 6px;
+    padding: 50%;
+    position: relative;
     box-sizing: border-box;
     border: 1px solid #f2f2f2;
 `
@@ -15,20 +15,18 @@ interface ImageContentProps {
     imageUrl: string
 }
 export const ImageContent = styled.div<ImageContentProps>`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    font-size: 30px;
-    color: #ededed;
-    justify-content: center;
-    align-items: center;
+    width: 94%;
+    height: 94%;
+    margin: 3%;
     background-image: url(${(props) => props.imageUrl});
     background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 `
 
 export const TitleWrapper = styled.div`
     padding: 6px 4px;
-    width: 100px;
     box-sizing: border-box;
     white-space: break-spaces;
 `

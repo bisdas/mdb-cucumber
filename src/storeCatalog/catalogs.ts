@@ -197,4 +197,12 @@ export const TAGS = {
         id: 'tpan',
         title: 'tpan',
     },
+    tawa: {
+        id: 'tawa',
+        title: 'tawa',
+    },
+    tava: {
+        id: 'tava',
+        title: 'tava',
+    },
 }

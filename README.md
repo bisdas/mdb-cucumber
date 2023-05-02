@@ -20,3 +20,4 @@ Done - update site motto text
 block desktop browser
 \*\* bookmarkability: maintain state when a sub route is opened directly.
 update tech tags in readme above
+auto-redirect home in 10 seconds from error boundary
