@@ -16,6 +16,7 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
     const [error, setError] = useState(null)
     const useSearchProductsRef = useRef()
 
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
     const fetchProducts = useCallback(
         debounce(
             useSearchProductsRef,

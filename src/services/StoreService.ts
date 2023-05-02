@@ -98,7 +98,7 @@ class StoreService {
         const productsList: any[] = this.products.reduce((collectedProducts: any[], currentProduct: any) => {
             const updatedList = [...collectedProducts]
             const brandIndex = brands.findIndex(
-                (brand) => brand.title.toLowerCase().trim() === currentProduct.brand.title.toLowerCase().trim()
+                (brand) => brand?.title?.toLowerCase().trim() === currentProduct.brand?.title?.toLowerCase().trim()
             )
 
             if (brandIndex !== -1) {
@@ -116,7 +116,7 @@ class StoreService {
             const updatedList = [...collectedProducts]
             currentProduct.tags.forEach((productCurrentTag: any) => {
                 const tagIndex = tags.findIndex(
-                    (tag) => tag.title.toLowerCase().trim() === productCurrentTag.title.toLowerCase().trim()
+                    (tag) => tag?.title?.toLowerCase().trim() === productCurrentTag?.title?.toLowerCase().trim()
                 )
 
                 if (tagIndex !== -1) {

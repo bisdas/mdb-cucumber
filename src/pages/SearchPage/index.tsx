@@ -58,7 +58,7 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
                         )}
 
                         <ProductGridWrapper>
-                            <ProductsGrid products={filteredProducts?.data} numberOfColumns={3} />
+                            <ProductsGrid products={filteredProducts?.data} numberOfColumns={2} />
                         </ProductGridWrapper>
                     </PageContent>
                 )}

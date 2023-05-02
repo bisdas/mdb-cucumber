@@ -6,11 +6,13 @@ export const Grid = styled.div``
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 10px;
     margin-bottom: 24px;
 `
-export const Item = styled.div``
+export const Item = styled.div`
+    flex: 1;
+`
 
 export const ProductCardWrapper = styled.div`
-    display: inline-block;
+    // display: inline-block;
 `

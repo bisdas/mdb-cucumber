@@ -19,7 +19,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
         () => `${location.protocol}//${window.location.host}/productImages/${image}`,
         [image]
     )
-    const shortTitle = `${title.substring(0, 40)}...`
+    const shortTitle = `${title.substring(0, 50)}...`
 
     return (
         <OuterWrapper>
