@@ -308,4 +308,13 @@ export const PRODUCTS = [
         targetLink: 'https://www.amazon.in/dp/B08KM88Z9H',
         image: '0000036.png',
     },
+    {
+        id: '0000037',
+        title: 'Non Stick Kadai with Lid, Induction Kadai, Granite Covered Kadhai, Biriyani Pot, Kadhai for Deep Frying, 24cm, White',
+        brand: BRANDS.Carote,
+        categories: [CATEGORIES.TAWA_KADHAI],
+        tags: [TAGS.kadai],
+        targetLink: 'https://www.amazon.in/dp/B09V7LBNDR',
+        image: '0000037.png',
+    },
 ]
