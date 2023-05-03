@@ -150,6 +150,42 @@ export const BRANDS = {
         id: 'Shri_Sam',
         title: 'Shri & Sam',
     },
+    Spatlus: {
+        id: 'Spatlus',
+        title: 'Spatlus',
+    },
+    Clazkit: {
+        id: 'Clazkit',
+        title: 'Clazkit',
+    },
+    Leeonz: {
+        id: 'Leeonz',
+        title: 'Leeonz',
+    },
+    Ikea: {
+        id: 'Ikea',
+        title: 'Ikea',
+    },
+    The_Better_Home: {
+        id: 'The_Better_Home',
+        title: 'The Better Home',
+    },
+    Kuber_Industries: {
+        id: 'Kuber_Industries',
+        title: 'Kuber Industries',
+    },
+    Pepplo: {
+        id: 'Pepplo',
+        title: 'pepplo',
+    },
+    Baskety: {
+        id: 'Baskety',
+        title: 'Baskety',
+    },
+    Vemlons: {
+        id: 'Vemlons',
+        title: 'Vemlons',
+    },
 }
 
 export const TAGS = {
