@@ -186,6 +186,94 @@ export const BRANDS = {
         id: 'Vemlons',
         title: 'Vemlons',
     },
+    Kelvee: {
+        id: 'KELVEE',
+        title: 'KELVEE',
+    },
+    Treo: {
+        id: 'Treo',
+        title: 'Treo',
+    },
+    PrimeWorld: {
+        id: 'PrimeWorld',
+        title: 'PrimeWorld',
+    },
+    Incrizma: {
+        id: 'Incrizma',
+        title: 'Incrizma',
+    },
+    Home_Cart: {
+        id: 'Home_Cart',
+        title: 'Home-Cart',
+    },
+    Cello: {
+        id: 'Cello',
+        title: 'Cello',
+    },
+    Korona: {
+        id: 'Korona',
+        title: 'Korona',
+    },
+    Golden_Bird: {
+        id: 'Golden_Bird',
+        title: 'Golden Bird',
+    },
+    RKK: {
+        id: 'RKK',
+        title: 'RKK',
+    },
+    Ramoji_International: {
+        id: 'Ramoji_International',
+        title: 'RAMOJI INTERNATIONAL',
+    },
+    Star_Work: {
+        id: 'Star_Work',
+        title: 'STAR WORK',
+    },
+    Vasukie: {
+        id: 'Vasukie',
+        title: 'Vasukie',
+    },
+    Satvikaya: {
+        id: 'Satvikaya',
+        title: 'SATVIKAYA',
+    },
+    M_T_Brothers: {
+        id: 'M_T_Brothers',
+        title: 'M T BROTHERS',
+    },
+    Hilofy: {
+        id: 'Hilofy',
+        title: 'Hilofy',
+    },
+    Cloudsell: {
+        id: 'Cloudsell',
+        title: 'Cloudsell',
+    },
+    Castanea: {
+        id: 'Castanea',
+        title: 'Castanea',
+    },
+    Dropany: {
+        id: 'Dropany',
+        title: 'DROPANY',
+    },
+    Meldique: {
+        id: 'Meldique',
+        title: 'Meldique',
+    },
+    Jinelza: {
+        id: 'Jinelza',
+        title: 'Jinelza',
+    },
+    Zosoe: {
+        id: 'Zosoe',
+        title: 'zosoe',
+    },
+    Aarav_House: {
+        id: 'Aarav_House',
+        title: 'Aarav House',
+    },
 }
 
 export const TAGS = {
