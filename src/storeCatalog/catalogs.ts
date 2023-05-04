@@ -274,6 +274,38 @@ export const BRANDS = {
         id: 'Aarav_House',
         title: 'Aarav House',
     },
+    Xacton: {
+        id: 'Xacton',
+        title: 'Xacton',
+    },
+    SEIKO: {
+        id: 'SEIKO',
+        title: 'SEIKO',
+    },
+    Zollyss: {
+        id: 'Zollyss',
+        title: 'Zollyss',
+    },
+    Kanshitas_Rasoiware: {
+        id: 'Kanshitas_Rasoiware',
+        title: "Kanshita's Rasoiware",
+    },
+    Amazon_Basics: {
+        id: 'Amazon_Basics',
+        title: 'Amazon Basics',
+    },
+    Meyer: {
+        id: 'Meyer',
+        title: 'Meyer',
+    },
+    USA_Pan: {
+        id: 'USA_Pan',
+        title: 'USA Pan',
+    },
+    Clay_Craft: {
+        id: 'Clay_Craft',
+        title: 'Clay Craft',
+    },
 }
 
 export const TAGS = {
