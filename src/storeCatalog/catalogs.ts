@@ -306,6 +306,10 @@ export const BRANDS = {
         id: 'Clay_Craft',
         title: 'Clay Craft',
     },
+    Pigeon: {
+        id: 'Pigeon',
+        title: 'Pigeon',
+    },
 }
 
 export const TAGS = {
