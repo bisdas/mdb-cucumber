@@ -155,7 +155,7 @@ class StoreService {
                 matchedProducts.push(...this.getProductsByTags(getMatchedTags))
                 matchedProducts.push(...this.getProductsByTitle(sanitisedKeyword))
 
-                // todo: remove duplicates
+                // todo: urgent : remove duplicates
                 if (sanitisedKeyword === 'error') {
                     reject(new Error('error keyword'))
                 } else {
