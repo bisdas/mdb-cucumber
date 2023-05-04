@@ -1,4 +1,4 @@
-/* eslint-disable no-debugger */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState, useRef, useCallback } from 'react'
 import { LONG_RUN_ACTIVITY, KEYWORD_MIN_LENGTH } from '../configuration/constants'
 import StoreService from '../services/StoreService'
@@ -54,12 +54,12 @@ export const useSearchProducts = (keyword: string): IUseSearchProducts => {
         /* if the keyword length is less than minimum, clear results
          * else, fetch new results.
          */
-        if (keyword.trim().length < KEYWORD_MIN_LENGTH) {
-            setProducts([])
-            setError(null)
-        } else {
-            fetchProducts()
-        }
+        // if (keyword.trim().length < KEYWORD_MIN_LENGTH) {
+        //     setProducts([])
+        //     setError(null)
+        // } else {
+        fetchProducts()
+        // }
     }, [keyword, fetchProducts])
 
     const isLoading: boolean = status === LONG_RUN_ACTIVITY.RUNNING
