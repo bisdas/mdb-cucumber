@@ -310,6 +310,38 @@ export const BRANDS = {
         id: 'Pigeon',
         title: 'Pigeon',
     },
+    Femora: {
+        id: 'Femora',
+        title: 'Femora',
+    },
+    Caffeine: {
+        id: 'Caffeine',
+        title: 'Caffeine',
+    },
+    InstaCuppa: {
+        id: 'InstaCuppa',
+        title: 'InstaCuppa',
+    },
+    Tesora: {
+        id: 'Tesora',
+        title: 'Tesora',
+    },
+    Mystic_Leaf: {
+        id: 'Mystic_Leaf',
+        title: 'Mystic Leaf',
+    },
+    Havells: {
+        id: 'Havells',
+        title: 'Havells',
+    },
+    KENT: {
+        id: 'KENT',
+        title: 'KENT',
+    },
+    Inalsa: {
+        id: 'Inalsa',
+        title: 'Inalsa',
+    },
 }
 
 export const TAGS = {

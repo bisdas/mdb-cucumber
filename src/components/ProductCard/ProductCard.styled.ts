@@ -18,6 +18,7 @@ export const ImageContent = styled.div<ImageContentProps>`
     width: 94%;
     height: 94%;
     margin: 3%;
+    border-radius: 7px;
     background-image: url(${(props) => props.imageUrl});
     background-size: cover;
     position: absolute;
