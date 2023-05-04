@@ -310,6 +310,14 @@ export const BRANDS = {
         id: 'Pigeon',
         title: 'Pigeon',
     },
+    Femora: {
+        id: 'Femora',
+        title: 'Femora',
+    },
+    Caffeine: {
+        id: 'Caffeine',
+        title: 'Caffeine',
+    },
 }
 
 export const TAGS = {
