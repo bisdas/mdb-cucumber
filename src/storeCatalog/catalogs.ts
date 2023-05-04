@@ -329,6 +329,14 @@ export const TAGS = {
         id: 'nonstick',
         title: 'nonstick',
     },
+    non_stick: {
+        id: 'non-stick',
+        title: 'non-stick',
+    },
+    non__stick: {
+        id: 'non__stick',
+        title: 'non stick',
+    },
     cutleries: {
         id: 'cutleries',
         title: 'cutleries',

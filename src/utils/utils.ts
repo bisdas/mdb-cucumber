@@ -15,7 +15,8 @@ export const getRandomNumber = (minimum: number, maximum: number): number => {
 
 export const openEmailWriterWindow = (subject: string): void => {
     // todo: check if encoding url is required
-    window.open(`mailto:${DELISH_BOWL_EMAIL_ADDRESS}?&subject=${subject}`)
+    const url = `mailto:${DELISH_BOWL_EMAIL_ADDRESS}?&subject=${subject}`
+    window.open(url)
 }
 
 export const openAnyLinkWindow = (link: string): void => {
