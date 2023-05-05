@@ -36,7 +36,7 @@ export const ContactButtonWrapper = styled.div`
     margin: 10px 0;
 `
 export const ContactButton = styled.div`
-    background: #0082d6;
+    background: #0b9d58;
     padding: 6px 16px;
     cursor: pointer;
     display: inline-block;
