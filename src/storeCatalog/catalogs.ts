@@ -342,6 +342,18 @@ export const BRANDS = {
         id: 'Inalsa',
         title: 'Inalsa',
     },
+    Tuelip: {
+        id: 'Tuelip',
+        title: 'Tuelip',
+    },
+    JCPL: {
+        id: 'JCPL',
+        title: 'JCPL',
+    },
+    TAJNAN: {
+        id: 'TAJNAN',
+        title: 'TAJNAN',
+    },
 }
 
 export const TAGS = {
