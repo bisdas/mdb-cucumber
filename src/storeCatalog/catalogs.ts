@@ -354,6 +354,42 @@ export const BRANDS = {
         id: 'TAJNAN',
         title: 'TAJNAN',
     },
+    SHAYONAM: {
+        id: 'SHAYONAM',
+        title: 'SHAYONAM',
+    },
+    Plantex: {
+        id: 'Plantex',
+        title: 'Plantex',
+    },
+    Ebee: {
+        id: 'Ebee',
+        title: 'Ebee',
+    },
+    Lyrovo: {
+        id: 'Lyrovo',
+        title: 'Lyrovo',
+    },
+    KITOME: {
+        id: 'KITOME',
+        title: 'KITOME',
+    },
+    Ginoya_Brothers: {
+        id: 'Ginoya_Brothers',
+        title: 'ginoya brothers',
+    },
+    Decorlay: {
+        id: 'Decorlay',
+        title: 'Decorlay',
+    },
+    EverEx: {
+        id: 'EverEx',
+        title: 'EverEx',
+    },
+    JRM: {
+        id: 'JRM',
+        title: 'JRM',
+    },
 }
 
 export const TAGS = {
