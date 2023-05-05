@@ -13,6 +13,7 @@ import {
     TitleWrapper,
     TitleText,
     ActionLinkButton,
+    Image,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
 
@@ -49,13 +50,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                 <ContentWrapper closing={isClosing}>
                     <Content>
                         <ImageWrapper>
-                            <img
-                                src={formattedImageUrl}
-                                height="100%"
-                                width="100%"
-                                alt="product-image"
-                                style={{ position: 'absolute', top: '0px', left: '0px' }}
-                            />
+                            <Image src={formattedImageUrl} alt="Product image" />
                         </ImageWrapper>
                         <Brand>{product.brand.title}</Brand>
                         <TitleWrapper>

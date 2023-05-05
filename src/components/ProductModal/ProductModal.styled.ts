@@ -72,6 +72,15 @@ export const ImageWrapper = styled.div`
     position: relative;
 `
 
+export const Image = styled.img`
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+`
+
 export const Brand = styled.div`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     color: rgb(0 0 0);
