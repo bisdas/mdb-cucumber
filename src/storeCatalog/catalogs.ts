@@ -65,7 +65,7 @@ export const CATEGORIES = {
     },
     INDUCTION_COOKWARE: {
         id: 'INDUCTION_COOKWARE',
-        title: 'Induction Friendly Cookware',
+        title: 'Induction-friendly Cookware',
     },
     STOVES_COOKTOPS: {
         id: 'STOVES_COOKTOPS',
@@ -465,6 +465,26 @@ export const BRANDS = {
     Whirlpool: {
         id: 'Whirlpool',
         title: 'Whirlpool',
+    },
+    IFB: {
+        id: 'IFB',
+        title: 'IFB',
+    },
+    Samsung: {
+        id: 'Samsung',
+        title: 'Samsung',
+    },
+    LG: {
+        id: 'LG',
+        title: 'LG',
+    },
+    Panasonic: {
+        id: 'Panasonic',
+        title: 'Panasonic',
+    },
+    Bajaj: {
+        id: 'Bajaj',
+        title: 'Bajaj',
     },
 }
 

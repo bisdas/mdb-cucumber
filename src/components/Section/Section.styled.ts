@@ -8,7 +8,7 @@ export const ContentWrapper = styled.div``
 export const TitleWrapper = styled.div`
     box-sizing: border-box;
     white-space: break-spaces;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     pointer-events: none;
     user-select: none;
 `

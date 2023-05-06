@@ -5,15 +5,15 @@ interface IOuterWrapperProps {
 }
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     margin-top: 6px;
-    border: ${(props) => (props?.seamless === false ? '2px solid #cecece' : 'none')};
-    border-radius: 6px;
-    height: 36px;
+    border: ${(props) => (props?.seamless === false ? '2px solid #b4b4b4' : 'none')};
+    border-radius: 24px;
+    height: 40px;
 `
 
 export const SearchIconWrapper = styled.div`
     margin-right: 6px;
     position: relative;
-    top: 2px;
+    top: 3px;
     pointer-events: none;
     user-select: none;
 `
@@ -29,9 +29,9 @@ export const SearchForm = styled.form<ISearchFormProps>`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 36px;
+    height: inherit;
     padding-left: ${(props) => (props.seamless ? '0' : '14px')};
-    padding-right: 5px;
+    padding-right: 14px;
 `
 
 export const SearchTextBox = styled.input`
@@ -43,6 +43,7 @@ export const SearchTextBox = styled.input`
     font-family: 'Montserrat-Light', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
     font-size: 16px;
+    background: transparent;
 
     &:hover {
         border: none;

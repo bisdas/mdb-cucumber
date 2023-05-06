@@ -23,3 +23,7 @@ update tech tags in readme above
 auto-redirect home in 10 seconds from error boundary
 add top brands section on home page
 order categories in home page based on rank
+add 'isDeleted' property to each product
+add order to each product
+** create a ranking model for product (dynamic store)
+** add store tag to product links
