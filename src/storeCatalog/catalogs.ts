@@ -450,6 +450,22 @@ export const BRANDS = {
         id: 'Eureka_Forbes',
         title: 'Eureka Forbes',
     },
+    Usha: {
+        id: 'Usha',
+        title: 'Usha',
+    },
+    Elica: {
+        id: 'Elica',
+        title: 'Elica',
+    },
+    Glen: {
+        id: 'Glen',
+        title: 'Glen',
+    },
+    Whirlpool: {
+        id: 'Whirlpool',
+        title: 'Whirlpool',
+    },
 }
 
 export const TAGS = {
