@@ -390,6 +390,66 @@ export const BRANDS = {
         id: 'JRM',
         title: 'JRM',
     },
+    Nutricook: {
+        id: 'Nutricook',
+        title: 'Nutricook',
+    },
+    Wellspire: {
+        id: 'Wellspire',
+        title: 'Wellspire',
+    },
+    Instant_Pot: {
+        id: 'Instant_Pot',
+        title: 'Instant Pot',
+    },
+    Butterfly: {
+        id: 'Butterfly',
+        title: 'Butterfly',
+    },
+    Philips: {
+        id: 'Philips',
+        title: 'Philips',
+    },
+    Morphy_Richards: {
+        id: 'Morphy_Richards',
+        title: 'Morphy Richards',
+    },
+    Simxen: {
+        id: 'Simxen',
+        title: 'Simxen',
+    },
+    Wipro: {
+        id: 'Wipro',
+        title: 'Wipro',
+    },
+    AGARO: {
+        id: 'AGARO',
+        title: 'AGARO',
+    },
+    Nutripro: {
+        id: 'Nutripro',
+        title: 'Nutripro',
+    },
+    Wonderchef: {
+        id: 'Wonderchef',
+        title: 'Wonderchef',
+    },
+    Cookwell: {
+        id: 'Cookwell',
+        title: 'Cookwell',
+    },
+    HUL_Pureit: {
+        id: 'HUL_Pureit',
+        title: 'HUL Pureit',
+    },
+    Livpure: {
+        id: 'Livpure',
+        title: 'Livpure',
+    },
+    Eureka_Forbes: {
+        id: 'Eureka_Forbes',
+        title: 'Eureka Forbes',
+    },
 }
 
 export const TAGS = {
