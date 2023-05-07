@@ -550,6 +550,38 @@ export const BRANDS = {
         id: 'Elgi',
         title: 'Elgi',
     },
+    Clarco: {
+        id: 'Clarco',
+        title: 'Clarco',
+    },
+    Art_Street: {
+        id: 'Art_Street',
+        title: 'Art Street',
+    },
+    The_Generation_X_Art_House: {
+        id: 'The_Generation_X_Art_House',
+        title: 'The Generation X Art House',
+    },
+    All_About_Wood: {
+        id: 'All_About_Wood',
+        title: 'All About Wood',
+    },
+    Paper_Plane_Design: {
+        id: 'Paper_Plane_Design',
+        title: 'Paper Plane Design',
+    },
+    Decals_Design: {
+        id: 'Decals_Design',
+        title: 'Decals Design',
+    },
+    ArtVibes: {
+        id: 'ArtVibes',
+        title: 'ArtVibes',
+    },
+    Generic: {
+        id: 'Generic',
+        title: 'Generic',
+    },
 }
 
 export const TAGS = {
@@ -612,5 +644,13 @@ export const TAGS = {
     tava: {
         id: 'tava',
         title: 'tava',
+    },
+    belan: {
+        id: 'belan',
+        title: 'belan',
+    },
+    chakla: {
+        id: 'chakla',
+        title: 'chakla',
     },
 }
