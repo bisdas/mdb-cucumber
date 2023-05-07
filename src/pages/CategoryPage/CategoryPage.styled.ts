@@ -14,7 +14,7 @@ export const Content = styled.div`
 export const PageHeader = styled.div`
     display: flex;
     flex: direction: row;
-    border-bottom: 2px solid #dedede;
+    border-bottom: 3px solid #f4f4f4;
     padding-top: 10px;
     padding-bottom: 6px;
 `
