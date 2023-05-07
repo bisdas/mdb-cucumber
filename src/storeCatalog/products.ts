@@ -2415,7 +2415,7 @@ export const PRODUCTS = [
         categories: [CATEGORIES.ESSENTIAL_APPLIANCES],
         tags: [],
         targetLink: 'https://www.amazon.in/dp/B0B53CGS6Z',
-        image: '00000334.png',
+        image: '00000334.jpg',
     },
     {
         id: '00000315',
