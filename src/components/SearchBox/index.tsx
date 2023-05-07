@@ -43,7 +43,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
             <SearchForm seamless={seamless} onSubmit={onSubmitForm}>
                 {icon && (
                     <SearchIconWrapper>
-                        <SearchIcon height={18} width={18} fill="#bdbdbd" />
+                        <SearchIcon height={18} width={18} fill="#  9a9a9a" />
                     </SearchIconWrapper>
                 )}
 

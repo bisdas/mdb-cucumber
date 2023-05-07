@@ -47,9 +47,9 @@ export const CATEGORIES = {
         id: 'CERAMIC_ITEMS',
         title: 'Ceramic Items',
     },
-    KITCHEN_TOOLS_ACCESSORIES: {
-        id: 'KITCHEN_TOOLS_ACCESSORIES',
-        title: 'Kitchen Tools & Accessories',
+    TOOLS_ACCESSORIES: {
+        id: 'TOOLS_ACCESSORIES',
+        title: 'Tools & Accessories',
     },
     STORAGE_CONTAINERS: {
         id: 'STORAGE_CONTAINERS',
@@ -485,6 +485,70 @@ export const BRANDS = {
     Bajaj: {
         id: 'Bajaj',
         title: 'Bajaj',
+    },
+    Brick_Brown: {
+        id: 'Brick_Brown',
+        title: 'BRICK BROWN',
+    },
+    Wood_Art_Store: {
+        id: 'Wood_Art_Store',
+        title: 'Wood Art Store',
+    },
+    Yellow_Weaves: {
+        id: 'Yellow_Weaves',
+        title: 'Yellow Weaves',
+    },
+    Jaipur_Ace: {
+        id: 'Jaipur_Ace',
+        title: 'Jaipur Ace',
+    },
+    Rollyware: {
+        id: 'Rollyware',
+        title: 'Rollyware',
+    },
+    Sharda_Metals: {
+        id: 'Sharda_Metals',
+        title: 'Sharda Metals',
+    },
+    Treegift: {
+        id: 'Treegift',
+        title: 'Treegift',
+    },
+    Tiara: {
+        id: 'Tiara',
+        title: 'Tiara',
+    },
+    Victorinox: {
+        id: 'Victorinox',
+        title: 'Victorinox',
+    },
+    Simran_Handicrafts: {
+        id: 'Simran_Handicrafts',
+        title: 'Simran Handicrafts',
+    },
+    Pure_Source: {
+        id: 'Pure_Source',
+        title: 'Pure Source',
+    },
+    Giffy: {
+        id: 'Giffy',
+        title: 'Giffy',
+    },
+    Dynore: {
+        id: 'Dynore',
+        title: 'Dynore',
+    },
+    Ajanta: {
+        id: 'Ajanta',
+        title: 'Ajanta',
+    },
+    Kitchen_Connect: {
+        id: 'Kitchen_Connect',
+        title: 'Kitchen Connect',
+    },
+    Elgi: {
+        id: 'Elgi',
+        title: 'Elgi',
     },
 }
 
