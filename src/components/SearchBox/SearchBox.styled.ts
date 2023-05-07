@@ -5,7 +5,7 @@ interface IOuterWrapperProps {
 }
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     margin-top: 6px;
-    border: ${(props) => (props?.seamless === false ? '2px solid #b4b4b4' : 'none')};
+    border: ${(props) => (props?.seamless === false ? '2px solid #4f4f4f' : 'none')};
     border-radius: 24px;
     height: 40px;
 `
