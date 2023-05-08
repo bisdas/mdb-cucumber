@@ -2,7 +2,7 @@
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
-const openPostionTop = '30px'
+const openPostionTop = '6vw'
 const closedPostionTop = '-100%'
 
 const backdropFadeIn = keyframes`
@@ -50,7 +50,7 @@ export const ContentWrapper = styled.div<IContentWrapper>`
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 30px;
+    top: 5vw;
     position: absolute;
     opacity: 1;
     animation: 0.3s ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease;
@@ -58,7 +58,7 @@ export const ContentWrapper = styled.div<IContentWrapper>`
 
 export const Content = styled.div`
     background: #ffffff;
-    width: 80vw;
+    width: 90vw;
     border-radius: 4px;
     padding: 20px;
     box-sizing: border-box;
