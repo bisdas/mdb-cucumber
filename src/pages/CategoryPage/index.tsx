@@ -31,7 +31,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
 
     useEffect(() => {
         // fake delay to show the loader on category page
-        const randomDelay = getRandomNumber(250, 750)
+        const randomDelay = getRandomNumber(250, 500)
         setTimeout(() => {
             setPageLoading(false)
         }, randomDelay)
