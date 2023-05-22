@@ -14,6 +14,9 @@ import {
     TitleWrapper,
     TitleText,
     Image,
+    ActionContentLayout,
+    RightAlignedContent,
+    LeftAlignedContent,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
 
@@ -51,17 +54,23 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                         <TitleWrapper>
                             <TitleText>{product.title}</TitleText>
                         </TitleWrapper>
-                        <Button
-                            appearance="contained"
-                            onClick={() => {
-                                openAnyLinkWindow(product.targetLink)
-                            }}
-                        >
-                            See it on Amazon
-                        </Button>
-                        <Button appearance="textonly" onClick={initiateClose}>
-                            Close
-                        </Button>
+                        <ActionContentLayout>
+                            <LeftAlignedContent>
+                                <Button
+                                    appearance="contained"
+                                    onClick={() => {
+                                        openAnyLinkWindow(product.targetLink)
+                                    }}
+                                >
+                                    See it on Amazon
+                                </Button>
+                            </LeftAlignedContent>
+                            <RightAlignedContent>
+                                <Button appearance="textonly" onClick={initiateClose}>
+                                    Close
+                                </Button>
+                            </RightAlignedContent>
+                        </ActionContentLayout>
                     </Content>
                 </ContentWrapper>
             </OuterWrapper>

@@ -97,7 +97,7 @@ export const TitleWrapper = styled.div`
     white-space: break-spaces;
     flex: 1;
     margin-top: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     padding: 6px 10px;
     border-radius: 4px;
     display: inline-block;
@@ -110,3 +110,16 @@ export const TitleText = styled.span`
     width: 100%;
     display: block;
 }`
+
+export const ActionContentLayout = styled.div`
+    display: flex;
+`
+
+export const LeftAlignedContent = styled.div`
+    flex: 1;
+`
+
+export const RightAlignedContent = styled.div`
+    flex: 1;
+    text-align: right;
+`
