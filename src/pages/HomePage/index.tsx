@@ -8,6 +8,9 @@ import {
     SiteFooterWrapper,
     SiteMottoWrapper,
     ProductSectionsWrapper,
+    GoToTopWrapper,
+    GoToTopIconWrapper,
+    GoToTopButton,
 } from './HomePage.styled'
 import Section from '../../components/Section'
 import SearchBox from '../../components/SearchBox'
@@ -21,6 +24,7 @@ import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
 import Spinner from '../../components/Spinner'
 import SiteFooter from '../../components/SiteFooter'
 import SiteHeader from '../../components/SiteHeader'
+import { ReactComponent as GoToTopIcon } from '../../assets/icons/go-to-top.svg'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -50,22 +54,37 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
                         <Spinner />
                     </LoaderWrapper>
                 ) : (
-                    <ProductSectionsWrapper>
-                        <>
-                            {categorisedItemsData.map((item: any) => (
-                                <Section title={item.category.title} key={item.category.id}>
-                                    <ScrollableLayout>
-                                        <ProductsInCategory
-                                            category={item.category}
-                                            products={item.products}
-                                            showAll={false}
-                                        />
-                                    </ScrollableLayout>
-                                </Section>
-                            ))}
-                        </>
-                    </ProductSectionsWrapper>
+                    <>
+                        <ProductSectionsWrapper>
+                            <>
+                                {categorisedItemsData.map((item: any) => (
+                                    <Section title={item.category.title} key={item.category.id}>
+                                        <ScrollableLayout>
+                                            <ProductsInCategory
+                                                category={item.category}
+                                                products={item.products}
+                                                showAll={false}
+                                            />
+                                        </ScrollableLayout>
+                                    </Section>
+                                ))}
+                            </>
+                        </ProductSectionsWrapper>
+                        <GoToTopWrapper>
+                            <GoToTopButton
+                                onClick={() => {
+                                    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                }}
+                            >
+                                <GoToTopIconWrapper>
+                                    <GoToTopIcon width={28} height={28} />
+                                </GoToTopIconWrapper>
+                                Go to top
+                            </GoToTopButton>
+                        </GoToTopWrapper>
+                    </>
                 )}
+
                 <SiteFooterWrapper>
                     <SiteFooter />
                 </SiteFooterWrapper>
