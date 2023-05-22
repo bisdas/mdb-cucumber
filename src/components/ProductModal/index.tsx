@@ -41,12 +41,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
             <OuterWrapper>
-                <Backdrop
-                    closing={isClosing}
-                    onClick={() => {
-                        initiateClose()
-                    }}
-                />
+                <Backdrop closing={isClosing} onClick={initiateClose} />
                 <ContentWrapper closing={isClosing}>
                     <Content>
                         <ImageWrapper>
@@ -63,6 +58,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                         >
                             See it on Amazon
                         </ActionLinkButton>
+                        <ActionLinkButton onClick={initiateClose}>Close</ActionLinkButton>
                     </Content>
                 </ContentWrapper>
             </OuterWrapper>

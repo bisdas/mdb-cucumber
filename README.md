@@ -30,3 +30,4 @@ add order to each product
 css.escape
 DONE - hamburger menu backdrop adjustment
 test hamburger menu on mobile device
+DONE - close button on product modal

@@ -83,9 +83,13 @@ export const Image = styled.img`
 
 export const Brand = styled.div`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
-    color: rgb(0 0 0);
+    color: rgb(0, 0, 0);
     font-size: 14px;
     margin-top: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    background: #f1f1f1;
 `
 
 export const TitleWrapper = styled.div`
@@ -94,6 +98,10 @@ export const TitleWrapper = styled.div`
     flex: 1;
     margin-top: 4px;
     margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    background: #f1f1f1;
 `
 export const TitleText = styled.span`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
