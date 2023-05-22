@@ -2,7 +2,7 @@
 import React, { useMemo, useState, type FunctionComponent } from 'react'
 import { Portal } from '../Portal'
 import { useScrollLock } from '../../hooks/useScrollLock'
-import { OuterWrapper, Trigger, MenuContentWrapper, Backdrop, MenuContent } from './HamburgerMenu.styled'
+import { OuterWrapper, Trigger, MenuMainWrapper, Backdrop, MenuContent } from './HamburgerMenu.styled'
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu-alt.svg'
 
 const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
@@ -40,10 +40,10 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
             </Trigger>
             {isOpen && (
                 <Portal rootElementId="portal-root" className="hamburger-menu-portal">
-                    <MenuContentWrapper>
+                    <MenuMainWrapper>
                         <Backdrop closing={isClosing} onClick={initiateCloseMenu}></Backdrop>
                         <MenuContent closing={isClosing}>{childrenWithProps}</MenuContent>
-                    </MenuContentWrapper>
+                    </MenuMainWrapper>
                 </Portal>
             )}
         </OuterWrapper>
