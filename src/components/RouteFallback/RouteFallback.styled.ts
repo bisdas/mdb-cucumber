@@ -11,17 +11,3 @@ export const NotFoundMessage = styled.div`
     font-size: 16px;
     margin-bottom: 10px;
 `
-
-export const NavigateHomeButton = styled.div`
-    background: #202020;
-    padding: 6px 16px;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 3px;
-    box-sizing: border-box;
-    user-select: none;
-    outline: none;
-    color: #ffffff;
-    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
-    font-size: 14px;
-`

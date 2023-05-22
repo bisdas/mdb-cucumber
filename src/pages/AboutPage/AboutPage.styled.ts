@@ -49,20 +49,6 @@ export const GoBackWrapper = styled.div`
     cursor: pointer;
 `
 
-export const ShareButton = styled.div`
-    background: #202020;
-    padding: 6px 16px;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 3px;
-    box-sizing: border-box;
-    user-select: none;
-    outline: none;
-    color: #ffffff;
-    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
-    font-size: 14px;
-`
-
 export const ButtonWrapper = styled.div`
     margin-top: 10px;
 `

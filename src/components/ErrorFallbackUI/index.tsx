@@ -1,5 +1,6 @@
 import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, ContentWrapper, MessageTitle, MessageDetails, ReportLinkButton } from './ErrorFallbackUI.styled'
+import { Button } from '../flexible'
+import { OuterWrapper, ContentWrapper, MessageTitle, MessageDetails } from './ErrorFallbackUI.styled'
 import { openEmailWriterWindow } from '../../utils/utils'
 import { CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT } from '../../configuration/constants'
 
@@ -13,13 +14,14 @@ const ErrorFallbackUI: FunctionComponent = (): ReactElement => {
                     the button below.
                 </MessageDetails>
 
-                <ReportLinkButton
+                <Button
+                    appearance="outlined"
                     onClick={() => {
                         openEmailWriterWindow(CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT)
                     }}
                 >
                     Report an error
-                </ReportLinkButton>
+                </Button>
             </ContentWrapper>
         </OuterWrapper>
     )

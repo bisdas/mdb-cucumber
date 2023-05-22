@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { type FunctionComponent, type ReactElement } from 'react'
+import { Button } from '../../components/flexible'
 import {
     OuterWrapper,
     Content,
@@ -10,7 +11,6 @@ import {
     Avatar,
     Link,
     ParagraphText,
-    ShareButton,
     ButtonWrapper,
 } from './AboutPage.styled'
 import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
@@ -60,14 +60,14 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                     <ParagraphText>
                         Are you having a great product idea we can list on Cucumber?
                         <ButtonWrapper>
-                            <ShareButton
+                            <Button
+                                appearance="outlined"
                                 onClick={() => {
                                     openEmailWriterWindow(CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT)
                                 }}
-                                role="button"
                             >
                                 Share with us
-                            </ShareButton>
+                            </Button>
                         </ButtonWrapper>
                     </ParagraphText>
                     <ParagraphText></ParagraphText>

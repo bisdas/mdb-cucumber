@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 import React, { type FunctionComponent, type ReactElement, useState, useMemo } from 'react'
 import { Portal } from '../Portal'
+import { Button } from '../flexible'
 import {
     OuterWrapper,
     Backdrop,
@@ -12,8 +13,10 @@ import {
     Brand,
     TitleWrapper,
     TitleText,
-    ActionLinkButton,
     Image,
+    ActionContentLayout,
+    RightAlignedContent,
+    LeftAlignedContent,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
 
@@ -41,12 +44,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
             <OuterWrapper>
-                <Backdrop
-                    closing={isClosing}
-                    onClick={() => {
-                        initiateClose()
-                    }}
-                />
+                <Backdrop closing={isClosing} onClick={initiateClose} />
                 <ContentWrapper closing={isClosing}>
                     <Content>
                         <ImageWrapper>
@@ -56,13 +54,23 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                         <TitleWrapper>
                             <TitleText>{product.title}</TitleText>
                         </TitleWrapper>
-                        <ActionLinkButton
-                            onClick={() => {
-                                openAnyLinkWindow(product.targetLink)
-                            }}
-                        >
-                            See it on Amazon
-                        </ActionLinkButton>
+                        <ActionContentLayout>
+                            <LeftAlignedContent>
+                                <Button
+                                    appearance="contained"
+                                    onClick={() => {
+                                        openAnyLinkWindow(product.targetLink)
+                                    }}
+                                >
+                                    See it on Amazon
+                                </Button>
+                            </LeftAlignedContent>
+                            <RightAlignedContent>
+                                <Button appearance="textonly" onClick={initiateClose}>
+                                    Close
+                                </Button>
+                            </RightAlignedContent>
+                        </ActionContentLayout>
                     </Content>
                 </ContentWrapper>
             </OuterWrapper>
