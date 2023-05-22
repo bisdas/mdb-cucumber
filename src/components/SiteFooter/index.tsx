@@ -26,11 +26,6 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
     return (
         <OuterWrapper>
             <Content>
-                {/* <Section>
-                    <SectionBody>
-                        Go to top
-                    </SectionBody>
-                </Section> */}
                 <Section>
                     <SectionTitle>Cucumber</SectionTitle>
                     <SectionBody>

@@ -24,6 +24,25 @@ export const ProductSectionsWrapper = styled.div`
     animation: 1s ${fadeIn};
 `
 
+export const GoToTopWrapper = styled.div`
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+`
+
+export const GoToTopButton = styled.div`
+    text-align: center;
+    padding: 6px 10px;
+    font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    color: #000000;
+    font-size: 12px;
+    box-sizing: border-box;
+`
+export const GoToTopIconWrapper = styled.div`
+    text-align: center;
+`
+
 export const SearchTitle = styled.div`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #0b9d58;

@@ -120,6 +120,5 @@ export const LeftAlignedContent = styled.div`
 `
 
 export const RightAlignedContent = styled.div`
-    flex: 1;
     text-align: right;
 `
