@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityOpen = '0.7'
 const backdropOpacityClosed = '0'
-const menuPositionLeftOpen = '0%'
-const menuPositionLeftClosed = '100%'
+const menuPositionRightOpen = '0'
+const menuPositionRightClosed = '-100vw'
 
 const fadeOpacityIn = keyframes`
     0%   {opacity: ${backdropOpacityClosed}}
@@ -13,12 +13,12 @@ const fadeOpacityOut = keyframes`
     100% {opacity: ${backdropOpacityClosed}}
 `
 const slideLeftIn = keyframes`
-    0% { left: ${menuPositionLeftClosed} }
-    100% { left: ${menuPositionLeftOpen} }
+    0% { right: ${menuPositionRightClosed} }
+    100% { right: ${menuPositionRightOpen} }
 `
 const slideRightOut = keyframes`
-    0% { left: ${menuPositionLeftOpen} }
-    100% { left: ${menuPositionLeftClosed} }
+    0% { right: ${menuPositionRightOpen} }
+    100% { right: ${menuPositionRightClosed} }
 `
 
 export const OuterWrapper = styled.div``
@@ -28,21 +28,23 @@ export const Trigger = styled.div`
     top: -6px;
 `
 
-export const MenuContentWrapper = styled.div`
+export const MenuMainWrapper = styled.div`
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: row;
 `
 
 interface IBackdrop {
     closing: boolean
 }
 export const Backdrop = styled.div<IBackdrop>`
-    flex: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: #000000;
     opacity: ${backdropOpacityOpen};
     animation-duration: ${(props) => (props.closing ? '0.3s' : '1.2s')};
@@ -59,11 +61,15 @@ interface IMenuContent {
     closing: boolean
 }
 export const MenuContent = styled.div<IMenuContent>`
-    flex: 7;
+    position: absolute;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
     background: #ffffff;
     opacity: 1;
+    border-left: 4px solid #ffffff;
     box-sizing: border-box;
-    position: relative;
+    box-sizing: border-box;
     animation-duration: 0.3s;
     animation-timing-function: ease-out;
     animation-delay: 0s;

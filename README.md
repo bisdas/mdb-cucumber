@@ -27,3 +27,6 @@ add 'isDeleted' property to each product
 add order to each product
 ** create a ranking model for product (dynamic store)
 ** add store tag to product links
+css.escape
+DONE - hamburger menu backdrop adjustment
+test hamburger menu on mobile device
