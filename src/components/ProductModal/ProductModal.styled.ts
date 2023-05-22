@@ -110,17 +110,3 @@ export const TitleText = styled.span`
     width: 100%;
     display: block;
 }`
-
-export const ActionLinkButton = styled.div`
-    background: #0091db;
-    padding: 6px 16px;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 3px;
-    box-sizing: border-box;
-    user-select: none;
-    outline: none;
-    color: #ffffff;
-    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
-    font-size: 14px;
-`

@@ -35,19 +35,6 @@ export const SectionBody = styled.div`
 export const ContactButtonWrapper = styled.div`
     margin: 10px 0;
 `
-export const ContactButton = styled.div`
-    background: #0b9d58;
-    padding: 6px 16px;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 3px;
-    box-sizing: border-box;
-    user-select: none;
-    outline: none;
-    color: #ffffff;
-    font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
-    font-size: 14px;
-`
 
 export const SocialLink = styled.span`
     display: inline-flex;

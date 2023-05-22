@@ -1,6 +1,7 @@
 import React, { type FunctionComponent, type ReactElement } from 'react'
+import { Button } from '../flexible'
 import SiteHeader from '../SiteHeader'
-import { OuterWrapper, ContentWrapper, NotFoundMessage, NavigateHomeButton } from './RouteFallback.styled'
+import { OuterWrapper, ContentWrapper, NotFoundMessage } from './RouteFallback.styled'
 import { useRouter } from '../../router/useRouter'
 
 const RouteFallback: FunctionComponent<any> = (): ReactElement => {
@@ -10,7 +11,9 @@ const RouteFallback: FunctionComponent<any> = (): ReactElement => {
             <SiteHeader />
             <ContentWrapper>
                 <NotFoundMessage>This page wasn&apos;t found!</NotFoundMessage>
-                <NavigateHomeButton onClick={navigateHome}>Go Home</NavigateHomeButton>
+                <Button appearance="outlined" onClick={navigateHome}>
+                    Go Home
+                </Button>
             </ContentWrapper>
         </OuterWrapper>
     )

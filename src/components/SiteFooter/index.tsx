@@ -7,9 +7,9 @@ import {
     SectionTitle,
     SectionBody,
     ContactButtonWrapper,
-    ContactButton,
     SocialLink,
 } from './SiteFooter.styled'
+import { Button } from '../flexible'
 import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
@@ -46,14 +46,14 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                             business grow faster.
                         </p>
                         <ContactButtonWrapper>
-                            <ContactButton
+                            <Button
+                                appearance="contained"
                                 onClick={() => {
                                     openEmailWriterWindow(CUCUMBER_COLLABORATION_EMAIL_SUBJECT)
                                 }}
-                                role="button"
                             >
                                 Send an email
-                            </ContactButton>
+                            </Button>
                         </ContactButtonWrapper>
                     </SectionBody>
                 </Section>

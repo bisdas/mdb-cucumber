@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 import React, { type FunctionComponent, type ReactElement, useState, useMemo } from 'react'
 import { Portal } from '../Portal'
+import { Button } from '../flexible'
 import {
     OuterWrapper,
     Backdrop,
@@ -12,7 +13,6 @@ import {
     Brand,
     TitleWrapper,
     TitleText,
-    ActionLinkButton,
     Image,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
@@ -51,14 +51,17 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                         <TitleWrapper>
                             <TitleText>{product.title}</TitleText>
                         </TitleWrapper>
-                        <ActionLinkButton
+                        <Button
+                            appearance="contained"
                             onClick={() => {
                                 openAnyLinkWindow(product.targetLink)
                             }}
                         >
                             See it on Amazon
-                        </ActionLinkButton>
-                        <ActionLinkButton onClick={initiateClose}>Close</ActionLinkButton>
+                        </Button>
+                        <Button appearance="textonly" onClick={initiateClose}>
+                            Close
+                        </Button>
                     </Content>
                 </ContentWrapper>
             </OuterWrapper>
