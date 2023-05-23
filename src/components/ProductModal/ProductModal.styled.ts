@@ -2,8 +2,10 @@
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
-const openPostionBottom = '1vw'
+const openPostionBottom = '0'
 const closedPostionBottom = '-100%'
+const animationTiming = '0.3s'
+export const AnimationTimingMilliseconds = 300
 
 const backdropFadeIn = keyframes`
     0%     {opacity: ${backdropOpacityClosed}}
@@ -40,7 +42,7 @@ export const Backdrop = styled.div<IBackdrop>`
     height: 100%;
     position: relative;
     top: 0;
-    animation: 0.3s ${(props) => (props.closing ? backdropFadeOut : backdropFadeIn)} linear;
+    animation: ${animationTiming} ${(props) => (props.closing ? backdropFadeOut : backdropFadeIn)} linear;
 `
 
 interface IContentWrapper {
@@ -50,18 +52,18 @@ export const ContentWrapper = styled.div<IContentWrapper>`
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 1vw;
+    bottom: ${openPostionBottom};
     position: absolute;
     opacity: 1;
-    animation: 0.3s ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease-out;
+    animation: ${animationTiming} ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease-out;
 `
 
 export const Content = styled.div`
     background: #ffffff;
-    width: 98vw;
+    // width: 98vw;
     border-radius: 4px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
     padding: 20px;
     box-sizing: border-box;
     padding-bottom: 66px;
