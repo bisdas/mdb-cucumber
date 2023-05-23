@@ -17,6 +17,7 @@ import {
     ActionContentLayout,
     RightAlignedContent,
     LeftAlignedContent,
+    AnimationTimingMilliseconds,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
 
@@ -33,7 +34,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
         setTimeout(() => {
             setIsClosing(false)
             onClose()
-        }, 300)
+        }, AnimationTimingMilliseconds)
     }
 
     const formattedImageUrl = useMemo(
