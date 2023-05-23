@@ -66,7 +66,6 @@ export const Content = styled.div`
     border-top-left-radius: 40px;
     padding: 20px;
     box-sizing: border-box;
-    padding-bottom: 66px;
 `
 
 export const ImageWrapper = styled.div`
