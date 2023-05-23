@@ -2,25 +2,25 @@
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
-const openPostionTop = '1vw'
-const closedPostionTop = '-100%'
+const openPostionBottom = '1vw'
+const closedPostionBottom = '-100%'
 
 const backdropFadeIn = keyframes`
-    0%   {opacity: ${backdropOpacityClosed}}
-    100% {opacity: ${backdropOpacityOpen}}
+    0%     {opacity: ${backdropOpacityClosed}}
+    100%   {opacity: ${backdropOpacityOpen}}
 `
 const backdropFadeOut = keyframes`
-    0% {opacity: ${backdropOpacityOpen}}
+    0%     {opacity: ${backdropOpacityOpen}}
     100%   {opacity: ${backdropOpacityClosed}}
 `
 
 const contentDriftIn = keyframes`
-    0%   {top: ${closedPostionTop}}
-    100% {top: ${openPostionTop}}
+    0%     {bottom: ${closedPostionBottom}}
+    100%   {bottom: ${openPostionBottom}}
 `
 const contentDriftOut = keyframes`
-    0%      {top: ${openPostionTop}}
-    100%   {top: ${closedPostionTop}}
+    0%     {bottom: ${openPostionBottom}}
+    100%   {bottom: ${closedPostionBottom}}
 `
 
 export const OuterWrapper = styled.div`
@@ -50,7 +50,7 @@ export const ContentWrapper = styled.div<IContentWrapper>`
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 1vw;
+    bottom: 1vw;
     position: absolute;
     opacity: 1;
     animation: 0.3s ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease-out;
@@ -60,8 +60,11 @@ export const Content = styled.div`
     background: #ffffff;
     width: 98vw;
     border-radius: 4px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
     padding: 20px;
     box-sizing: border-box;
+    padding-bottom: 66px;
 `
 
 export const ImageWrapper = styled.div`
