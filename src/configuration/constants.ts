@@ -18,3 +18,11 @@ export const CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT: string = 'Cucumber (Delish Bow
 export const DELISH_BOWL_INSTAGRAM_LINK: string = 'https://www.instagram.com/mydelishbowl/reels'
 export const DELISH_BOWL_FACEBOOK_LINK: string = 'https://www.facebook.com/mydelishbowl'
 export const DELISH_BOWL_YOUTUBE_LINK: string = 'https://www.youtube.com/@mydelishbowl/shorts'
+
+/** value in pixels */
+export const MaxSupportedScreenWidth: number = 480
+
+export const MessageText = {
+    UnderDevelopment:
+        'This site is under development. Currently best experienced on mobile devices. If you are on a large screen, enable mobile device mode to experience the site.',
+}

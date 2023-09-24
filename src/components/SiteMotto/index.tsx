@@ -1,13 +1,12 @@
 import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, First, Second, Third, Fourth, Stylish, HowItWorks } from './SiteMotto.styled'
+import { OuterWrapper, First, Third, Fourth, Stylish, HowItWorks } from './SiteMotto.styled'
 import { useRouter } from '../../router/useRouter'
 
 const SiteMotto: FunctionComponent<any> = (): ReactElement => {
     const { navigateAbout } = useRouter()
     return (
         <OuterWrapper>
-            <First>Uplift your</First>
-            <Second>kitchen.</Second>
+            <First>Uplift your kitchen.</First>
             <Third>
                 Many <Stylish>beautiful</Stylish> ideas
             </Third>
