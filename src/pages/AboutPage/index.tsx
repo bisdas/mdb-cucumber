@@ -36,9 +36,9 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                     </Avatar>
                     <ParagraphTitle>Hello, wondering what&apos;s this about?</ParagraphTitle>
                     <ParagraphText>
-                        Cucumber brings you ideas for organising and uplifing your kitchen. Here you can find products
+                        Cucumber brings you ideas for organising and uplifing your home & kitchen. Here you can find products
                         for your daily needs in the kitchen, or maybe something beautiful you&apos;re looking out for
-                        decorating your lovely kitchen.
+                        decorating your sweet home.
                     </ParagraphText>
                     <ParagraphText>
                         Cucumber is the idea and recommendation store at{' '}
@@ -46,14 +46,14 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                             Delish Bowl
                         </Link>
                         . We are frequently asked about the products we use for preparing the recipes. So here we are -
-                        sharing some ideas that you could choose from for your own kitchen.
+                        sharing some that you could choose for your own kitchen.
                     </ParagraphText>
 
                     <ParagraphTitle>How this works?</ParagraphTitle>
                     <ParagraphText>
-                        We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon. You
-                        don&apos;t pay anything extra for any item. You pay normally what you pay on Amazon for the
-                        product. Sounds good, right?
+                        We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon. <b>You
+                        don&apos;t pay anything extra for any item. You pay what you normally pay on Amazon for the
+                        product you are buying.</b> Sounds good, right?
                     </ParagraphText>
 
                     <ParagraphTitle>Share your idea</ParagraphTitle>

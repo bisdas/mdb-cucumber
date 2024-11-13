@@ -16,7 +16,7 @@ const HamburgerMenu: FunctionComponent<any> = ({ children }) => {
         setTimeout(() => {
             setIsOpen(false)
             setIsClosing(false)
-        }, 300)
+        }, 280)
     }
 
     const childrenWithProps = useMemo(() => {

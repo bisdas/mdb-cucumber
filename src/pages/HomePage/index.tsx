@@ -25,6 +25,9 @@ import Spinner from '../../components/Spinner'
 import SiteFooter from '../../components/SiteFooter'
 import SiteHeader from '../../components/SiteHeader'
 import { ReactComponent as GoToTopIcon } from '../../assets/icons/go-to-top.svg'
+import { getScreenDimension, showUnderDevelopmentBanner } from '../../utils/utils'
+import { MaxSupportedScreenWidth, MessageText } from '../../configuration/constants'
+import Banner from '../../components/Banner'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -38,6 +41,7 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
 
     return (
         <OuterWrapper>
+            {showUnderDevelopmentBanner() && <Banner text={MessageText.UnderDevelopment} />}
             <Content>
                 <SiteHeader />
 

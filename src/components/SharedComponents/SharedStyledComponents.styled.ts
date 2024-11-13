@@ -18,7 +18,7 @@ export const ScrollableLayout = styled.div`
 `
 
 export const LoaderWrapper = styled.div`
-    padding: 6px 12px;
+    padding: 6px 18px;
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #2b2b2b;
     font-size: 14px;

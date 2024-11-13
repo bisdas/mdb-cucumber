@@ -25,7 +25,6 @@ export const SectionTitle = styled.div`
 `
 
 export const SectionBody = styled.div`
-    user-select: none;
     outline: none;
     color: #000000;
     font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';

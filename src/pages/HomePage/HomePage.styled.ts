@@ -15,12 +15,13 @@ export const Content = styled.div`
 `
 
 export const SearchBoxWrapper = styled.div`
-    padding: 6px 12px;
+    padding: 6px 18px;
+    margin-bottom: 12px;
     animation: 1s ${fadeIn};
 `
 
 export const ProductSectionsWrapper = styled.div`
-    padding: 6px 12px;
+    padding: 6px 18px;
     animation: 1s ${fadeIn};
 `
 
@@ -55,16 +56,10 @@ export const SearchTitle = styled.div`
 export const SiteFooterWrapper = styled.div``
 
 export const SiteMottoWrapper = styled.div`
-    padding: 6px 12px;
+    padding: 6px 18px;
     padding-top: 16px;
     padding-bottom: 16px;
     animation: 2s ${fadeIn};
-    background: rgb(255, 240, 215);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 240, 215, 1) 0%,
-        rgba(190, 237, 255, 1) 35%,
-        rgba(243, 253, 255, 1) 100%
-    );
+    background: #f9f9f9;
     margin-bottom: 20px;
 `
