@@ -36,9 +36,9 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                     </Avatar>
                     <ParagraphTitle>Hello, wondering what&apos;s this about?</ParagraphTitle>
                     <ParagraphText>
-                        Cucumber brings you ideas for organising and uplifing your home & kitchen. Here you can find products
-                        for your daily needs in the kitchen, or maybe something beautiful you&apos;re looking out for
-                        decorating your sweet home.
+                        Cucumber brings you ideas for organising and uplifing your home & kitchen. Here you can find
+                        products for your daily needs in the kitchen, or maybe something beautiful you&apos;re looking
+                        out for decorating your sweet home.
                     </ParagraphText>
                     <ParagraphText>
                         Cucumber is the idea and recommendation store at{' '}
@@ -51,9 +51,12 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
 
                     <ParagraphTitle>How this works?</ParagraphTitle>
                     <ParagraphText>
-                        We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon. <b>You
-                        don&apos;t pay anything extra for any item. You pay what you normally pay on Amazon for the
-                        product you are buying.</b> Sounds good, right?
+                        We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon.{' '}
+                        <b>
+                            You don&apos;t pay anything extra for any item. You pay what you normally pay on Amazon for
+                            the product you are buying.
+                        </b>{' '}
+                        Sounds good, right?
                     </ParagraphText>
 
                     <ParagraphTitle>Share your idea</ParagraphTitle>

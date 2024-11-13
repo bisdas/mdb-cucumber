@@ -23,6 +23,7 @@ export const DELISH_BOWL_AMAZON_STORE_ID: string = 'rajyashreedey-21'
 
 /** value in pixels */
 export const MaxSupportedScreenWidth: number = 540
+export const EnableProductPopup: boolean = false
 
 export const MessageText = {
     UnderDevelopment:
