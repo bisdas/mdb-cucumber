@@ -16,15 +16,15 @@ export const CUCUMBER_COLLABORATION_EMAIL_SUBJECT: string = 'Cucumber (Delish Bo
 export const CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT: string = 'Cucumber (Delish Bowl) - Sharing a Product Idea'
 export const CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT: string = 'Cucumber (Delish Bowl) - Reporting an Error'
 export const DELISH_BOWL_INSTAGRAM_LINK: string = 'https://www.instagram.com/mydelishbowl/reels'
-export const DELISH_BOWL_FACEBOOK_LINK: string = 'https://www.facebook.com/mydelishbowl'
+export const DELISH_BOWL_FACEBOOK_LINK: string = 'https://www.facebook.com/mydelishbowl/reels'
 export const DELISH_BOWL_YOUTUBE_LINK: string = 'https://www.youtube.com/@mydelishbowl/shorts'
 
 export const DELISH_BOWL_AMAZON_STORE_ID: string = 'rajyashreedey-21'
 
 /** value in pixels */
-export const MaxSupportedScreenWidth: number = 480
+export const MaxSupportedScreenWidth: number = 540
 
 export const MessageText = {
     UnderDevelopment:
-        'This site is under development. Currently best experienced on mobile devices. If you are on a large screen, enable mobile device mode to experience the site.',
+        'This site is best experienced on mobile devices. If you are on a large screen like tablet or laptop, enable mobile device mode to experience the site.',
 }

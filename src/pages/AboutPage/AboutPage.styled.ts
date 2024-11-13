@@ -32,6 +32,7 @@ export const ParagraphText = styled.div`
     font-family: Montserrat-Light, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
     margin-bottom: 6px;
+    line-height: 1.3;
 `
 export const ParagraphTitle = styled.div`
     color: #000000;
