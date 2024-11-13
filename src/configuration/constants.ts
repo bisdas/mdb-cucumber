@@ -20,3 +20,11 @@ export const DELISH_BOWL_FACEBOOK_LINK: string = 'https://www.facebook.com/mydel
 export const DELISH_BOWL_YOUTUBE_LINK: string = 'https://www.youtube.com/@mydelishbowl/shorts'
 
 export const DELISH_BOWL_AMAZON_STORE_ID: string = 'rajyashreedey-21'
+
+/** value in pixels */
+export const MaxSupportedScreenWidth: number = 480
+
+export const MessageText = {
+    UnderDevelopment:
+        'This site is under development. Currently best experienced on mobile devices. If you are on a large screen, enable mobile device mode to experience the site.',
+}
