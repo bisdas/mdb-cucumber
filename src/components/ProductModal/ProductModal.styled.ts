@@ -2,10 +2,10 @@
 import styled, { keyframes } from 'styled-components/macro'
 const backdropOpacityClosed = 0
 const backdropOpacityOpen = 0.4
-const openPostionBottom = '0'
+const openPostionBottom = '20%'
 const closedPostionBottom = '-100%'
-const animationTiming = '0.3s'
-export const AnimationTimingMilliseconds = 300
+const animationTiming = '0.2s'
+export const AnimationTimingMilliseconds = 200
 
 const backdropFadeIn = keyframes`
     0%     {opacity: ${backdropOpacityClosed}}
@@ -49,21 +49,19 @@ interface IContentWrapper {
     closing: boolean
 }
 export const ContentWrapper = styled.div<IContentWrapper>`
-    width: 100%;
-    display: flex;
     justify-content: center;
     bottom: ${openPostionBottom};
     position: absolute;
     opacity: 1;
     animation: ${animationTiming} ${(props) => (props.closing ? contentDriftOut : contentDriftIn)} ease-out;
+
+    background: transparent;
+    padding: 30px;
 `
 
 export const Content = styled.div`
     background: #ffffff;
-    // width: 98vw;
     border-radius: 4px;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
     padding: 20px;
     box-sizing: border-box;
 `

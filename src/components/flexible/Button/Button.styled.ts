@@ -14,7 +14,7 @@ interface IOuterWrapperProps {
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
     font-size: 14px;
-    padding: 6px 16px;
+    padding: 10px 16px;
     cursor: pointer;
     display: inline-block;
     user-select: none;

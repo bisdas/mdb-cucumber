@@ -7,7 +7,8 @@ export const Content = styled.div`
     width: 100px;
     border-radius: 10px;
     box-sizing: border-box;
-    border: 1px solid #f2f2f2;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #f2f2f2;
 `

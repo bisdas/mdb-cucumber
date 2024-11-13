@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const OuterWrapper = styled.div`
-    padding: 6px 12px;
+    padding: 6px 18px;
     padding-top: 24px;
     padding-bottom: 14px;
     display: flex;

@@ -20,6 +20,8 @@ import {
     AnimationTimingMilliseconds,
 } from './ProductModal.styled'
 import { openAnyLinkWindow } from '../../utils/utils'
+import { DELISH_BOWL_AMAZON_STORE_ID } from '../../configuration/constants'
+import HyperlinkButton from '../flexible/HyperlinkButton'
 
 interface IProductModalProps {
     product: any
@@ -42,6 +44,8 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
         [product.image]
     )
 
+    const storeIdAttachedLink = `${product.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`
+
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
             <OuterWrapper>
@@ -57,14 +61,9 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                         </TitleWrapper>
                         <ActionContentLayout>
                             <LeftAlignedContent>
-                                <Button
-                                    appearance="contained"
-                                    onClick={() => {
-                                        openAnyLinkWindow(product.targetLink)
-                                    }}
-                                >
-                                    See it on Amazon
-                                </Button>
+                                <HyperlinkButton href={storeIdAttachedLink} appearance="contained">
+                                    Buy from Amazon
+                                </HyperlinkButton>
                             </LeftAlignedContent>
                             <RightAlignedContent>
                                 <Button appearance="textonly" onClick={initiateClose}>
