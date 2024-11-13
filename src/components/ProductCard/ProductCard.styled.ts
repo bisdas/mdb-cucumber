@@ -2,6 +2,9 @@ import styled from 'styled-components/macro'
 
 export const OuterWrapper = styled.div``
 export const Content = styled.div``
+export const HyperlinkContent = styled.a`
+    text-decoration: none;
+`
 export const ImageWrapper = styled.div`
     min-width: 100px;
     border-radius: 10px;

@@ -1,8 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useState, type FunctionComponent, type ReactElement, useMemo } from 'react'
-import { OuterWrapper, Content, ImageWrapper, ImageContent, TitleWrapper, TitleText } from './ProductCard.styled'
+import {
+    OuterWrapper,
+    Content,
+    ImageWrapper,
+    ImageContent,
+    TitleWrapper,
+    TitleText,
+    HyperlinkContent,
+} from './ProductCard.styled'
 import ProductModal from '../ProductModal'
 import { useScrollLock } from '../../hooks/useScrollLock'
+import { DELISH_BOWL_AMAZON_STORE_ID, EnableProductPopup } from '../../configuration/constants'
 
 interface IProductCardProps {
     image: string
@@ -20,6 +30,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
         [image]
     )
     const shortTitle = `${title.substring(0, 50)}...`
+    const productLink: string = `${allDetails.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`
 
     return (
         <OuterWrapper>
@@ -32,18 +43,31 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
                 />
             )}
 
-            <Content
-                onClick={() => {
-                    setIsProductModalOpen(true)
-                }}
-            >
-                <ImageWrapper>
-                    <ImageContent imageUrl={formattedImageUrl}></ImageContent>
-                </ImageWrapper>
-                <TitleWrapper>
-                    <TitleText>{shortTitle}</TitleText>
-                </TitleWrapper>
-            </Content>
+            {EnableProductPopup && (
+                <Content
+                    onClick={() => {
+                        setIsProductModalOpen(true)
+                    }}
+                >
+                    <ImageWrapper>
+                        <ImageContent imageUrl={formattedImageUrl}></ImageContent>
+                    </ImageWrapper>
+                    <TitleWrapper>
+                        <TitleText>{shortTitle}</TitleText>
+                    </TitleWrapper>
+                </Content>
+            )}
+
+            {!EnableProductPopup && (
+                <HyperlinkContent href={productLink} target="_blank">
+                    <ImageWrapper>
+                        <ImageContent imageUrl={formattedImageUrl}></ImageContent>
+                    </ImageWrapper>
+                    <TitleWrapper>
+                        <TitleText>{shortTitle}</TitleText>
+                    </TitleWrapper>
+                </HyperlinkContent>
+            )}
         </OuterWrapper>
     )
 }
