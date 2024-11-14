@@ -20,6 +20,7 @@ export const DELISH_BOWL_FACEBOOK_LINK: string = 'https://www.facebook.com/mydel
 export const DELISH_BOWL_YOUTUBE_LINK: string = 'https://www.youtube.com/@mydelishbowl/shorts'
 
 export const DELISH_BOWL_AMAZON_STORE_ID: string = 'rajyashreedey-21'
+export const DELISH_BOWL_AMAZON_INFLUENCER_SHOP_LINK: string = 'https://www.amazon.in/shop/mydelishbowl'
 
 /** value in pixels */
 export const MaxSupportedScreenWidth: number = 540
