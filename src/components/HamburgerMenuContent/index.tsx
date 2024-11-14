@@ -32,6 +32,7 @@ import {
     DELISH_BOWL_FACEBOOK_LINK,
     CUCUMBER_FEEDBACK_EMAIL_SUBJECT,
     CUCUMBER_CONTACT_EMAIL_SUBJECT,
+    DELISH_BOWL_AMAZON_INFLUENCER_SHOP_LINK,
 } from '../../configuration/constants'
 import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils'
 
@@ -68,15 +69,31 @@ const HamburgerMenuContent: FunctionComponent<IHamburgerMenuContent> = ({ onClos
                         <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
                     </MenuNavigateIcon>
                 </MenuItem>
-                {/* <MenuItem>
+                <MenuItem>
                     <MenuItemIcon adjustTopPosition={0}>
-                        <GoHomeIcon height={16} width={16} />
+                        <InfoIcon height={16} width={16} />
                     </MenuItemIcon>
-                    <MenuItemTitle border={true}>Delish Bowl - Home</MenuItemTitle>
+                    <MenuItemTitle border={true}>
+                        <a
+                            style={{ textDecoration: 'none', color: '#000000' }}
+                            href={DELISH_BOWL_AMAZON_INFLUENCER_SHOP_LINK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Our Amazon Shop
+                        </a>
+                    </MenuItemTitle>
                     <MenuNavigateIcon adjustTopPosition={-1}>
-                        <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
+                        <a
+                            style={{ textDecoration: 'none', color: '#000000' }}
+                            href={DELISH_BOWL_AMAZON_INFLUENCER_SHOP_LINK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <ArrowRightShortIcon height={12} width={12} fill="red" stroke="#fefefe" />
+                        </a>
                     </MenuNavigateIcon>
-                </MenuItem> */}
+                </MenuItem>
                 <MenuItem
                     onClick={() => {
                         openEmailWriterWindow(CUCUMBER_CONTACT_EMAIL_SUBJECT)
