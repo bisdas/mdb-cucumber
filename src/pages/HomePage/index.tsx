@@ -44,12 +44,11 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
             {showUnderDevelopmentBanner() && <Banner text={MessageText.UnderDevelopment} />}
             <Content>
                 <SiteHeader />
-
                 <SiteMottoWrapper>
                     <SiteMotto />
                 </SiteMottoWrapper>
                 <SearchBoxWrapper>
-                    <SearchTitle>Find your choice</SearchTitle>
+                    <SearchTitle>What are you looking for?</SearchTitle>
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 

@@ -22,7 +22,7 @@ export const PageHeader = styled.div`
 export const PageContent = styled.div`
     padding: 20px 12px;
     border-bottom: 18px solid #eaeaea;
-    animation: 1s ${fadeIn};
+    animation: 0.4s ${fadeIn};
 `
 
 export const Description = styled.div``

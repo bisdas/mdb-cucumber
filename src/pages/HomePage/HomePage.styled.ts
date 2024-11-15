@@ -15,14 +15,13 @@ export const Content = styled.div`
 `
 
 export const SearchBoxWrapper = styled.div`
-    padding: 6px 18px;
-    margin-bottom: 12px;
-    animation: 1s ${fadeIn};
+    padding: 28px 18px;
+    animation: 0.4s ${fadeIn};
 `
 
 export const ProductSectionsWrapper = styled.div`
     padding: 6px 18px;
-    animation: 1s ${fadeIn};
+    animation: 0.4s ${fadeIn};
 `
 
 export const GoToTopWrapper = styled.div`
@@ -47,7 +46,7 @@ export const GoToTopIconWrapper = styled.div`
 export const SearchTitle = styled.div`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #0b9d58;
-    font-size: 16px;
+    font-size: 14px;
     box-sizing: border-box;
     white-space: break-spaces;
     text-align: center;
@@ -56,10 +55,7 @@ export const SearchTitle = styled.div`
 export const SiteFooterWrapper = styled.div``
 
 export const SiteMottoWrapper = styled.div`
-    padding: 6px 18px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    animation: 2s ${fadeIn};
+    padding: 28px 18px;
+    animation: 0.4s ${fadeIn};
     background: #f9f9f9;
-    margin-bottom: 20px;
 `

@@ -19,7 +19,7 @@ export const PageHeader = styled.div`
 export const PageContent = styled.div`
     padding: 20px 12px;
     margin-bottom: 60px;
-    animation: 1s ${fadeIn};
+    animation: 0.4s ${fadeIn};
 `
 
 export const SearchBoxWrapper = styled.div`

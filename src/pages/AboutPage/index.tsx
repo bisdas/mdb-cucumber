@@ -41,15 +41,20 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                         out for decorating your sweet home.
                     </ParagraphText>
                     <ParagraphText>
+                        First thing - let&apos;s be honest. Finding the right product for your need is a tough job.
+                        It&apos;s tiresome and time consuming.
+                    </ParagraphText>
+                    <ParagraphText>
                         Cucumber is the idea and recommendation store at{' '}
                         <Link href={DELISH_BOWL_INSTAGRAM_LINK} target="_blank">
                             Delish Bowl
                         </Link>
                         . We are frequently asked about the products we use for preparing the recipes. So here we are -
-                        sharing some that you could choose for your own kitchen.
+                        sharing some that you could choose for your own kitchen. We choose the items best in quality and
+                        design and also budget friendly.
                     </ParagraphText>
 
-                    <ParagraphTitle>How this works?</ParagraphTitle>
+                    {/* <ParagraphTitle>How this works?</ParagraphTitle>
                     <ParagraphText>
                         We use Amazon Affiliate Partnership to allow you buy the products directly from Amazon.{' '}
                         <b>
@@ -57,11 +62,17 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                             the product you are buying.
                         </b>{' '}
                         Sounds good, right?
-                    </ParagraphText>
+                    </ParagraphText> */}
 
+                    <ParagraphTitle>Sounds good, right?</ParagraphTitle>
+                    <ParagraphText>
+                        So, as said, we choose the best products for you, so you can take some rest :) So why not
+                        explore the site around and find something you need :)
+                    </ParagraphText>
                     <ParagraphTitle>Share your idea</ParagraphTitle>
                     <ParagraphText>
-                        Are you having a great product idea we can list on Cucumber?
+                        Do you see something you&apos;re looking for is not on Cucumber, or maybe you have some idea.
+                        Let us know, your feedback is always welcome.
                         <ButtonWrapper>
                             <Button
                                 appearance="outlined"
