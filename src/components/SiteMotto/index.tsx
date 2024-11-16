@@ -1,9 +1,9 @@
 import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, First, Third, Fourth, Stylish, HowItWorks } from './SiteMotto.styled'
-import { useRouter } from '../../router/useRouter'
+import { OuterWrapper, First, Third, Fourth, Stylish } from './SiteMotto.styled'
+// import { useRouter } from '../../router/useRouter'
 
 const SiteMotto: FunctionComponent<any> = (): ReactElement => {
-    const { navigateAbout } = useRouter()
+    // const { navigateAbout } = useRouter()
     return (
         <OuterWrapper>
             <First>Uplift your kitchen.</First>
@@ -12,7 +12,7 @@ const SiteMotto: FunctionComponent<any> = (): ReactElement => {
             </Third>
             <Fourth>to choose from.</Fourth>
 
-            <HowItWorks onClick={navigateAbout}>Learn how this works</HowItWorks>
+            {/* <HowItWorks onClick={navigateAbout}>Learn how this works</HowItWorks> */}
         </OuterWrapper>
     )
 }

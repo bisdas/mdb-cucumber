@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { useEffect, type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
@@ -25,9 +25,10 @@ import Spinner from '../../components/Spinner'
 import SiteFooter from '../../components/SiteFooter'
 import SiteHeader from '../../components/SiteHeader'
 import { ReactComponent as GoToTopIcon } from '../../assets/icons/go-to-top.svg'
-import { getScreenDimension, showUnderDevelopmentBanner } from '../../utils/utils'
-import { MaxSupportedScreenWidth, MessageText } from '../../configuration/constants'
+import { showUnderDevelopmentBanner } from '../../utils/utils'
+import { MessageText } from '../../configuration/constants'
 import Banner from '../../components/Banner'
+import { MetricType, sendMetrics } from '../../utils/analyticsUtils'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -39,17 +40,20 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
         navigateSearch()
     }
 
+    useEffect(() => {
+        sendMetrics(MetricType.visitSite)
+    }, [])
+
     return (
         <OuterWrapper>
             {showUnderDevelopmentBanner() && <Banner text={MessageText.UnderDevelopment} />}
             <Content>
                 <SiteHeader />
-
                 <SiteMottoWrapper>
                     <SiteMotto />
                 </SiteMottoWrapper>
                 <SearchBoxWrapper>
-                    <SearchTitle>Find your choice</SearchTitle>
+                    <SearchTitle>What are you looking for?</SearchTitle>
                     <SearchBox onSearch={onChange} onFocus={navigateToSearchPage} />
                 </SearchBoxWrapper>
 
