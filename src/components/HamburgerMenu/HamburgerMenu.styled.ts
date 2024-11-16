@@ -47,7 +47,7 @@ export const Backdrop = styled.div<IBackdrop>`
     height: 100vh;
     background: #000000;
     opacity: ${backdropOpacityOpen};
-    animation-duration: ${(props) => (props.closing ? '0.3s' : '0.8s')};
+    animation-duration: ${(props) => (props.closing ? '0.3s' : '0.4s')};
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;

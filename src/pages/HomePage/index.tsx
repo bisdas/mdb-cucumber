@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { useEffect, type FunctionComponent, type ReactElement } from 'react'
 import {
     OuterWrapper,
     Content,
@@ -25,9 +25,10 @@ import Spinner from '../../components/Spinner'
 import SiteFooter from '../../components/SiteFooter'
 import SiteHeader from '../../components/SiteHeader'
 import { ReactComponent as GoToTopIcon } from '../../assets/icons/go-to-top.svg'
-import { getScreenDimension, showUnderDevelopmentBanner } from '../../utils/utils'
-import { MaxSupportedScreenWidth, MessageText } from '../../configuration/constants'
+import { showUnderDevelopmentBanner } from '../../utils/utils'
+import { MessageText } from '../../configuration/constants'
 import Banner from '../../components/Banner'
+import { MetricType, sendMetrics } from '../../utils/analyticsUtils'
 
 const HomePage: FunctionComponent<any> = (): ReactElement => {
     useStartUp()
@@ -38,6 +39,10 @@ const HomePage: FunctionComponent<any> = (): ReactElement => {
     const navigateToSearchPage = (): void => {
         navigateSearch()
     }
+
+    useEffect(() => {
+        sendMetrics(MetricType.visitSite)
+    }, [])
 
     return (
         <OuterWrapper>

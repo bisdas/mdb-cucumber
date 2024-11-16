@@ -13,6 +13,7 @@ import {
 import ProductModal from '../ProductModal'
 import { useScrollLock } from '../../hooks/useScrollLock'
 import { DELISH_BOWL_AMAZON_STORE_ID, EnableProductPopup } from '../../configuration/constants'
+import { MetricType, sendMetrics } from '../../utils/analyticsUtils'
 
 interface IProductCardProps {
     image: string
@@ -59,7 +60,13 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
             )}
 
             {!EnableProductPopup && (
-                <HyperlinkContent href={productLink} target="_blank">
+                <HyperlinkContent
+                    href={productLink}
+                    target="_blank"
+                    onClick={() => {
+                        sendMetrics(MetricType.visitProduct)
+                    }}
+                >
                     <ImageWrapper>
                         <ImageContent imageUrl={formattedImageUrl}></ImageContent>
                     </ImageWrapper>
