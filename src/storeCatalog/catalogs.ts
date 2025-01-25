@@ -87,6 +87,10 @@ export const CATEGORIES = {
         id: 'KITCHEN_FURNITURES',
         title: 'Kitchen Furnitures',
     },
+    BEAUTY_PERSONAL_CARE: {
+        id: 'BEAUTY & PERSONAL CARE',
+        title: 'Beauty & Personal Care',
+    },
 }
 
 export const BRANDS = {
@@ -409,6 +413,14 @@ export const BRANDS = {
     Philips: {
         id: 'Philips',
         title: 'Philips',
+    },
+    Yana: {
+        id: 'Yana',
+        title: 'Yana',
+    },
+    LA_GIRL: {
+        id: 'LA_GIRL',
+        title: 'L.A GIRL',
     },
     Morphy_Richards: {
         id: 'Morphy_Richards',

@@ -19,7 +19,8 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
     showAll,
     category,
 }): ReactElement => {
-    const selectProducts = showAll ? products : products.slice(0, 5)
+    const numberOfInitialProductsShown = 5
+    const selectProducts = showAll ? products : products.slice(0, numberOfInitialProductsShown)
     const moreItemsLink: string = `category/${category.id}`
     return (
         <>
@@ -29,9 +30,11 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
                 </SingleProductWrapper>
             ))}
 
-            <Link to={moreItemsLink} style={{ textDecoration: 'none' }}>
-                <MoreProductsCard />
-            </Link>
+            {selectProducts.length > numberOfInitialProductsShown && (
+                <Link to={moreItemsLink} style={{ textDecoration: 'none' }}>
+                    <MoreProductsCard />
+                </Link>
+            )}
         </>
     )
 }

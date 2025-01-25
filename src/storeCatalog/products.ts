@@ -3,6 +3,33 @@ import { CATEGORIES, BRANDS, TAGS } from './catalogs'
 
 export const PRODUCTS = [
     {
+        id: '00000381',
+        title: 'Philips Hair Straightener Brush- Advanced Ionic Care for 5X Better Frizz Free Hair in 5min',
+        brand: BRANDS.Philips,
+        categories: [CATEGORIES.BEAUTY_PERSONAL_CARE],
+        tags: [],
+        targetLink: 'https://www.amazon.in/dp/B0B53B8MJ2',
+        image: '00000381.jpg',
+    },
+    {
+        id: '00000382',
+        title: 'Yana Beauty Cream with Korean Technology - Skin Whitening Cream for Women & Men',
+        brand: BRANDS.Yana,
+        categories: [CATEGORIES.BEAUTY_PERSONAL_CARE],
+        tags: [],
+        targetLink: 'https://www.amazon.in/dp/B0CG5MJBHC',
+        image: '00000382.jpg',
+    },
+    {
+        id: '00000383',
+        title: 'L.A GIRL Pro Natural High Definition Full Coverage Concealer Cream',
+        brand: BRANDS.LA_GIRL,
+        categories: [CATEGORIES.BEAUTY_PERSONAL_CARE],
+        tags: [],
+        targetLink: 'https://www.amazon.in/dp/B00WND09LC',
+        image: '00000383.png',
+    },
+    {
         id: '000001',
         title: 'Prestige Platina Popular Stainless Steel Gas and Induction Compatible Casserole with Glass Lid',
         brand: BRANDS.Prestige,
