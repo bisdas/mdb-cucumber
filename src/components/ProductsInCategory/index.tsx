@@ -30,7 +30,7 @@ const ProductsInCategory: FunctionComponent<IProductsInCategoryProps> = ({
                 </SingleProductWrapper>
             ))}
 
-            {selectProducts.length > numberOfInitialProductsShown && (
+            {products.length > numberOfInitialProductsShown && (
                 <Link to={moreItemsLink} style={{ textDecoration: 'none' }}>
                     <MoreProductsCard />
                 </Link>
