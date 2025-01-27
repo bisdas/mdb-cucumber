@@ -33,15 +33,6 @@ export const Third = styled(Text)`
     display: inline-block;
     width: 100%;
 `
-export const Fourth = styled(Text)`
-    font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: #000000;
-    position: relative;
-    font-size: 21px;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-`
 
 export const Stylish = styled(Text)`
     font-family: 'Lobster-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';

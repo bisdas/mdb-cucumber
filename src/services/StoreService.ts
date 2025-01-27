@@ -155,11 +155,18 @@ class StoreService {
                 matchedProducts.push(...this.getProductsByTags(getMatchedTags))
                 matchedProducts.push(...this.getProductsByTitle(sanitisedKeyword))
 
-                // todo: urgent : remove duplicates
+                /** remove duplicates */
+                const uniqueItems = new Set()
+                for (const item of matchedProducts) {
+                    uniqueItems.add(item)
+                }
+
+                const uniqueItemsArray = Array.from(uniqueItems)
+
                 if (sanitisedKeyword === 'error') {
                     reject(new Error('error keyword'))
                 } else {
-                    resolve(matchedProducts)
+                    resolve(uniqueItemsArray)
                 }
             } catch (error: any) {
                 reject(error)

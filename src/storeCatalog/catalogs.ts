@@ -87,6 +87,10 @@ export const CATEGORIES = {
         id: 'KITCHEN_FURNITURES',
         title: 'Kitchen Furnitures',
     },
+    BEAUTY_PERSONAL_CARE: {
+        id: 'BEAUTY & PERSONAL CARE',
+        title: 'Beauty & Personal Care',
+    },
 }
 
 export const BRANDS = {
@@ -410,9 +414,69 @@ export const BRANDS = {
         id: 'Philips',
         title: 'Philips',
     },
+    Yana: {
+        id: 'Yana',
+        title: 'Yana',
+    },
+    LA_GIRL: {
+        id: 'LA_GIRL',
+        title: 'L.A GIRL',
+    },
+    Minimalist: {
+        id: 'Minimalist',
+        title: 'Minimalist',
+    },
+    Pilgrim: {
+        id: 'Pilgrim',
+        title: 'Pilgrim',
+    },
+    DOT_KEY: {
+        id: 'DOT_KEY',
+        title: 'DOT & KEY',
+    },
+    Moody: {
+        id: 'Moody',
+        title: 'Moody',
+    },
+    Indulekha: {
+        id: 'Indulekha',
+        title: 'Indulekha',
+    },
+    SESA: {
+        id: 'SESA',
+        title: 'SESA',
+    },
+    Ghar_Soaps: {
+        id: 'Ghar_Soaps',
+        title: 'Ghar Soaps',
+    },
+    Mysore_Sandal: {
+        id: 'Mysore_Sandal',
+        title: 'Mysore Sandal',
+    },
+    Nat_Habit: {
+        id: 'Nat_Habit',
+        title: 'Nat Habit',
+    },
+    RENEE: {
+        id: 'RENEE',
+        title: 'RENEE',
+    },
+    BELLAVITA: {
+        id: 'BELLAVITA',
+        title: 'BELLAVITA',
+    },
+    VELPACKS: {
+        id: 'VELPACKS',
+        title: 'VELPACKS',
+    },
     Morphy_Richards: {
         id: 'Morphy_Richards',
         title: 'Morphy Richards',
+    },
+    Stewit: {
+        id: 'Stewit',
+        title: 'Stewit',
     },
     Simxen: {
         id: 'Simxen',
