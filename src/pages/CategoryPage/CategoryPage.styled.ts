@@ -80,6 +80,14 @@ export const ThatsAll = styled.div`
     text-align: center;
 `
 
+export const WeAreGrowing = styled.div`
+    font-family: Montserrat-Regular, 'Helvetica Neue', Helvetica, 'sans-serif';
+    color: rgb(0 0 0);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+`
+
 export const ProductGridWrapper = styled.div`
     margin-top: 30px;
     margin-bottom: 40px;

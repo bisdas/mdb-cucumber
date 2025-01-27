@@ -156,13 +156,13 @@ class StoreService {
                 matchedProducts.push(...this.getProductsByTitle(sanitisedKeyword))
 
                 /** remove duplicates */
-                const uniqueItems = new Set();
-                for(const item of matchedProducts) {
-                    uniqueItems.add(item);
+                const uniqueItems = new Set()
+                for (const item of matchedProducts) {
+                    uniqueItems.add(item)
                 }
 
-                const uniqueItemsArray = Array.from(uniqueItems);
-                
+                const uniqueItemsArray = Array.from(uniqueItems)
+
                 if (sanitisedKeyword === 'error') {
                     reject(new Error('error keyword'))
                 } else {
