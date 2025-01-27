@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import React, { type FunctionComponent, type ReactElement, useState, useEffect } from 'react'
+import React, { type FunctionComponent, type ReactElement, useState, useEffect } from 'react';
 import {
     OuterWrapper,
     Content,
@@ -14,35 +14,35 @@ import {
     CategoryTitle,
     ThatsAll,
     WeAreGrowing,
-} from './CategoryPage.styled'
-import { LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled'
-import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
-import { useParams } from 'react-router-dom'
-import { useRouter } from '../../router/useRouter'
-import { useCategorisedProducts } from '../../hooks/useCategorisedProducts'
-import ProductsGrid from '../../components/ProductsGrid'
-import Spinner from '../../components/Spinner'
-import { getRandomNumber } from '../../utils/utils'
+} from './CategoryPage.styled';
+import { LoaderWrapper } from '../../components/SharedComponents/SharedStyledComponents.styled';
+import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg';
+import { useParams } from 'react-router-dom';
+import { useRouter } from '../../router/useRouter';
+import { useCategorisedProducts } from '../../hooks/useCategorisedProducts';
+import ProductsGrid from '../../components/ProductsGrid';
+import Spinner from '../../components/Spinner';
+import { getRandomNumber } from '../../utils/utils';
 
 const CategoryPage: FunctionComponent<any> = (): ReactElement => {
-    const { navigateHome } = useRouter()
-    const { id } = useParams()
-    const [productsData, error, isProductsLoading] = useCategorisedProducts()
-    const [pageLoading, setPageLoading] = useState(true)
+    const { navigateHome } = useRouter();
+    const { id } = useParams();
+    const [productsData, error, isProductsLoading] = useCategorisedProducts();
+    const [pageLoading, setPageLoading] = useState(true);
 
     useEffect(() => {
         // fake delay to show the loader on category page
-        const randomDelay = getRandomNumber(250, 500)
+        const randomDelay = getRandomNumber(250, 500);
         setTimeout(() => {
-            setPageLoading(false)
-        }, randomDelay)
-    })
+            setPageLoading(false);
+        }, randomDelay);
+    });
 
-    const category = productsData?.find((data: any) => data.category.id.trim() === id?.trim())
+    const category = productsData?.find((data: any) => data.category.id.trim() === id?.trim());
 
     const navigateToHomePage = (): void => {
-        navigateHome()
-    }
+        navigateHome();
+    };
 
     return (
         <OuterWrapper>
@@ -74,7 +74,7 @@ const CategoryPage: FunctionComponent<any> = (): ReactElement => {
                 )}
             </Content>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default CategoryPage
+export default CategoryPage;

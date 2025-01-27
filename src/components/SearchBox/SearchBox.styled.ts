@@ -1,14 +1,14 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 interface IOuterWrapperProps {
-    seamless?: boolean
+    seamless?: boolean;
 }
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     margin-top: 12px;
     border: ${(props) => (props?.seamless === false ? '3px solid #d8d8d8' : 'none')};
     border-radius: 24px;
     height: 40px;
-`
+`;
 
 export const SearchIconWrapper = styled.div`
     margin-right: 6px;
@@ -16,14 +16,14 @@ export const SearchIconWrapper = styled.div`
     top: 3px;
     pointer-events: none;
     user-select: none;
-`
+`;
 
 export const SearchTextBoxWrapper = styled.div`
     flex: 1;
-`
+`;
 
 interface ISearchFormProps {
-    seamless: boolean
+    seamless: boolean;
 }
 export const SearchForm = styled.form<ISearchFormProps>`
     display: flex;
@@ -32,7 +32,7 @@ export const SearchForm = styled.form<ISearchFormProps>`
     height: inherit;
     padding-left: ${(props) => (props.seamless ? '0' : '14px')};
     padding-right: 14px;
-`
+`;
 
 export const SearchTextBox = styled.input`
     width: 100%;
@@ -53,4 +53,4 @@ export const SearchTextBox = styled.input`
     &::placeholder {
         color: #bababa;
     }
-`
+`;

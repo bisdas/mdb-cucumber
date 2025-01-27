@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const OuterWrapper = styled.div`
     padding: 6px 18px;
@@ -7,4 +7,4 @@ export const OuterWrapper = styled.div`
     display: flex;
     flex-direction: row;
     background: #f5f5f5;
-`
+`;

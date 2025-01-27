@@ -1,8 +1,8 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, Background, Text } from './Banner.styled'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, Background, Text } from './Banner.styled';
 
 interface IBannerProps {
-    text: string
+    text: string;
 }
 
 const Banner: FunctionComponent<IBannerProps> = ({ text }): ReactElement => {
@@ -12,7 +12,7 @@ const Banner: FunctionComponent<IBannerProps> = ({ text }): ReactElement => {
                 <Text>{text}</Text>
             </Background>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;

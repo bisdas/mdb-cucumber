@@ -1,6 +1,6 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, TitleDesign } from './SiteTitle.styled'
-import SiteTitleImage from '../../assets/images/site_title.svg'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, TitleDesign } from './SiteTitle.styled';
+import SiteTitleImage from '../../assets/images/site_title.svg';
 
 const SiteTitle: FunctionComponent<any> = (): ReactElement => {
     return (
@@ -9,7 +9,7 @@ const SiteTitle: FunctionComponent<any> = (): ReactElement => {
                 <img style={{ width: '100%' }} src={SiteTitleImage} />
             </TitleDesign>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default SiteTitle
+export default SiteTitle;

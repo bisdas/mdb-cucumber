@@ -1,23 +1,23 @@
-import React, { type ReactElement } from 'react'
-import ErrorFallbackUI from '../ErrorFallbackUI'
+import React, { type ReactElement } from 'react';
+import ErrorFallbackUI from '../ErrorFallbackUI';
 
 interface IErrorBoundaryProps {
-    error: any
-    onCatchError: any
-    children: any
+    error: any;
+    onCatchError: any;
+    children: any;
 }
 class ErrorBoundary extends React.Component<IErrorBoundaryProps> {
     componentDidCatch(error: any): void {
-        this.props.onCatchError(error)
+        this.props.onCatchError(error);
     }
 
     render(): ReactElement {
         if (this.props.error !== null) {
-            return <ErrorFallbackUI />
+            return <ErrorFallbackUI />;
         }
 
-        return this.props.children
+        return this.props.children;
     }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

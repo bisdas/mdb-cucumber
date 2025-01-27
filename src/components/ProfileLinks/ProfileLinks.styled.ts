@@ -1,15 +1,15 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const OuterWrapper = styled.div`
     flex: 1;
     display: flex;
     justify-content: end;
-`
+`;
 
 interface LinkProps {
-    backgroundImage: any
-    width: number
-    height: number
+    backgroundImage: any;
+    width: number;
+    height: number;
 }
 export const Link = styled.div<LinkProps>`
     background-image: url(${(props) => props.backgroundImage});
@@ -19,4 +19,4 @@ export const Link = styled.div<LinkProps>`
     background-size: cover;
     margin-left: 12px;
     cursor: pointer;
-`
+`;

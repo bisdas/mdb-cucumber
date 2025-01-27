@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { Button } from '../../components/flexible'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { Button } from '../../components/flexible';
 import {
     OuterWrapper,
     Content,
@@ -12,15 +12,15 @@ import {
     Link,
     ParagraphText,
     ButtonWrapper,
-} from './AboutPage.styled'
-import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
-import { DELISH_BOWL_INSTAGRAM_LINK, CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT } from '../../configuration/constants'
-import { useRouter } from '../../router/useRouter'
-import { ReactComponent as ThinkingAvatar } from '../../assets/icons/avatar-thinking.svg'
-import { openEmailWriterWindow } from '../../utils/utils'
+} from './AboutPage.styled';
+import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg';
+import { DELISH_BOWL_INSTAGRAM_LINK, CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT } from '../../configuration/constants';
+import { useRouter } from '../../router/useRouter';
+import { ReactComponent as ThinkingAvatar } from '../../assets/icons/avatar-thinking.svg';
+import { openEmailWriterWindow } from '../../utils/utils';
 
 const AboutPage: FunctionComponent<any> = (): ReactElement => {
-    const { navigateBack } = useRouter()
+    const { navigateBack } = useRouter();
 
     return (
         <OuterWrapper>
@@ -77,7 +77,7 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                             <Button
                                 appearance="outlined"
                                 onClick={() => {
-                                    openEmailWriterWindow(CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT)
+                                    openEmailWriterWindow(CUCUMBER_SHARE_IDEA_EMAIL_SUBJECT);
                                 }}
                             >
                                 Share with us
@@ -88,7 +88,7 @@ const AboutPage: FunctionComponent<any> = (): ReactElement => {
                 </PageContent>
             </Content>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default AboutPage
+export default AboutPage;

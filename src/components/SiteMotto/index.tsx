@@ -1,5 +1,5 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, First, Third, Stylish } from './SiteMotto.styled'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, First, Third, Stylish } from './SiteMotto.styled';
 // import { useRouter } from '../../router/useRouter'
 
 const SiteMotto: FunctionComponent<any> = (): ReactElement => {
@@ -12,7 +12,7 @@ const SiteMotto: FunctionComponent<any> = (): ReactElement => {
             </Third>
             {/* <HowItWorks onClick={navigateAbout}>Learn how this works</HowItWorks> */}
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default SiteMotto
+export default SiteMotto;

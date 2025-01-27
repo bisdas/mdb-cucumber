@@ -1,32 +1,32 @@
-import styled, { keyframes } from 'styled-components/macro'
-const backdropOpacityOpen = '0.7'
-const backdropOpacityClosed = '0'
-const menuPositionRightOpen = '0'
-const menuPositionRightClosed = '-100vw'
+import styled, { keyframes } from 'styled-components/macro';
+const backdropOpacityOpen = '0.7';
+const backdropOpacityClosed = '0';
+const menuPositionRightOpen = '0';
+const menuPositionRightClosed = '-100vw';
 
 const fadeOpacityIn = keyframes`
     0%   {opacity: ${backdropOpacityClosed}}
     100% {opacity: ${backdropOpacityOpen}}
-`
+`;
 const fadeOpacityOut = keyframes`
     0%   {opacity: ${backdropOpacityOpen}}
     100% {opacity: ${backdropOpacityClosed}}
-`
+`;
 const slideLeftIn = keyframes`
     0% { right: ${menuPositionRightClosed} }
     100% { right: ${menuPositionRightOpen} }
-`
+`;
 const slideRightOut = keyframes`
     0% { right: ${menuPositionRightOpen} }
     100% { right: ${menuPositionRightClosed} }
-`
+`;
 
-export const OuterWrapper = styled.div``
+export const OuterWrapper = styled.div``;
 export const Trigger = styled.div`
     user-select: none;
     position: relative;
     top: -6px;
-`
+`;
 
 export const MenuMainWrapper = styled.div`
     position: fixed;
@@ -34,10 +34,10 @@ export const MenuMainWrapper = styled.div`
     right: 0;
     height: 100vh;
     width: 100vw;
-`
+`;
 
 interface IBackdrop {
-    closing: boolean
+    closing: boolean;
 }
 export const Backdrop = styled.div<IBackdrop>`
     position: absolute;
@@ -55,10 +55,10 @@ export const Backdrop = styled.div<IBackdrop>`
     animation-fill-mode: none;
     animation-play-state: running;
     animation-name: ${(props) => (props.closing ? fadeOpacityOut : fadeOpacityIn)};
-`
+`;
 
 interface IMenuContent {
-    closing: boolean
+    closing: boolean;
 }
 export const MenuContent = styled.div<IMenuContent>`
     position: absolute;
@@ -78,4 +78,4 @@ export const MenuContent = styled.div<IMenuContent>`
     animation-fill-mode: none;
     animation-play-state: running;
     animation-name: ${(props) => (props.closing ? slideRightOut : slideLeftIn)};
-`
+`;

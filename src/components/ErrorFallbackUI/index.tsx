@@ -1,8 +1,8 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { Button } from '../flexible'
-import { OuterWrapper, ContentWrapper, MessageTitle, MessageDetails } from './ErrorFallbackUI.styled'
-import { openEmailWriterWindow } from '../../utils/utils'
-import { CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT } from '../../configuration/constants'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { Button } from '../flexible';
+import { OuterWrapper, ContentWrapper, MessageTitle, MessageDetails } from './ErrorFallbackUI.styled';
+import { openEmailWriterWindow } from '../../utils/utils';
+import { CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT } from '../../configuration/constants';
 
 const ErrorFallbackUI: FunctionComponent = (): ReactElement => {
     return (
@@ -17,14 +17,14 @@ const ErrorFallbackUI: FunctionComponent = (): ReactElement => {
                 <Button
                     appearance="outlined"
                     onClick={() => {
-                        openEmailWriterWindow(CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT)
+                        openEmailWriterWindow(CUCUMBER_REPORT_ERROR_EMAIL_SUBJECT);
                     }}
                 >
                     Report an error
                 </Button>
             </ContentWrapper>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default ErrorFallbackUI
+export default ErrorFallbackUI;

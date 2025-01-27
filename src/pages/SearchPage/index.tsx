@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement, useContext } from 'react'
+import React, { type FunctionComponent, type ReactElement, useContext } from 'react';
 import {
     OuterWrapper,
     Content,
@@ -12,25 +12,25 @@ import {
     DescriptionFirstLine,
     DescriptionSecondLine,
     ProductGridWrapper,
-} from './SearchPage.styled'
-import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg'
-import SearchBox from '../../components/SearchBox'
-import { useSearchBox } from '../../hooks/useSearchBox'
-import { useRouter } from '../../router/useRouter'
-import { StoreContext } from '../../stateManagement/storeState'
-import ProductsGrid from '../../components/ProductsGrid'
-import Spinner from '../../components/Spinner'
+} from './SearchPage.styled';
+import { ReactComponent as BackArrow } from '../../assets/icons/arrow-left.svg';
+import SearchBox from '../../components/SearchBox';
+import { useSearchBox } from '../../hooks/useSearchBox';
+import { useRouter } from '../../router/useRouter';
+import { StoreContext } from '../../stateManagement/storeState';
+import ProductsGrid from '../../components/ProductsGrid';
+import Spinner from '../../components/Spinner';
 
 const SearchPage: FunctionComponent<any> = (): ReactElement => {
-    const [storeData] = useContext(StoreContext)
-    const { onChangeInput } = useSearchBox()
-    const { navigateHome } = useRouter()
+    const [storeData] = useContext(StoreContext);
+    const { onChangeInput } = useSearchBox();
+    const { navigateHome } = useRouter();
 
     const navigateToHomePage = (): void => {
-        navigateHome()
-    }
+        navigateHome();
+    };
 
-    const { filteredProducts } = storeData
+    const { filteredProducts } = storeData;
 
     return (
         <OuterWrapper>
@@ -64,7 +64,7 @@ const SearchPage: FunctionComponent<any> = (): ReactElement => {
                 )}
             </Content>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default SearchPage
+export default SearchPage;

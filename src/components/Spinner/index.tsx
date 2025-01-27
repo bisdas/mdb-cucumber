@@ -1,6 +1,6 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, SpinnerWrapper, LoadingTextWrapper } from './Spinner.styled'
-import { ReactComponent as SpinnerIcon } from '../../assets/icons/spinner.svg'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, SpinnerWrapper, LoadingTextWrapper } from './Spinner.styled';
+import { ReactComponent as SpinnerIcon } from '../../assets/icons/spinner.svg';
 
 const Spinner: FunctionComponent = (): ReactElement => {
     return (
@@ -10,7 +10,7 @@ const Spinner: FunctionComponent = (): ReactElement => {
             </SpinnerWrapper>
             <LoadingTextWrapper>Loading...</LoadingTextWrapper>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default Spinner
+export default Spinner;

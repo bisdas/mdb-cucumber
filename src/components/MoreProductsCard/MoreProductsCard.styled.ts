@@ -1,6 +1,6 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
-export const OuterWrapper = styled.div``
+export const OuterWrapper = styled.div``;
 
 export const Content = styled.div`
     height: 100px;
@@ -11,4 +11,4 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
-`
+`;

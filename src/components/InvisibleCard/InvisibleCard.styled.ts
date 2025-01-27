@@ -1,9 +1,9 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const OuterWrapper = styled.div`
     pointer-events: none;
     user-select: none;
-`
+`;
 export const ImageWrapper = styled.div`
     height: 100px;
     width: 100px;
@@ -11,4 +11,4 @@ export const ImageWrapper = styled.div`
     box-sizing: border-box;
     pointer-events: none;
     user-select: none;
-`
+`;

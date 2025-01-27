@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { CATEGORIES, BRANDS, TAGS } from './catalogs'
+import { CATEGORIES, BRANDS, TAGS } from './catalogs';
 
 export const PRODUCTS = [
     {
@@ -3101,4 +3101,4 @@ export const PRODUCTS = [
         targetLink: 'https://www.amazon.in/dp/B00NMBB65C',
         image: '00000380.jpg',
     },
-]
+];

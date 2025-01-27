@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { type FunctionComponent, type ReactElement } from 'react'
+import React, { type FunctionComponent, type ReactElement } from 'react';
 import {
     OuterWrapper,
     Content,
@@ -8,19 +8,19 @@ import {
     SectionBody,
     ContactButtonWrapper,
     SocialLink,
-} from './SiteFooter.styled'
-import { Button } from '../flexible'
-import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg'
-import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg'
-import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg'
+} from './SiteFooter.styled';
+import { Button } from '../flexible';
+import { ReactComponent as YouTubeIcon } from '../../assets/icons/youtube.svg';
+import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram.svg';
+import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg';
 import {
     DELISH_BOWL_INSTAGRAM_LINK,
     DELISH_BOWL_YOUTUBE_LINK,
     DELISH_BOWL_FACEBOOK_LINK,
     DELISH_BOWL_EMAIL_ADDRESS,
     CUCUMBER_COLLABORATION_EMAIL_SUBJECT,
-} from '../../configuration/constants'
-import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils'
+} from '../../configuration/constants';
+import { openEmailWriterWindow, openAnyLinkWindow } from '../../utils/utils';
 
 const SiteFooter: FunctionComponent = (): ReactElement => {
     return (
@@ -44,7 +44,7 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                             <Button
                                 appearance="contained"
                                 onClick={() => {
-                                    openEmailWriterWindow(CUCUMBER_COLLABORATION_EMAIL_SUBJECT)
+                                    openEmailWriterWindow(CUCUMBER_COLLABORATION_EMAIL_SUBJECT);
                                 }}
                             >
                                 Send an email
@@ -60,21 +60,21 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                     <SectionBody>
                         <SocialLink
                             onClick={() => {
-                                openAnyLinkWindow(DELISH_BOWL_INSTAGRAM_LINK)
+                                openAnyLinkWindow(DELISH_BOWL_INSTAGRAM_LINK);
                             }}
                         >
                             <InstagramIcon height={14} width={14} />
                         </SocialLink>
                         <SocialLink
                             onClick={() => {
-                                openAnyLinkWindow(DELISH_BOWL_YOUTUBE_LINK)
+                                openAnyLinkWindow(DELISH_BOWL_YOUTUBE_LINK);
                             }}
                         >
                             <YouTubeIcon height={14} width={14} />
                         </SocialLink>
                         <SocialLink
                             onClick={() => {
-                                openAnyLinkWindow(DELISH_BOWL_FACEBOOK_LINK)
+                                openAnyLinkWindow(DELISH_BOWL_FACEBOOK_LINK);
                             }}
                         >
                             <FacebookIcon height={14} width={14} />
@@ -83,7 +83,7 @@ const SiteFooter: FunctionComponent = (): ReactElement => {
                 </Section>
             </Content>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default SiteFooter
+export default SiteFooter;

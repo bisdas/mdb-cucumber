@@ -1,9 +1,9 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, ContentWrapper, TitleWrapper, TitleText } from './Section.styled'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, ContentWrapper, TitleWrapper, TitleText } from './Section.styled';
 
 interface SectionProps {
-    title: string
-    children: ReactElement
+    title: string;
+    children: ReactElement;
 }
 
 const Section: FunctionComponent<SectionProps> = ({ children, title }): ReactElement => {
@@ -14,7 +14,7 @@ const Section: FunctionComponent<SectionProps> = ({ children, title }): ReactEle
             </TitleWrapper>
             <ContentWrapper>{children}</ContentWrapper>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default Section
+export default Section;

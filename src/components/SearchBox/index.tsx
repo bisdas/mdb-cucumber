@@ -1,14 +1,14 @@
-import React, { useRef, useEffect, type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled'
-import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg'
-import { useLocation } from 'react-router-dom'
-import { ROUTES } from '../../router'
+import React, { useRef, useEffect, type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper, SearchIconWrapper, SearchTextBoxWrapper, SearchTextBox, SearchForm } from './SearchBox.styled';
+import { ReactComponent as SearchIcon } from '../../assets/icons/search-light.svg';
+import { useLocation } from 'react-router-dom';
+import { ROUTES } from '../../router';
 
 interface SearchBoxProps {
-    onSearch: (term: string) => any
-    onFocus?: () => any
-    seamless?: boolean
-    icon?: boolean
+    onSearch: (term: string) => any;
+    onFocus?: () => any;
+    seamless?: boolean;
+    icon?: boolean;
 }
 
 const SearchBox: FunctionComponent<SearchBoxProps> = ({
@@ -17,26 +17,26 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     seamless = false,
     icon = true,
 }): ReactElement => {
-    const inputRef = useRef<HTMLInputElement>(null)
-    const location = useLocation()
+    const inputRef = useRef<HTMLInputElement>(null);
+    const location = useLocation();
 
     useEffect(() => {
         if (location.pathname === `/${ROUTES.SEARCH}`) {
-            inputRef?.current?.focus()
+            inputRef?.current?.focus();
         }
-    }, [location.pathname])
+    }, [location.pathname]);
 
     const onSubmitForm = (event: any): void => {
-        event.preventDefault()
-    }
+        event.preventDefault();
+    };
 
     const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        onSearch(event.currentTarget.value)
-    }
+        onSearch(event.currentTarget.value);
+    };
 
     const onFocusInput = (): void => {
-        onFocus instanceof Function && onFocus()
-    }
+        onFocus instanceof Function && onFocus();
+    };
 
     return (
         <OuterWrapper seamless={seamless}>
@@ -58,7 +58,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
                 </SearchTextBoxWrapper>
             </SearchForm>
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default SearchBox
+export default SearchBox;

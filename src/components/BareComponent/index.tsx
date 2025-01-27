@@ -1,13 +1,13 @@
-import React, { type FunctionComponent, type ReactElement } from 'react'
-import { OuterWrapper } from './BareComponent.styled'
+import React, { type FunctionComponent, type ReactElement } from 'react';
+import { OuterWrapper } from './BareComponent.styled';
 
 interface IBareComponentProps {
-    title: string
-    children: ReactElement
+    title: string;
+    children: ReactElement;
 }
 
 const BareComponent: FunctionComponent<IBareComponentProps> = (): ReactElement => {
-    return <OuterWrapper></OuterWrapper>
-}
+    return <OuterWrapper></OuterWrapper>;
+};
 
-export default BareComponent
+export default BareComponent;

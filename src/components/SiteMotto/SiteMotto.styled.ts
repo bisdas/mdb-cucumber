@@ -1,13 +1,13 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
-export const OuterWrapper = styled.div``
+export const OuterWrapper = styled.div``;
 
 const Text = styled.span`
     font-family: 'Montserrat-Bold', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     display: block;
     width: fit-content;
     font-size: 11px;
-`
+`;
 export const First = styled(Text)`
     font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
@@ -15,7 +15,7 @@ export const First = styled(Text)`
     text-align: center;
     display: inline-block;
     width: 100%;
-`
+`;
 export const Second = styled(Text)`
     font-family: 'Montserrat-Black', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
@@ -23,7 +23,7 @@ export const Second = styled(Text)`
     text-align: center;
     display: inline-block;
     width: 100%;
-`
+`;
 export const Third = styled(Text)`
     font-family: 'Montserrat-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
@@ -32,7 +32,7 @@ export const Third = styled(Text)`
     text-align: center;
     display: inline-block;
     width: 100%;
-`
+`;
 
 export const Stylish = styled(Text)`
     font-family: 'Lobster-Regular', 'Helvetica Neue', 'Helvetica', 'sans-serif';
@@ -40,7 +40,7 @@ export const Stylish = styled(Text)`
     position: relative;
     font-size: 24px;
     display: inline;
-`
+`;
 
 export const HowItWorks = styled.div`
     margin-top: 10px;
@@ -53,4 +53,4 @@ export const HowItWorks = styled.div`
     display: inline-block;
     width: 100%;
     text-underline-offset: 4px;
-`
+`;

@@ -1,32 +1,32 @@
-import { useEffect, useContext } from 'react'
-import StoreService from '../services/StoreService'
+import { useEffect, useContext } from 'react';
+import StoreService from '../services/StoreService';
 import {
     createCategorisedProductsDataAction,
     createCategorisedProductsErrorAction,
     createCategorisedProductsRequestAction,
     StoreContext,
-} from '../stateManagement/storeState'
+} from '../stateManagement/storeState';
 
 export const useCategorisedProducts = (): any => {
-    const [state, dispatch] = useContext(StoreContext)
-    const data = state.categorisedProducts?.data
-    const errors = state.categorisedProducts?.errors
-    const isLoading = state.categorisedProducts?.isLoading
+    const [state, dispatch] = useContext(StoreContext);
+    const data = state.categorisedProducts?.data;
+    const errors = state.categorisedProducts?.errors;
+    const isLoading = state.categorisedProducts?.isLoading;
 
     useEffect(() => {
         void (async (): Promise<any> => {
             if (data?.length === 0) {
-                dispatch(createCategorisedProductsRequestAction())
+                dispatch(createCategorisedProductsRequestAction());
 
                 try {
-                    const products = await StoreService.getCategorisedProducts()
-                    dispatch(createCategorisedProductsDataAction(products))
+                    const products = await StoreService.getCategorisedProducts();
+                    dispatch(createCategorisedProductsDataAction(products));
                 } catch (error: any) {
-                    dispatch(createCategorisedProductsErrorAction(error))
+                    dispatch(createCategorisedProductsErrorAction(error));
                 }
             }
-        })()
-    }, [data?.length, dispatch])
+        })();
+    }, [data?.length, dispatch]);
 
-    return [data, errors, isLoading]
-}
+    return [data, errors, isLoading];
+};

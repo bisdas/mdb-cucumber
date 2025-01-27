@@ -1,36 +1,36 @@
-import React, { useReducer, type Dispatch } from 'react'
+import React, { useReducer, type Dispatch } from 'react';
 /*  types */
 interface IAction {
-    type: string
-    value: any
+    type: string;
+    value: any;
 }
 
 export interface IStoreState {
     categories: {
-        isLoading: boolean
-        data: any[]
-        errors: any[]
-    }
+        isLoading: boolean;
+        data: any[];
+        errors: any[];
+    };
     brands: {
-        isLoading: boolean
-        data: any[]
-        errors: any[]
-    }
+        isLoading: boolean;
+        data: any[];
+        errors: any[];
+    };
     tags: {
-        isLoading: boolean
-        data: any[]
-        errors: any[]
-    }
+        isLoading: boolean;
+        data: any[];
+        errors: any[];
+    };
     categorisedProducts: {
-        isLoading: boolean
-        data: any[]
-        errors: any[]
-    }
+        isLoading: boolean;
+        data: any[];
+        errors: any[];
+    };
     filteredProducts: {
-        isLoading: boolean
-        data: any[]
-        errors: any[]
-    }
+        isLoading: boolean;
+        data: any[];
+        errors: any[];
+    };
 }
 
 /* initial state */
@@ -60,136 +60,136 @@ export const productsInitialState: IStoreState = {
         data: [],
         errors: [],
     },
-}
+};
 
 /* actions */
-const CATEGORIES_REQUEST = 'CATEGORIES_REQUEST'
-const CATEGORIES_DATA = 'CATEGORIES_DATA'
-const CATEGORIES_ERROR = 'CATEGORIES_ERROR'
+const CATEGORIES_REQUEST = 'CATEGORIES_REQUEST';
+const CATEGORIES_DATA = 'CATEGORIES_DATA';
+const CATEGORIES_ERROR = 'CATEGORIES_ERROR';
 
-const BRANDS_REQUEST = 'BRANDS_REQUEST'
-const BRANDS_DATA = 'BRANDS_DATA'
-const BRANDS_ERROR = 'BRANDS_ERROR'
+const BRANDS_REQUEST = 'BRANDS_REQUEST';
+const BRANDS_DATA = 'BRANDS_DATA';
+const BRANDS_ERROR = 'BRANDS_ERROR';
 
-const TAGS_REQUEST = 'TAGS_REQUEST'
-const TAGS_DATA = 'TAGS_DATA'
-const TAGS_ERROR = 'TAGS_ERROR'
+const TAGS_REQUEST = 'TAGS_REQUEST';
+const TAGS_DATA = 'TAGS_DATA';
+const TAGS_ERROR = 'TAGS_ERROR';
 
-const CATEGORISED_PRODUCTS_REQUEST = 'CATEGORISED_PRODUCTS_REQUEST'
-const CATEGORISED_PRODUCTS_DATA = 'CATEGORISED_PRODUCTS_DATA'
-const CATEGORISED_PRODUCTS_ERROR = 'CATEGORISED_PRODUCTS_ERROR'
+const CATEGORISED_PRODUCTS_REQUEST = 'CATEGORISED_PRODUCTS_REQUEST';
+const CATEGORISED_PRODUCTS_DATA = 'CATEGORISED_PRODUCTS_DATA';
+const CATEGORISED_PRODUCTS_ERROR = 'CATEGORISED_PRODUCTS_ERROR';
 
-const FILTERED_PRODUCTS_REQUEST = 'FILTERED_PRODUCTS_REQUEST'
-const FILTERED_PRODUCTS_DATA = 'FILTERED_PRODUCTS_DATA'
-const FILTERED_PRODUCTS_ERROR = 'FILTERED_PRODUCTS_ERROR'
+const FILTERED_PRODUCTS_REQUEST = 'FILTERED_PRODUCTS_REQUEST';
+const FILTERED_PRODUCTS_DATA = 'FILTERED_PRODUCTS_DATA';
+const FILTERED_PRODUCTS_ERROR = 'FILTERED_PRODUCTS_ERROR';
 
 /* action creators */
 export const createCategoriesRequestAction = (): any => {
     return {
         type: CATEGORIES_REQUEST,
         value: true,
-    }
-}
+    };
+};
 
 export const createCategoriesDataAction = (data: any): any => {
     return {
         type: CATEGORIES_DATA,
         value: data,
-    }
-}
+    };
+};
 
 export const createCategoriesErrorAction = (error: any): any => {
     return {
         type: CATEGORIES_ERROR,
         value: error,
-    }
-}
+    };
+};
 export const createBrandsRequestAction = (): any => {
     return {
         type: BRANDS_REQUEST,
         value: true,
-    }
-}
+    };
+};
 
 export const createBrandsDataAction = (data: any): any => {
     return {
         type: BRANDS_DATA,
         value: data,
-    }
-}
+    };
+};
 
 export const createBrandsErrorAction = (error: any): any => {
     return {
         type: BRANDS_ERROR,
         value: error,
-    }
-}
+    };
+};
 export const createTagsRequestAction = (): any => {
     return {
         type: TAGS_REQUEST,
         value: true,
-    }
-}
+    };
+};
 
 export const createTagsDataAction = (data: any): any => {
     return {
         type: TAGS_DATA,
         value: data,
-    }
-}
+    };
+};
 
 export const createTagsErrorAction = (error: any): any => {
     return {
         type: TAGS_ERROR,
         value: error,
-    }
-}
+    };
+};
 
 export const createCategorisedProductsRequestAction = (): any => {
     return {
         type: CATEGORISED_PRODUCTS_REQUEST,
         value: true,
-    }
-}
+    };
+};
 
 export const createCategorisedProductsDataAction = (data: any): any => {
     return {
         type: CATEGORISED_PRODUCTS_DATA,
         value: data,
-    }
-}
+    };
+};
 
 export const createCategorisedProductsErrorAction = (error: any): any => {
     return {
         type: CATEGORISED_PRODUCTS_ERROR,
         value: error,
-    }
-}
+    };
+};
 
 export const createFilteredProductsRequestAction = (): any => {
     return {
         type: FILTERED_PRODUCTS_REQUEST,
         value: true,
-    }
-}
+    };
+};
 
 export const createFilteredProductsDataAction = (data: any): any => {
     return {
         type: FILTERED_PRODUCTS_DATA,
         value: data,
-    }
-}
+    };
+};
 
 export const createFilteredProductsErrorAction = (error: any): any => {
     return {
         type: FILTERED_PRODUCTS_ERROR,
         value: error,
-    }
-}
+    };
+};
 
 /* reducers */
 export const productsReducer = (state = productsInitialState, action: IAction): any => {
-    const { type, value } = action
+    const { type, value } = action;
     switch (type) {
         case CATEGORIES_REQUEST:
             return {
@@ -199,7 +199,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: [],
                 },
-            }
+            };
 
         case CATEGORIES_DATA:
             return {
@@ -209,7 +209,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: value,
                     errors: [],
                 },
-            }
+            };
 
         case CATEGORIES_ERROR:
             return {
@@ -219,7 +219,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: value,
                 },
-            }
+            };
         case BRANDS_REQUEST:
             return {
                 ...state,
@@ -228,7 +228,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: [],
                 },
-            }
+            };
 
         case BRANDS_DATA:
             return {
@@ -238,7 +238,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: value,
                     errors: [],
                 },
-            }
+            };
 
         case BRANDS_ERROR:
             return {
@@ -248,7 +248,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: value,
                 },
-            }
+            };
         case TAGS_REQUEST:
             return {
                 ...state,
@@ -257,7 +257,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: [],
                 },
-            }
+            };
 
         case TAGS_DATA:
             return {
@@ -267,7 +267,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: value,
                     errors: [],
                 },
-            }
+            };
 
         case TAGS_ERROR:
             return {
@@ -277,7 +277,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: value,
                 },
-            }
+            };
         case CATEGORISED_PRODUCTS_REQUEST:
             return {
                 ...state,
@@ -286,7 +286,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: [],
                 },
-            }
+            };
 
         case CATEGORISED_PRODUCTS_DATA:
             return {
@@ -296,7 +296,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: value,
                     errors: [],
                 },
-            }
+            };
 
         case CATEGORISED_PRODUCTS_ERROR:
             return {
@@ -306,7 +306,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: value,
                 },
-            }
+            };
         case FILTERED_PRODUCTS_REQUEST:
             return {
                 ...state,
@@ -315,7 +315,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: [],
                 },
-            }
+            };
 
         case FILTERED_PRODUCTS_DATA:
             return {
@@ -325,7 +325,7 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: value,
                     errors: [],
                 },
-            }
+            };
 
         case FILTERED_PRODUCTS_ERROR:
             return {
@@ -335,17 +335,17 @@ export const productsReducer = (state = productsInitialState, action: IAction): 
                     data: [],
                     errors: value,
                 },
-            }
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
 /** context */
-export const StoreContext = React.createContext<[Partial<IStoreState>, Dispatch<any>]>([{}, () => {}])
+export const StoreContext = React.createContext<[Partial<IStoreState>, Dispatch<any>]>([{}, () => {}]);
 
 /** context provider */
 export const StoreContextProvider = (props: any): any => {
-    const [state, dispatch] = useReducer(productsReducer, productsInitialState)
-    return <StoreContext.Provider value={[state, dispatch]}>{props.children} </StoreContext.Provider>
-}
+    const [state, dispatch] = useReducer(productsReducer, productsInitialState);
+    return <StoreContext.Provider value={[state, dispatch]}>{props.children} </StoreContext.Provider>;
+};

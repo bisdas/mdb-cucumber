@@ -1,9 +1,9 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const OuterWrapper = styled.div`
     margin-top: 18px;
-`
-export const ContentWrapper = styled.div``
+`;
+export const ContentWrapper = styled.div``;
 
 export const TitleWrapper = styled.div`
     box-sizing: border-box;
@@ -11,7 +11,7 @@ export const TitleWrapper = styled.div`
     margin-bottom: 10px;
     pointer-events: none;
     user-select: none;
-`
+`;
 export const TitleText = styled.span`
     font-family: 'Montserrat-Medium', 'Helvetica Neue', 'Helvetica', 'sans-serif';
     color: #000000;
@@ -21,4 +21,4 @@ export const TitleText = styled.span`
     pointer-events: none;
     user-select: none;
 }
-`
+`;

@@ -1,15 +1,15 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
-export type HyperlinkButtonAppearance = 'contained' | 'outlined' | 'textonly'
+export type HyperlinkButtonAppearance = 'contained' | 'outlined' | 'textonly';
 
-const backgroundColorDefault = 'unset'
-const backgroundColorContained = '#0b9d58'
-const outlineColor = '#0b9d58'
-const textColorDefault = '#000000'
-const textColorContained = '#ffffff'
+const backgroundColorDefault = 'unset';
+const backgroundColorContained = '#0b9d58';
+const outlineColor = '#0b9d58';
+const textColorDefault = '#000000';
+const textColorContained = '#ffffff';
 
 interface IOuterWrapperProps {
-    appearance: HyperlinkButtonAppearance
+    appearance: HyperlinkButtonAppearance;
 }
 export const OuterWrapper = styled.a<IOuterWrapperProps>`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
@@ -26,12 +26,12 @@ export const OuterWrapper = styled.a<IOuterWrapperProps>`
     border-radius: 3px;
     box-sizing: border-box;
     text-decoration: none;
-`
+`;
 
 interface ITextProps {
-    appearance: HyperlinkButtonAppearance
+    appearance: HyperlinkButtonAppearance;
 }
 
 export const Text = styled.div<ITextProps>`
     color: ${(props) => (props.appearance === 'contained' ? textColorContained : textColorDefault)};
-`
+`;

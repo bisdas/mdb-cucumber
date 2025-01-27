@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/promise-function-async */
-import React, { type FunctionComponent, type ReactElement, useState, useMemo } from 'react'
-import { Portal } from '../Portal'
-import { Button } from '../flexible'
+import React, { type FunctionComponent, type ReactElement, useState, useMemo } from 'react';
+import { Portal } from '../Portal';
+import { Button } from '../flexible';
 import {
     OuterWrapper,
     Backdrop,
@@ -18,33 +18,33 @@ import {
     RightAlignedContent,
     LeftAlignedContent,
     AnimationTimingMilliseconds,
-} from './ProductModal.styled'
-import { openAnyLinkWindow } from '../../utils/utils'
-import { DELISH_BOWL_AMAZON_STORE_ID } from '../../configuration/constants'
-import HyperlinkButton from '../flexible/HyperlinkButton'
+} from './ProductModal.styled';
+import { openAnyLinkWindow } from '../../utils/utils';
+import { DELISH_BOWL_AMAZON_STORE_ID } from '../../configuration/constants';
+import HyperlinkButton from '../flexible/HyperlinkButton';
 
 interface IProductModalProps {
-    product: any
-    onClose: any
+    product: any;
+    onClose: any;
 }
 
 const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose }): ReactElement => {
-    const [isClosing, setIsClosing] = useState(false)
+    const [isClosing, setIsClosing] = useState(false);
 
     const initiateClose = (): void => {
-        setIsClosing(true)
+        setIsClosing(true);
         setTimeout(() => {
-            setIsClosing(false)
-            onClose()
-        }, AnimationTimingMilliseconds)
-    }
+            setIsClosing(false);
+            onClose();
+        }, AnimationTimingMilliseconds);
+    };
 
     const formattedImageUrl = useMemo(
         () => `${location.protocol}//${window.location.host}/productImages/${product.image}`,
         [product.image]
-    )
+    );
 
-    const storeIdAttachedLink = `${product.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`
+    const storeIdAttachedLink = `${product.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`;
 
     return (
         <Portal rootElementId="portal-root" className="product-info-portal">
@@ -75,7 +75,7 @@ const ProductModal: FunctionComponent<IProductModalProps> = ({ product, onClose 
                 </ContentWrapper>
             </OuterWrapper>
         </Portal>
-    )
-}
+    );
+};
 
-export default ProductModal
+export default ProductModal;

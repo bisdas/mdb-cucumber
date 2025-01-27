@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import React, { useState, type FunctionComponent, type ReactElement, useMemo } from 'react'
+import React, { useState, type FunctionComponent, type ReactElement, useMemo } from 'react';
 import {
     OuterWrapper,
     Content,
@@ -9,29 +9,29 @@ import {
     TitleWrapper,
     TitleText,
     HyperlinkContent,
-} from './ProductCard.styled'
-import ProductModal from '../ProductModal'
-import { useScrollLock } from '../../hooks/useScrollLock'
-import { DELISH_BOWL_AMAZON_STORE_ID, EnableProductPopup } from '../../configuration/constants'
-import { MetricType, sendMetrics } from '../../utils/analyticsUtils'
+} from './ProductCard.styled';
+import ProductModal from '../ProductModal';
+import { useScrollLock } from '../../hooks/useScrollLock';
+import { DELISH_BOWL_AMAZON_STORE_ID, EnableProductPopup } from '../../configuration/constants';
+import { MetricType, sendMetrics } from '../../utils/analyticsUtils';
 
 interface IProductCardProps {
-    image: string
-    title: string
-    allDetails: any
+    image: string;
+    title: string;
+    allDetails: any;
 }
 
 const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDetails }): ReactElement => {
-    const [isProductModalOpen, setIsProductModalOpen] = useState(false)
+    const [isProductModalOpen, setIsProductModalOpen] = useState(false);
 
-    useScrollLock(isProductModalOpen)
+    useScrollLock(isProductModalOpen);
 
     const formattedImageUrl = useMemo(
         () => `${location.protocol}//${window.location.host}/productImages/${image}`,
         [image]
-    )
-    const shortTitle = `${title.substring(0, 50)}...`
-    const productLink: string = `${allDetails.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`
+    );
+    const shortTitle = `${title.substring(0, 50)}...`;
+    const productLink: string = `${allDetails.targetLink}/ref=nosim?tag=${DELISH_BOWL_AMAZON_STORE_ID}`;
 
     return (
         <OuterWrapper>
@@ -39,7 +39,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
                 <ProductModal
                     product={allDetails}
                     onClose={() => {
-                        setIsProductModalOpen(false)
+                        setIsProductModalOpen(false);
                     }}
                 />
             )}
@@ -47,7 +47,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
             {EnableProductPopup && (
                 <Content
                     onClick={() => {
-                        setIsProductModalOpen(true)
+                        setIsProductModalOpen(true);
                     }}
                 >
                     <ImageWrapper>
@@ -64,7 +64,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
                     href={productLink}
                     target="_blank"
                     onClick={() => {
-                        sendMetrics(MetricType.visitProduct)
+                        sendMetrics(MetricType.visitProduct);
                     }}
                 >
                     <ImageWrapper>
@@ -76,7 +76,7 @@ const ProductCard: FunctionComponent<IProductCardProps> = ({ image, title, allDe
                 </HyperlinkContent>
             )}
         </OuterWrapper>
-    )
-}
+    );
+};
 
-export default ProductCard
+export default ProductCard;

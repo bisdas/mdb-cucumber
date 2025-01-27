@@ -91,7 +91,7 @@ export const CATEGORIES = {
         id: 'BEAUTY & PERSONAL CARE',
         title: 'Beauty & Personal Care',
     },
-}
+};
 
 export const BRANDS = {
     Prestige: {
@@ -646,7 +646,7 @@ export const BRANDS = {
         id: 'Generic',
         title: 'Generic',
     },
-}
+};
 
 export const TAGS = {
     cookware: {
@@ -717,4 +717,4 @@ export const TAGS = {
         id: 'chakla',
         title: 'chakla',
     },
-}
+};

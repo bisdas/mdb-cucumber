@@ -1,15 +1,15 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
-export type ButtonAppearance = 'contained' | 'outlined' | 'textonly'
+export type ButtonAppearance = 'contained' | 'outlined' | 'textonly';
 
-const backgroundColorDefault = 'unset'
-const backgroundColorContained = '#0b9d58'
-const outlineColor = '#0b9d58'
-const textColorDefault = '#000000'
-const textColorContained = '#ffffff'
+const backgroundColorDefault = 'unset';
+const backgroundColorContained = '#0b9d58';
+const outlineColor = '#0b9d58';
+const textColorDefault = '#000000';
+const textColorContained = '#ffffff';
 
 interface IOuterWrapperProps {
-    appearance: ButtonAppearance
+    appearance: ButtonAppearance;
 }
 export const OuterWrapper = styled.div<IOuterWrapperProps>`
     font-family: Montserrat-Bold, 'Helvetica Neue', Helvetica, 'sans-serif';
@@ -25,12 +25,12 @@ export const OuterWrapper = styled.div<IOuterWrapperProps>`
     border-color: ${outlineColor};
     border-radius: 3px;
     box-sizing: border-box;
-`
+`;
 
 interface ITextProps {
-    appearance: ButtonAppearance
+    appearance: ButtonAppearance;
 }
 
 export const Text = styled.div<ITextProps>`
     color: ${(props) => (props.appearance === 'contained' ? textColorContained : textColorDefault)};
-`
+`;
